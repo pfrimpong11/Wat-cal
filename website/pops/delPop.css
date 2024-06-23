@@ -1,0 +1,181 @@
+*{ margin: 0;
+    border: o;
+    box-sizing: border-box;
+}
+.eagle {
+    width: 500px;
+    height: 253px;
+    position: relative;
+    border-radius: 50px;
+    display: none;
+    max-width: 100%;
+    z-index: 0;
+  }
+  .remuv {
+    text-decoration: none;
+    height: 60px;
+    width: 497px;
+    position: absolute;
+    margin: 0 !important;
+    top: calc(50% - 30px);
+    left: -429px;
+    font-weight: 700;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .clo-icon {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .delete-opt {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .are-you-sure,
+  .no1 {
+    text-decoration: none;
+    font-weight: 500;
+    color: inherit;
+    align-items: center;
+    justify-content: center;
+  }
+  .are-you-sure {
+    width: 436px;
+    height: 60px;
+    position: absolute;
+    margin: 0 !important;
+    top: 67px;
+    left: calc(50% - 218px);
+    display: flex;
+    z-index: 2;
+  }
+  .no1 {
+    height: 49px;
+    position: relative;
+  }
+  .no,
+  .no1,
+  .yes1 {
+    flex: 1;
+    display: flex;
+  }
+  .no {
+    border-radius: 50px;
+    background-color: #06cc02;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 130px;
+    z-index: 1;
+  }
+  .yes1 {
+    text-decoration: none;
+    height: 49px;
+    position: relative;
+    font-weight: 500;
+    color: inherit;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .no:hover{
+    transition: 0.7s;
+    background-color: #1fe61c;
+  }
+  .confirmable,
+  .yes,
+  .yes-no-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .yes {
+    flex: 1;
+    border-radius: 50px;
+    background-color: #ff0505;
+    overflow: hidden;
+    justify-content: flex-start;
+    min-width: 130px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .yes:hover{
+    transition: 0.7s;
+    background-color: #cf1717;
+  }
+  .confirmable,
+  .yes-no-buttons {
+    max-width: 100%;
+  }
+  .yes-no-buttons {
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+  .confirmable {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 4px 0 0;
+    box-sizing: border-box;
+    color: #1a1a1a;
+  }
+  .deletepopper,
+  .vecpa {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .vecpa {
+    flex: 1;
+    border-radius: 50px;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 27px 40px 54px 32px;
+    box-sizing: border-box;
+    gap: 93px;
+    max-width: 100%;
+    max-height: 90%;
+    overflow: auto;
+  }
+  .deletepopper {
+    width: 500px;
+    flex-direction: row;
+    align-items: flex-start;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-family: Nunito;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+    transition: all .5s ease-in-out;
+  }
+  @media screen and (max-width: 450px) {
+    .are-you-sure,
+    .remuv,
+    .no1,
+    .yes1 {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 250px) {
+    .vecpa {
+      gap: 46px;
+    }
+  }

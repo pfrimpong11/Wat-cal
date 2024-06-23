@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./openAccount.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap"
+    />
+  </head>
+  <body>
+    <div class="signupllt">
+      <div class="astenant" id="tenant">As a Tenant</div>
+      <div class="userroles">
+        <div class="aslandlord" id="landlord">As a Landlord</div>
+      </div>
+    </div>
+    <script>
+         var tenant = document.getElementById("tenant");
+      if (tenant) {
+        tenant.addEventListener("click", function (e) {
+            window.location.href = "../other/TSignup.html";
+        });
+      }
+      var landlord = document.getElementById("landlord");
+      if (landlord) {
+        landlord.addEventListener("click", function (e) {
+            window.location.href = "../other/LSignup.html";
+        });
+      }
+    </script>
+  </body>
+</html>
+

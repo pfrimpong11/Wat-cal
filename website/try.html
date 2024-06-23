@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landlord Signup</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Landlord Signup</h1>
+  <form id="signupForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required><br><br>
+
+    <label for="meter_type">Meter Type:</label>
+    <input type="text" id="meter_type" name="meter_type" required><br><br>
+
+    <label for="installation_date">Installation Date:</label>
+    <input type="date" id="installation_date" name="installation_date" required><br><br>
+
+    <div id="roomsContainer">
+      <h3>Rooms</h3>
+      <button type="button" id="addRoomBtn">Add Room</button>
+    </div>
+    <br>
+    <button type="submit">Signup</button>
+  </form>
+
+  <script>
+    let roomCount = 0;
+
+document.getElementById('addRoomBtn').addEventListener('click', () => {
+  roomCount += 1;
+
+  const roomContainer = document.createElement('div');
+  roomContainer.classList.add('room');
+
+  const roomLabel = document.createElement('label');
+  roomLabel.textContent = `Room ${roomCount}:`;
+  const roomInput = document.createElement('input');
+  roomInput.type = 'text';
+  roomInput.name = `room_${roomCount}`;
+  roomInput.required = true;
+
+  roomContainer.appendChild(roomLabel);
+  roomContainer.appendChild(roomInput);
+
+  document.getElementById('roomsContainer').appendChild(roomContainer);
+});
+    
+
+    document.getElementById('signupForm').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const address = document.getElementById('address').value;
+      const meterType = document.getElementById('meter_type').value;
+      const installationDate = document.getElementById('installation_date').value;
+      
+      const roomElements = document.getElementsByName('room_name');
+      const roomNames = Array.from(roomElements).map(roomInput => roomInput.value);
+
+      try {
+        const response = await fetch('/api/user/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            username,
+            email,
+            password,
+            address,
+            meterType,
+            installationDate,
+            roomNames
+          })
+        });
+
+        if (response.ok) {
+          alert('Signup successful');
+        } else {
+          const errorData = await response.json();
+          alert('Signup failed: ' + errorData.message);
+        }
+      } catch (error) {
+        console.error('Error during signup:', error);
+        alert('Signup failed: ' + error.message);
+      }
+    });
+  </script>
+</body>
+</html>

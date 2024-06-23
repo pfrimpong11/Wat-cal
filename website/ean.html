@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Popup</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap"
+    />
+    <link rel="stylesheet" href="./ean.css">
+</head>
+<body>
+    <div class="content">
+        <button class="logoutBtn" data-target="logout.html">Logout</button>
+        <button class="logoutBtn" data-target="anotherPage.html">Another Action</button>
+        <button class="logoutBtn" data-target="differentPage.html">Different Action</button>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="logout-popup" id="logoutPopup">
+        <p>Are you sure you want to proceed?</p>
+        <button id="logoutYes">Yes</button>
+        <button id="logoutNo">No</button>
+    </div>
+
+    <script>
+        document.querySelectorAll(".logoutBtn").forEach(button => {
+            button.addEventListener("click", function() {
+                const targetUrl = this.getAttribute("data-target");
+                document.getElementById("logoutPopup").classList.add("active");
+                document.getElementById("logoutPopup").setAttribute("data-target", targetUrl);
+                document.getElementById("overlay").classList.add("active");
+                document.querySelector('.content').classList.add('blur-background');
+            });
+        });
+
+        document.getElementById("overlay").addEventListener("click", function() {
+            document.getElementById("logoutPopup").classList.remove("active");
+            document.getElementById("overlay").classList.remove("active");
+            document.querySelector('.content').classList.remove('blur-background');
+        });
+
+        document.getElementById("logoutYes").addEventListener("click", function() {
+            const targetUrl = document.getElementById("logoutPopup").getAttribute("data-target");
+            window.location.href = targetUrl;
+        });
+
+        document.getElementById("logoutNo").addEventListener("click", function() {
+            document.getElementById("logoutPopup").classList.remove("active");
+            document.getElementById("overlay").classList.remove("active");
+            document.querySelector('.content').classList.remove('blur-background');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./EditProfile.css" />
+    <link
+      rel="stylesheet"
+      href="ht../other/tps://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="ht../other/tps://fonts.googleapis.com/css2?family=Lexend:wght@300;400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="edit-profile-page-desktop">
+      <section class="edit-profile-page-desktop-inner">
+        <div class="frame-parent">
+          <div class="navbar-wrapper">
+            <button class="navbar">
+              <div class="material-symbolsarrow-back-io" onclick="goBack()">
+                <img class="back-icon" alt="" src="./public/back.svg" />
+              </div>
+              <div class="profile-title">
+                <b class="edit-profile">Edit Profile</b>
+              </div>
+            </button>
+          </div>
+          <div class="frame-group">
+            <div class="frame-wrapper">
+              <div class="outer-circle-parent">
+                <div class="outer-circle"></div>
+                <div class="picdefault-wrapper">
+                  <img
+                    class="picdefault-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/avatar.png"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="name-email-field-parent">
+                <div class="name-email-field">
+                  <div class="name-email-input">
+                    <b class="username">Username</b>
+                    <b class="email">Email</b>
+                  </div>
+                </div>
+                <div class="user-details">
+                  <div class="rectangle-parent">
+                    <div class="frame-child"></div>
+                    <input
+                    class="melissa-peters"
+                    placeholder="Melissa Peters"
+                    type="text"
+                  />
+                  </div>
+                  <div class="user-email">
+                    <div class="rectangle-group">
+                      <div class="frame-item"></div>
+                      <input
+                      class="melpetersgmailcom"
+                      placeholder="melpeters@gmail.com"
+                      type="text"
+                    />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-container">
+                <div class="password-input-wrapper">
+                  <div class="password-input">
+                    <b class="enter-password">Enter password</b>
+                    <b class="confirm-password">Confirm password</b>
+                  </div>
+                </div>
+                <div class="password-visibility">
+                  <div class="password-icon-field">
+                    <div class="component-10">
+                      <div class="visibility-background"></div>
+                      <div class="password-value">
+                        <input
+                        class="visibility-state"
+                        placeholder="*********"
+                        type="password"
+                      />
+                      </div>
+                      <img class="eye-icon" alt="" src="./public/eye.svg" />
+                    </div>
+                    <div class="frame-div">
+                      <div class="date-of-birth-wrapper">
+                        <b class="date-of-birth">Date of Birth</b>
+                      </div>
+                      <div class="rectangle-container">
+                        <div class="frame-inner"></div>
+                        <input
+                        class="ddmmyyyy"
+                        placeholder="DD/MM/YYYY"
+                        type="text"
+                      />
+                      </div>
+                    </div>
+                    <div class="address-field">
+                      <div class="detail-types">
+                        <b class="house-address">House address</b>
+                      </div>
+                      <div class="group-div">
+                        <div class="rectangle-div"></div>
+                        <div class="optional-label">
+                            <input
+                            class="optional"
+                            placeholder="(Optional)"
+                            type="text"
+                          />
+                        </div>
+                        <img
+                          class="iconoutlinequestion"
+                          alt=""
+                          src="./public/question.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="additional-details">
+                    <div class="component-101">
+                      <div class="visibility-back"></div>
+                      <div class="meter-type-value">
+                        <input
+                        class="detail-state"
+                        placeholder="*********"
+                        type="password"
+                      />
+                      </div>
+                      <img class="eye-icon1" alt="" src="./public/eye.svg" />
+                    </div>
+                    <div class="details-input">
+                      <div class="password-fields">
+                        <b class="meter-serial-number">Meter_Serial_Number</b>
+                      </div>
+                      <div class="rectangle-parent1">
+                        <div class="frame-child1"></div>
+                        <input
+                        class="xxxxxxx"
+                        placeholder="131xxxxxxx"
+                        type="text"
+                      />
+                      </div>
+                    </div>
+                    <div class="details-input1">
+                      <div class="meter-type-wrapper">
+                        <b class="meter-type">Meter_type</b>
+                      </div>
+                      <div class="rectangle-parent2">
+                        <div class="frame-child2"></div>
+                        <input
+                        class="prepaidpostpaid"
+                        placeholder="Prepaid/Postpaid"
+                        type="text"
+                      />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="addroombtn-wrapper">
+                <button class="addroombtn" style="border: 0;">
+                  <img class="broom-icon" alt="" src="./public/broom.svg" />
+
+                  <div class="add-room-label">
+                    <div class="add-room">Add room</div>
+                  </div>
+                </button>
+              </div>
+              <div class="add-room-container"></div> <!-- Container for dynamically added rooms -->
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button class="button">
+              <div class="save-changes">Save changes</div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="footer-section">
+        <div class="social-links">
+          <div class="logo">
+            <img
+              class="logo-icon"
+              loading="lazy"
+              alt=""
+              src="./public/biglogo.svg"
+            />
+
+            <h3 class="watcal">WatCal</h3>
+          </div>
+        </div>
+        <div class="navigation-links">
+          <div class="links">
+            <div class="text-button" id="textButton">Home</div>
+            <div class="text-button1" id="textButton1">Help Desk</div>
+            <div class="text-button2" id="textButton2">About</div>
+            <div class="text-button3" id="textButton3">Security</div>
+          </div>
+        </div>
+        <div class="footer-dividers"></div>
+        <div class="social-links1">
+          <div class="icons">
+            <div class="button1">
+              <div class="social-button-content">
+                <img
+                  class="icon"
+                  loading="lazy"
+                  alt=""
+                  src="./public/mail.svg"
+                />
+              </div>
+              <div class="text-button4">manuelansah955@gmail.com</div>
+            </div>
+            <div class="button2">
+              <div class="icon-wrapper">
+                <img
+                  class="icon1"
+                  loading="lazy"
+                  alt=""
+                  src="./public/phone.svg"
+                />
+              </div>
+              <div class="text-button5">+233 59 829 6141</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-dividers1"></div>
+        <footer class="container1">
+          <div class="info-wrapper">
+            <div class="info">WatCal All Rights Reserved</div>
+          </div>
+          <div class="contact-icons">
+            <div class="button3">
+              <img
+                class="icon2"
+                loading="lazy"
+                alt=""
+                src="./public/facebook.svg"
+              />
+            </div>
+            <div class="button4">
+              <img
+                class="icon3"
+                loading="lazy"
+                alt=""
+                src="./public/twitter.svg"
+              />
+            </div>
+            <div class="button5">
+              <img
+                class="icon4"
+                loading="lazy"
+                alt=""
+                src="./public/linkedin.svg"
+              />
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="legal-info">
+              <!-- <div class="text-button6" id="textButton6">Privacy Policy</div> -->
+              <a href="/website/other/Privacy.html"class="text-button6" >Privacy Policy</a>
+              <div class="info-divider"></div>
+              <!-- <div class="text-button7" id="textButton7">Terms of Service</div> -->
+              <a href="/website/other/Terms.html" class="text-button7">Terms of Service</a>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </div>
+
+    <script>
+        function goBack() {
+      window.history.back();
+    }
+      var textButton1 = document.getElementById("textButton1");
+      if (textButton1) {
+        textButton1.addEventListener("click", function (e) {
+            window.location.href = "../other/Helpdesk.html";
+        });
+      }
+      
+      var textButton = document.getElementById("textButton");
+      if (textButton) {
+        textButton.addEventListener("click", function (e) {
+            window.location.href = "../other/Home.html";
+        });
+      }
+      
+      var textButton2 = document.getElementById("textButton2");
+      if (textButton2) {
+        textButton2.addEventListener("click", function (e) {
+            window.location.href = "../other/About.html"; 
+        });
+      }
+      
+      var textButton3 = document.getElementById("textButton3");
+      if (textButton3) {
+        textButton3.addEventListener("click", function (e) {
+            window.location.href = "../other/Security.html";
+        });
+      }
+      
+      /* var textButton6 = document.getElementById("textButton6");
+      if (textButton6) {
+        textButton6.addEventListener("click", function (e) {
+            window.location.href = "../other/Privacy.html";
+        });
+      }
+      
+      var textButton7 = document.getElementById("textButton7");
+      if (textButton7) {
+        textButton7.addEventListener("click", function (e) {
+            window.location.href = "../other/Terms.html";
+        });
+      } */
+      </script>
+      <script>
+        document.querySelector('.addroombtn').addEventListener('click', addRoom);
+  
+        let roomIndex = 1;
+  
+        function addRoom() {
+          const container = document.createElement('div');
+          container.className = 'room-container';
+  
+          const label = document.createElement('label');
+          label.className = 'room-label';
+          label.innerText = `Room ${roomIndex}`;
+  
+          const input = document.createElement('input');
+          input.className = 'room-input';
+          input.type = 'text';
+          input.placeholder = `Enter room name`;
+  
+          container.appendChild(label);
+          container.appendChild(input);
+  
+          document.querySelector('.add-room-container').appendChild(container);
+  
+          roomIndex++;
+        }
+       </script>
+  
+  </body>
+</html>

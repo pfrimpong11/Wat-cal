@@ -1,0 +1,1309 @@
+*{ margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+.back-icon {
+    height: 21.7px;
+    width: 12.8px;
+    position: relative;
+  }
+  .material-symbolsarrow-back-io:hover{
+    transition: .7s;
+    background-color: #06cc02;
+  }
+  .material-symbolsarrow-back-io {
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .edit-profile {
+    align-self: stretch;
+    position: relative;
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 300;
+    font-family: 'Lexend', sans-serif;
+    color: #fff;
+    text-align: left;
+  }
+  .navbar,
+  .navbar-wrapper,
+  .profile-title {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+  }
+  .profile-title {
+    width: 133px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 11.8px 0 0;
+  }
+  .navbar,
+  .navbar-wrapper {
+    flex-direction: row;
+  }
+  .navbar {
+    cursor: pointer;
+    border: 1px solid #262626;
+    padding: 4px 12px;
+    background-color: #1c1c1c;
+    width: 260px;
+    border-radius: 100px;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .navbar-wrapper {
+    width: 424.5px;
+    justify-content: center;
+    padding: 0 20px 71px;
+    max-width: 100%;
+  }
+  .outer-circle {
+    position: absolute;
+    top: 25.8px;
+    left: 16.8px;
+    border-radius: 50%;
+    width: 172.3px;
+    height: 185.2px;
+  }
+  .picdefault-icon {
+    height: 200px;
+    width: 200px;
+    position: relative;
+  }
+  .picdefault-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .outer-circle-parent {
+    height: 211px;
+    width: 201px;
+    position: relative;
+  }
+  .frame-wrapper {
+    width: 1107.8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .email,
+  .username {
+    width: 298px;
+    position: relative;
+    line-height: 87.52%;
+    display: inline-block;
+    flex-shrink: 0;
+    debug_commit: 69da668;
+  }
+  .email {
+    width: 178.8px;
+  }
+  .name-email-input {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 100%;
+    gap: 20px;
+  }
+  .frame-child,
+  .name-email-field {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .name-email-field {
+    width: 756.8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 14px;
+  }
+  .frame-child {
+    height: 54px;
+    width: 498px;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    display: none;
+  }
+  .melissa-peters {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-weight: 500;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    height: 19.6px;
+    flex: 1;
+    line-height: 87.52%;
+    color: #BFBFBF;
+    text-align: left;
+    display: inline-block;
+    min-width: 250px;
+    padding: 0;
+    z-index: 1;
+  }
+  .rectangle-parent {
+    flex: 0.9076;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 17px 22px;
+    min-width: 324px;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  .frame-item,
+  .melpetersgmailcom {
+    position: relative;
+    max-width: 100%;
+  }
+  .frame-item {
+    height: 54px;
+    width: 498px;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    display: none;
+  }
+  .melpetersgmailcom {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-weight: 500;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    height: 19.6px;
+    flex: 1;
+    line-height: 87.52%;
+    color: #BFBFBF;
+    text-align: left;
+    display: inline-block;
+    min-width: 250px;
+    padding: 0;
+    z-index: 1;
+  }
+  .rectangle-group {
+    align-self: stretch;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    flex-direction: row;
+    padding: 17px 22px;
+  }
+  .name-email-field-parent,
+  .rectangle-group,
+  .user-details,
+  .user-email {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .user-email {
+    flex: 1;
+    flex-direction: column;
+    padding: 1px 0 0;
+    box-sizing: border-box;
+    min-width: 324px;
+  }
+  .name-email-field-parent,
+  .user-details {
+    align-self: stretch;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .name-email-field-parent {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .confirm-password,
+  .enter-password {
+    width: 290.9px;
+    position: relative;
+    line-height: 87.52%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .password-input,
+  .password-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .password-input {
+    flex: 1;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .password-input-wrapper {
+    width: 868.9px;
+    justify-content: flex-start;
+    padding: 0 14px;
+    box-sizing: border-box;
+  }
+  .visibility-background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+  }
+  .visibility-state {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 17px;
+    left: 23px;
+    height: 20.3px;
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6.3px 2px;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #BFBFBF;
+  }
+  .password-value {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px 0 0;
+    box-sizing: border-box;
+    min-width: 254px;
+    max-width: 100%;
+  }
+  .eye-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .component-10 {
+    align-self: stretch;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 17px 27px;
+    box-sizing: border-box;
+    position: relative;
+    gap: 33px;
+    max-width: 100%;
+  }
+  .date-of-birth {
+    flex: 1;
+    position: relative;
+    line-height: 87.52%;
+  }
+  .date-of-birth-wrapper {
+    width: 318.9px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 14px;
+    box-sizing: border-box;
+  }
+  .ddmmyyyy,
+  .frame-inner {
+    position: relative;
+    max-width: 100%;
+  }
+  .frame-inner {
+    height: 54px;
+    width: 498px;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    display: none;
+  }
+  .ddmmyyyy {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-weight: 500;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    height: 19.6px;
+    flex: 1;
+    line-height: 87.52%;
+    color: #BFBFBF;
+    text-align: left;
+    display: inline-block;
+    min-width: 250px;
+    padding: 0;
+    z-index: 1;
+  }
+  .frame-div,
+  .rectangle-container {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .rectangle-container {
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    flex-direction: row;
+    padding: 17px 23px;
+  }
+  .frame-div {
+    flex-direction: column;
+    gap: 4.5px;
+  }
+  .house-address {
+    flex: 1;
+    position: relative;
+    line-height: 87.52%;
+  }
+  .detail-types,
+  .rectangle-div {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .detail-types {
+    width: 339.2px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 14px;
+  }
+  .rectangle-div {
+    height: 54px;
+    width: 498px;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    display: none;
+  }
+  .optional {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-weight: 500;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    height: 19.6px;
+    flex: 1;
+    line-height: 87.52%;
+    color: #BFBFBF;
+    text-align: left;
+    display: inline-block;
+    min-width: 250px;
+    padding: 0;
+    z-index: 1;
+  }
+  .optional-label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4.3px 0 0;
+    box-sizing: border-box;
+    min-width: 256px;
+    max-width: 100%;
+  }
+  .iconoutlinequestion {
+    height: 24.5px;
+    width: 34.3px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .address-field,
+  .group-div,
+  .password-icon-field {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .group-div {
+    align-self: stretch;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    flex-direction: row;
+    padding: 13px 23px;
+    gap: 20px;
+  }
+  .address-field,
+  .password-icon-field {
+    flex-direction: column;
+  }
+  .address-field {
+    align-self: stretch;
+    gap: 5px;
+  }
+  .password-icon-field {
+    flex: 1;
+    gap: 50.5px;
+    min-width: 324px;
+  }
+  .visibility-back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+  }
+  .detail-state {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 17px;
+    left: 23px;
+    height: 20.3px;
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6.3px 2px;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #BFBFBF;
+  }
+  .meter-type-value {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px 0 0;
+    box-sizing: border-box;
+    min-width: 254px;
+    max-width: 100%;
+  }
+  .eye-icon1 {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .component-101 {
+    align-self: stretch;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 17px 27px;
+    box-sizing: border-box;
+    position: relative;
+    gap: 33px;
+    max-width: 100%;
+  }
+  .meter-serial-number {
+    flex: 1;
+    position: relative;
+    line-height: 87.52%;
+    display: inline-block;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .password-fields {
+    width: 448.1px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 16px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .frame-child1,
+  .xxxxxxx {
+    position: relative;
+    max-width: 100%;
+  }
+  .frame-child1 {
+    height: 54px;
+    width: 498px;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    display: none;
+  }
+  .xxxxxxx {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-weight: 500;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    height: 19.6px;
+    flex: 1;
+    line-height: 87.52%;
+    color: #BFBFBF;
+    text-align: left;
+    display: inline-block;
+    min-width: 250px;
+    padding: 0;
+    z-index: 1;
+  }
+  .details-input,
+  .rectangle-parent1 {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .rectangle-parent1 {
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    flex-direction: row;
+    padding: 17px 22px;
+  }
+  .details-input {
+    flex-direction: column;
+    gap: 5.5px;
+  }
+  .meter-type {
+    flex: 1;
+    position: relative;
+    line-height: 87.52%;
+  }
+  .meter-type-wrapper {
+    width: 323.9px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 16px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .frame-child2,
+  .prepaidpostpaid {
+    position: relative;
+    max-width: 100%;
+  }
+  .frame-child2 {
+    height: 54px;
+    width: 498px;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    display: none;
+  }
+  .prepaidpostpaid {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-weight: 500;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    height: 19.6px;
+    flex: 1;
+    line-height: 87.52%;
+    color: #BFBFBF;
+    text-align: left;
+    display: inline-block;
+    min-width: 250px;
+    padding: 0;
+    z-index: 1;
+  }
+  .rectangle-parent2 {
+    align-self: stretch;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 17px 22px;
+    max-width: 100%;
+  }
+  .details-input1 {
+    align-self: stretch;
+    flex-direction: column;
+    gap: 6.5px;
+  }
+  .additional-details,
+  .details-input1,
+  .frame-container,
+  .password-visibility {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .additional-details {
+    flex: 1;
+    flex-direction: column;
+    gap: 50px;
+    min-width: 324px;
+  }
+  .frame-container,
+  .password-visibility {
+    align-self: stretch;
+  }
+  .password-visibility {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .frame-container {
+    flex-direction: column;
+    gap: 5.5px;
+  }
+  .broom-icon {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 25px;
+  }
+  .add-room {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    min-width: 67px;
+    font-size: 16px;
+  }
+  .add-room-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2px 0 0;
+  }
+  .addroombtn,
+  .addroombtn-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .addroombtn {
+    border-radius: 20px;
+    background-color: #bfbfbf;
+    overflow: hidden;
+    justify-content: flex-start;
+    padding: 9.5px 60px;
+    gap: 2px;
+  }
+  .addroombtn:hover{
+    background-color: #6f6e6e;
+    transition: .7s;
+  }
+  .addroombtn-wrapper {
+    align-self: stretch;
+    justify-content: center;
+    padding: 0 1px 0 0;
+    text-align: center;
+    font-size: 14px;
+    color: #1a1a1a;
+    font-family: Lexend;
+    cursor: pointer;
+  }
+  .container,
+  .frame-group {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    max-width: 100%;
+  }
+  .container {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    align-items: flex-start;
+    padding: 50px 56px;
+    box-sizing: border-box;
+  }
+  .frame-group {
+    align-items: flex-end;
+  }
+  .save-changes {
+    width: 123.5px;
+    position: relative;
+    font-size: 18px;
+    line-height: 87.52%;
+    font-weight: 500;
+    font-family: 'Lexend', sans-serif;
+    color: #1a1a1a;
+    text-align: center;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .button,
+  .button-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .button {
+    cursor: pointer;
+    border: 0;
+    padding: 19px 20px;
+    background-color: #06cc02;
+    width: 400px;
+    border-radius: 63px;
+    display: flex;
+    align-items: flex-start;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  .button:hover {
+    transition: .7s;
+    background-color: #1fe61c;
+  }
+  .button-wrapper {
+    align-self: stretch;
+    padding: 0 21px 0 20px;
+  }
+  .button-wrapper,
+  .edit-profile-page-desktop-inner,
+  .frame-parent {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .frame-parent {
+    width: 1159.5px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  .edit-profile-page-desktop-inner {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 16px;
+    color: #bfbfbf;
+    font-family: 'Lexend', sans-serif;
+  }
+  .logo-icon {
+    height: 36px;
+    width: 36px;
+    position: relative;
+    object-fit: contain;
+    min-height: 36px;
+  }
+  .watcal {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    line-height: 150%;
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-block;
+    min-width: 86px;
+  }
+  .logo,
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .logo {
+    justify-content: flex-start;
+    gap: 6px;
+  }
+  .social-links {
+    width: 1116px;
+    justify-content: center;
+    max-width: 100%;
+    font-size: 24px;
+    color: #fff;
+  }
+  .text-button {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    min-width: 47px;
+    cursor: pointer;
+  }
+  .text-button1,
+  .text-button2,
+  .text-button3 {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .text-button1 {
+    min-width: 79px;
+    white-space: nowrap;
+  }
+  .text-button2,
+  .text-button3 {
+    min-width: 47px;
+  }
+  .text-button3 {
+    min-width: 64px;
+  }
+  .links,
+  .navigation-links {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .links {
+    justify-content: flex-start;
+    gap: 26px;
+  }
+  .navigation-links {
+    width: 1116px;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .footer-dividers {
+    width: 1116px;
+    height: 1px;
+    position: relative;
+    border-top: 1px solid #262626;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .social-button-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2px 0 0;
+  }
+  .text-button4 {
+    position: relative;
+    line-height: 150%;
+    white-space: nowrap;
+  }
+  .button1 {
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+  .icon1 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2px 0 0;
+  }
+  .text-button5 {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    min-width: 129px;
+    white-space: nowrap;
+  }
+  .button2,
+  .icons,
+  .social-links1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .button2 {
+    border-radius: 6px;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+  .icons,
+  .social-links1 {
+    max-width: 100%;
+  }
+  .icons {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .social-links1 {
+    width: 1116px;
+    justify-content: center;
+  }
+  .footer-dividers1 {
+    width: 1116px;
+    height: 1px;
+    position: relative;
+    border-top: 1px solid #262626;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .info {
+    position: relative;
+    line-height: 150%;
+    font-weight: 300;
+  }
+  .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 0 0;
+  }
+  .icon2 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .button3 {
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    background-color: #06cc02;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 14px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .icon3 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .button4 {
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    background-color: #06cc02;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 14px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .icon4 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .button5,
+  .contact-icons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .button5 {
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    background-color: #06cc02;
+    flex-direction: column;
+    padding: 14px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .contact-icons {
+    flex-direction: row;
+    gap: 14px;
+  }
+  .text-button6 {
+    position: relative;
+    line-height: 150%;
+    font-weight: 300;
+    display: inline-block;
+    min-width: 105px;
+    cursor: pointer;
+    color: #bfbfbf;
+    text-decoration: none;
+  }
+  .info-divider {
+    height: 25px;
+    width: 1px;
+    position: relative;
+    border-right: 1px solid #b3b3b3;
+    box-sizing: border-box;
+  }
+  .text-button7 {
+    position: relative;
+    line-height: 150%;
+    font-weight: 300;
+    display: inline-block;
+    min-width: 125px;
+    cursor: pointer;
+    color: #bfbfbf;
+    text-decoration: none;
+  }
+  .contact-info,
+  .container1,
+  .legal-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .legal-info {
+    height: 24px;
+    flex-direction: row;
+    gap: 11.5px;
+  }
+  .contact-info,
+  .container1 {
+    flex-direction: column;
+    padding: 12px 0 0;
+  }
+  .container1 {
+    width: 1116px;
+    border-radius: 100px;
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6px 30px 6px 16px;
+    gap: 20px;
+    max-width: 100%;
+    text-align: left;
+    font-size: 16px;
+    color: #b3b3b3;
+    font-family: Lexend;
+  }
+  .edit-profile-page-desktop,
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .footer-section {
+    align-self: stretch;
+    background-color: #1c1c1c;
+    border-top: 1px solid #000;
+    align-items: center;
+    padding: 98px 20px 50px;
+    gap: 49.6px;
+    max-width: 100%;
+    text-align: left;
+    font-size: 16px;
+    color: #e3e3e8;
+    font-family: 'Lexend', sans-serif;
+  }
+  .edit-profile-page-desktop {
+    width: 100%;
+    position: relative;
+    background-color: #1a1a1a;
+    overflow: hidden;
+    align-items: flex-end;
+    padding: 50px 0 0;
+    gap: 125.5px;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  @media screen and (max-width: 1125px) {
+    .container {
+      padding-left: 28px;
+      padding-right: 28px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .rectangle-parent,
+    .user-email {
+      flex: 1;
+    }
+    .container1,
+    .user-details {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .name-email-input {
+      flex-wrap: wrap;
+    }
+    .user-details {
+      gap: 25px;
+    }
+    .password-input {
+      flex-wrap: wrap;
+    }
+    .component-10 {
+      gap: 16px;
+    }
+    .component-10,
+    .group-div {
+      flex-wrap: wrap;
+    }
+    .password-icon-field {
+      gap: 25px;
+    }
+    .component-101 {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .additional-details,
+    .password-visibility {
+      gap: 25px;
+    }
+    .container {
+      gap: 25px;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      box-sizing: border-box;
+    }
+    .frame-group {
+      gap: 25px;
+    }
+    .footer-section {
+      gap: 25px;
+      padding-top: 64px;
+      padding-bottom: 32px;
+      box-sizing: border-box;
+    }
+    .edit-profile-page-desktop {
+      gap: 63px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .edit-profile {
+      font-size: 16px;
+      line-height: 14px;
+    }
+    .watcal {
+      font-size: 19px;
+      line-height: 29px;
+    }
+    .icons {
+      flex-wrap: wrap;
+    }
+    .edit-profile-page-desktop {
+      gap: 31px;
+    }
+  }
+  
+  .room-container {
+    width: 360px;
+    margin-top: 0;
+    padding: 10px;
+    border:0;
+    border-radius: 4px;
+    background-color: transparent;
+    margin-left: 340px;
+  }
+  
+  .room-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    text-align: center;
+  }
+  
+  .room-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-weight: 500;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    height: 50px;
+    flex: 1;
+    line-height: 87.52%;
+    color: #BFBFBF;
+    text-align: left;
+    display: inline-block;
+    min-width: 250px;
+    padding: 0;
+    z-index: 1;      
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }

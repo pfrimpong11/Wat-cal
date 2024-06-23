@@ -1,0 +1,27 @@
+// routes/tenantRoutes.js
+const express = require('express');
+const { registerTenant, loginTenant } = require('../controllers/tenantController');
+
+const router = express.Router();
+
+router.post('/tenantSignup', registerTenant);
+router.post('/tenantLogin', loginTenant);
+
+router.get('/tenantIsAuthenticated', (req, res) => {
+    if (req.session.tenant) {
+        res.status(200).json({ isAuthenticated: true, tenant: req.session.tenant });
+    } else {
+        res.status(200).json({ isAuthenticated: false });
+    }
+    });
+
+router.post('/tenantLogout', (req, res) => {
+    req.session.destroy(err => {
+        if (err) {
+        return res.status(500).json({ msg: 'Logout failed' });
+        }
+        res.status(200).json({ msg: 'Logout successful' });
+    });
+});
+
+module.exports = router;

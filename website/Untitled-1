@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="desktop-1">
+      <header class="navbar">
+        <div class="navbar-inner">
+          <div class="logo-parent">
+            <img
+              class="logo-icon"
+              loading="lazy"
+              alt=""
+              src="./public/logo@2x.png"
+            />
+
+            <div class="watcal">WatCal</div>
+          </div>
+        </div>
+        <nav class="navbar-child">
+          <nav class="text-button-parent">
+            <div class="text-button" id="textButton">Home</div>
+            <div class="text-button1" id="textButton1">Help Desk</div>
+            <div class="text-button2" id="textButton2">About</div>
+            <div class="text-button3" id="textButton3">Security</div>
+            <div class="contact-us" id="contactUsText">Contact Us</div>
+          </nav>
+        </nav>
+        <div class="frame-parent">
+          <div class="frame-wrapper">
+            <button class="text-button-wrapper">
+              <div class="text-button4">Sign Up</div>
+            </button>
+          </div>
+          <button class="button" id="button">
+            <div class="text">Login</div>
+          </button>
+        </div>
+      </header>
+    </div>
+
+    <script>
+      var textButton = document.getElementById("textButton");
+      if (textButton) {
+        textButton.addEventListener("click", function (e) {
+          // Please sync "Home Page - Desktop" to the project
+        });
+      }
+      
+      var textButton1 = document.getElementById("textButton1");
+      if (textButton1) {
+        textButton1.addEventListener("click", function (e) {
+          // Please sync "Help Page - Desktop" to the project
+        });
+      }
+      
+      var textButton2 = document.getElementById("textButton2");
+      if (textButton2) {
+        textButton2.addEventListener("click", function (e) {
+          // Please sync "About Page - Desktop" to the project
+        });
+      }
+      
+      var textButton3 = document.getElementById("textButton3");
+      if (textButton3) {
+        textButton3.addEventListener("click", function (e) {
+          // Please sync "Security Page - Desktop" to the project
+        });
+      }
+      
+      var contactUsText = document.getElementById("contactUsText");
+      if (contactUsText) {
+        contactUsText.addEventListener("click", function (e) {
+          // Please sync "contact Page - Desktop" to the project
+        });
+      }
+      
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          // Please sync "Login Page - Desktop" to the project
+        });
+      }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+*{ margin: 0;
+    border: o;
+    box-sizing: border-box;
+}
+.aslandlord,
+.astenant {
+  position: relative;
+  line-height: 150%;
+  font-weight: 300;
+  cursor: pointer;
+}
+.aslandlord:hover,
+.astenant:hover{
+    transition: 0.7s;
+  color: #06cc02;
+}
+.astenant {
+  width: 145px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.aslandlord {
+  flex: 1;
+  white-space: pre-wrap;
+}
+.signupllt,
+.userroles {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.userroles {
+  flex: 1;
+  border-left: 1px solid #06cc02;
+}
+.signupllt {
+  width: 369px;
+  position: absolute;
+  border-radius: 88px;
+  background-color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  gap: 10px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-family: Lexend;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%,-50%);
+}

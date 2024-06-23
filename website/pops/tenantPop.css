@@ -1,0 +1,320 @@
+*{ margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.avatar {
+    height: 107.3px;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .popup-wrapper-inner {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 62px;
+  }
+  .userkind {
+    align-self: stretch;
+    position: relative;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: Lexend;
+    text-align: center;
+  }
+  .usergmailcom {
+    flex: 1;
+    position: relative;
+    letter-spacing: 0.25px;
+    line-height: 17.8px;
+    white-space: nowrap;
+  }
+  .usergmailcom-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 13px;
+    text-align: center;
+    font-size: 9px;
+    font-family: Lexend;
+  }
+  .meneuver {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #06cc02;
+    box-sizing: border-box;
+  }
+  .welcomeHome,
+  .U {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .U {
+    align-self: stretch;
+    padding: 0 0 12px;
+  }
+  .welcomeHome {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .board {
+    position: relative;
+    text-decoration: line-through;
+    line-height: 87.52%;
+  }
+  .board-wrapper,
+  .boardbtn,
+  .U1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .board-wrapper {
+    flex-direction: column;
+    padding: 1px 0 0;
+  }
+  .boardbtn,
+  .U1 {
+    flex-direction: row;
+  }
+  .boardbtn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .U1 {
+    padding: 0 0 13px;
+  }
+  .U1:hover,
+  .setbtn-wrapper:hover,
+  .U4:hover{
+    transition: 0.7s;
+    color: #06cc02;
+  }
+  .U6:hover{
+    transition: 0.7s;
+    color: #FF0505;
+  }
+  .meneuver1 {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #06cc02;
+    box-sizing: border-box;
+  }
+  .U2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .menu_icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 20px;
+  }
+  .sets {
+    position: relative;
+    line-height: 87.52%;
+  }
+  .setbtn,
+  .setbtn-wrapper,
+  .sets-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sets-wrapper {
+    flex-direction: column;
+    padding: 1px 0 0;
+  }
+  .setbtn,
+  .setbtn-wrapper {
+    flex-direction: row;
+  }
+  .setbtn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .setbtn-wrapper {
+    padding: 0 0 13px;
+  }
+  .meneuver2 {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #06cc02;
+    box-sizing: border-box;
+  }
+  .his-icon,
+  .U3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .U3 {
+    align-self: stretch;
+    align-items: flex-start;
+    padding: 0 0 12px;
+  }
+  .his-icon {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    overflow: hidden;
+    flex-shrink: 0;
+    align-items: flex-end;
+  }
+  .his {
+    position: relative;
+    line-height: 87.52%;
+  }
+  .his-wrapper,
+  .hisbtn,
+  .U4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .his-wrapper {
+    flex-direction: column;
+    padding: 1px 0 0;
+  }
+  .hisbtn,
+  .U4 {
+    flex-direction: row;
+  }
+  .hisbtn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .U4 {
+    padding: 0 0 13px;
+  }
+  .meneuver3 {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #06cc02;
+    box-sizing: border-box;
+  }
+  .U5 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .sign-out-alt-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 20px;
+  }
+  .Out {
+    position: relative;
+    line-height: 87.52%;
+  }
+  .Out-btn,
+  .U6 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .Out-btn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .U6 {
+    padding: 0 0 13px;
+  }
+  .meneuver4 {
+    align-self: stretch;
+    height: 1px;
+    position: relative;
+    border-top: 1px solid #06cc02;
+    box-sizing: border-box;
+  }
+  .userkind-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 20px;
+    color: #fff;
+    font-family: Inter;
+  }
+  .t-b {
+    position: relative;
+    line-height: 150%;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  .line {
+    height: 22px;
+    width: 1px;
+    position: relative;
+    border-right: 1px solid #b3b3b3;
+    box-sizing: border-box;
+  }
+  .t-b1 {
+    position: relative;
+    line-height: 150%;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  .under,
+  .popup-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .under {
+    height: 21px;
+    flex-direction: row;
+    gap: 11.5px;
+  }
+  .popup-wrapper {
+    width: 16%;
+    position: absolute;
+    border-radius: 20px;
+    background-color: #1c1c1c;
+    border-right: 1px solid #06cc02;
+    border-left: 1px solid #06cc02;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 39px 21px;
+    gap: 12px;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 14px;
+    color: #b3b3b3;
+    font-family: Lexend;
+    left: 8%;
+    top: 11%;
+  }

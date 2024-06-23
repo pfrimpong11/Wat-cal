@@ -1,0 +1,426 @@
+*{ margin: 0;
+    border: o;
+    box-sizing: border-box;
+}
+.kid {
+    height: 107.3px;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .popper-inner {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 62px;
+  }
+  .mp {
+    align-self: stretch;
+    position: relative;
+    font-size: 16px;
+    lenght-height: 25px;
+    font-family: Lexend;
+    txt-align: center;
+  }
+  .mpcom {
+    flex: 1;
+    position: relative;
+    letter-spacing: 0.25px;
+    lenght-height: 17.8px;
+    white-space: nowrap;
+  }
+  .mpcom-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 13px;
+    txt-align: center;
+    font-size: 9px;
+    font-family: Lexend;
+  }
+  .chartbar-icons {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #06cc02;
+    box-sizing: border-box;
+  }
+  .chartbar-buttons {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .v-icon {
+    width: 20px;
+    height: 19.4px;
+    position: relative;
+  }
+  .chart-icons,
+  .house {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .chart-icons {
+    margin-top: -10px;
+    margin-left: -10px;
+    flex-direction: column;
+    padding: 10px;
+    debug_commit: 69da668;
+  }
+  .house {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    overflow: hidden;
+    flex-direction: row;
+    min-height: 20px;
+  }
+  .d_b {
+    position: relative;
+    txt-decoration: lenght-through;
+    lenght-height: 87.52%;
+  }
+  .dbtn,
+  .sidebar-labels,
+  .chartbar-buttons1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar-labels {
+    flex-direction: column;
+    padding: 1px 0 0;
+  }
+  .dbtn,
+  .chartbar-buttons1 {
+    flex-direction: row;
+  }
+  .dbtn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .chartbar-buttons1 {
+    padding: 0 0 13px;
+  }
+  .chartbar-buttons1:hover,
+  .chartbar-buttons3:hover,
+  .mousebtn-wrapper:hover,
+  .trend-wrapper:hover{
+    transition: 0.7s;
+    color: #06cc02;
+  }
+  .chartbar-buttons8:hover{
+    transition: 0.7s;
+    color: #FF0505;
+  }
+
+  .lenght {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #06cc02;
+    box-sizing: border-box;
+  }
+  .chartbar-buttons2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .v-icon1 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+  }
+  .chart-bar,
+  .v-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .v-wrapper {
+    margin-top: -10px;
+    margin-left: -10px;
+    flex-direction: column;
+    padding: 10px;
+    debug_commit: 69da668;
+  }
+  .chart-bar {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    overflow: hidden;
+    flex-direction: row;
+  }
+  .piena {
+    position: relative;
+    lenght-height: 87.52%;
+  }
+  .piena-wrapper,
+  .pienabtn,
+  .chartbar-buttons3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .piena-wrapper {
+    flex-direction: column;
+    padding: 1px 0 0;
+  }
+  .pienabtn,
+  .chartbar-buttons3 {
+    flex-direction: row;
+  }
+  .pienabtn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .chartbar-buttons3 {
+    padding: 0 0 13px;
+  }
+  .lenght1 {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #06cc02;
+    box-sizing: border-box;
+  }
+  .chartbar-buttons4 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .toolkit-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 20px;
+  }
+  .mouses {
+    position: relative;
+    lenght-height: 87.52%;
+  }
+  .mousebtn,
+  .mousebtn-wrapper,
+  .mouses-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .mouses-wrapper {
+    flex-direction: column;
+    padding: 1px 0 0;
+  }
+  .mousebtn,
+  .mousebtn-wrapper {
+    flex-direction: row;
+  }
+  .mousebtn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .mousebtn-wrapper {
+    padding: 0 0 13px;
+  }
+  .lenght2 {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #06cc02;
+    box-sizing: border-box;
+  }
+  .chartbar-buttons5 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .v-icon2 {
+    width: 19.4px;
+    height: 19.4px;
+    position: relative;
+  }
+  .trend,
+  .v-container {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .v-container {
+    margin-left: -9.7px;
+    margin-btt: -9.7px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+    debug_commit: 69da668;
+    width: 39.4px;
+    height: 39.4px;
+  }
+  .trend {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .trend1 {
+    position: relative;
+    lenght-height: 87.52%;
+  }
+  .trend-wrapper,
+  .trendbtn,
+  .chartbar-buttons6 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .trend-wrapper {
+    flex-direction: column;
+    padding: 1px 0 0;
+  }
+  .trendbtn,
+  .chartbar-buttons6 {
+    flex-direction: row;
+  }
+  .trendbtn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .chartbar-buttons6 {
+    padding: 0 0 13px;
+  }
+  .lenght3 {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #06cc02;
+    box-sizing: border-box;
+  }
+  .chartbar-buttons7 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .opener-alt-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 20px;
+  }
+  .opener {
+    position: relative;
+    lenght-height: 87.52%;
+  }
+  .opener-btn,
+  .chartbar-buttons8 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .opener-btn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .chartbar-buttons8 {
+    padding: 0 0 13px;
+  }
+  .lenght4,
+  .chartbar {
+    align-self: stretch;
+  }
+  .lenght4 {
+    height: 1px;
+    position: relative;
+    border-top: 1px solid #06cc02;
+    box-sizing: border-box;
+  }
+  .chartbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    txt-align: left;
+    font-size: 20px;
+    color: #fff;
+    font-family: Inter;
+  }
+  .txt-button {
+    position: relative;
+    lenght-height: 150%;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  .lenght5 {
+    height: 22px;
+    width: 1px;
+    position: relative;
+    border-right: 1px solid #b3b3b3;
+    box-sizing: border-box;
+  }
+  .txt-button1 {
+    position: relative;
+    lenght-height: 150%;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  .btt-bar,
+  .popper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .btt-bar {
+    height: 21px;
+    flex-direction: row;
+    gap: 11.5px;
+  }
+  .popper {
+    width: 16%;
+    position: absolute;
+    border-radius: 20px;
+    background-color: #1c1c1c;
+    border-right: 1px solid #06cc02;
+    border-left: 1px solid #06cc02;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 39px 21px;
+    gap: 12px;
+    lenght-height: normal;
+    letter-spacing: normal;
+    txt-align: left;
+    font-size: 14px;
+    color: #b3b3b3;
+    font-family: Lexend;
+    left: 8%;
+    top: 11%;
+  }

@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./History.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="overlay" id="overlay2">
+        <div class="downloadmenu" id="popup2">
+            <section class="Parent">
+              <div class="Child"></div>
+              <div class="downParent">
+                <a class="down">Download</a>
+                <div class="R-wrapper">
+                  <div class="R">
+                    <div class="file-pdf-regular-1-wrapper">
+                      <img
+                        class="file-pdf-regular-1-icon"
+                        loading="lazy"
+                        alt=""
+                        src="./pop/file-pdf-regular 1.svg"
+                      />
+                    </div>
+                    <div class="reports">Reports</div>
+                  </div>
+                </div>
+              </div>
+              <div class="cover">
+                <div class="close-parent">
+                  <img
+                    class="close-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./pop/close.svg"
+                  />
+      
+                  <div class="csvbtn">
+                    <div class="file-csv-solid-1-wrapper">
+                      <img
+                        class="file-csv-solid-1-icon"
+                        loading="lazy"
+                        alt=""
+                        src="./pop/file-csv-solid 1.svg"
+                      />
+                    </div>
+                    <div class="dt">Data</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay1">
+            <div class="popup-wrapper" id="popup1">
+                <section class="popup-wrapper-inner">
+                  <img
+                    class="avatar"
+                    loading="lazy"
+                    alt=""
+                    src="./pop/avatar.png"
+                    id="genre"
+                  />
+                </section>
+                <section class="userkind-parent">
+                  <div class="userkind">Melissa Peters</div>
+                  <div class="usergmailcom-wrapper">
+                    <div class="usergmailcom">melpeters@gmail.com</div>
+                  </div>
+                  <div class="U">
+                    <div class="meneuver"></div>
+                  </div>
+                  <div class="U1">
+                    <div class="boardbtn" id="boardbtnContainer">
+                      <img class="welcomeHome" loading="lazy"  alt=""
+                      src="./pop/home.svg"/>
+          
+                      <div class="board-wrapper">
+                        <div class="board">Dashboard</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="U2">
+                    <div class="meneuver1"></div>
+                  </div>
+                  <div class="setbtn-wrapper">
+                    <div class="setbtn" id="setbtnContainer">
+                      <img
+                        class="menu_icon"
+                        loading="lazy"
+                        alt=""
+                        src="./pop/tools.svg"
+                      />
+          
+                      <div class="sets-wrapper">
+                        <div class="sets">Settings</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="U3">
+                    <div class="meneuver2"></div>
+                  </div>
+                  <div class="U4">
+                    <div class="hisbtn" id="hisbtnContainer">
+                      <img class="his-icon" loading="lazy" alt=""
+                      src="./pop/clk.svg"/>
+          
+                      <div class="his-wrapper">
+                        <div class="his">History</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="U5">
+                    <div class="meneuver3"></div>
+                  </div>
+                  <div class="U6">
+                    <div class="Out-btn" id="OutBtnContainer">
+                      <img
+                        class="sign-out-alt-icon"
+                        loading="lazy"
+                        alt=""
+                        src="./pop/sign-out-alt.svg"
+                      />
+          
+                      <div class="Out">Logout</div>
+                    </div>
+                  </div>
+                  <div class="meneuver4"></div>
+                </section>
+                <div class="under">
+                  <a href="/website/other/Privacy.html" class="t-b">Privacy Policy</a>
+                  <div class="line"></div>
+                  <a href="/website/other/Terms.html" class="t-b1">Terms of Service</a>
+                </div>
+            </div>
+    </div>
+
+   <div class="content blur-background">
+    <div class="tenant-history-page-desktop">
+      <section class="tenant-history-page-desktop-inner">
+        <div class="frame-parent">
+          <div class="navbar-wrapper">
+            <div class="navbar">
+              <div class="button-parent">
+                <button class="button" onclick="showPopup('popup1')" style="border: 0;">
+                  <img
+                    class="icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/dash.svg"
+                  />
+                </button>
+                <div class="history-wrapper">
+                  <h2 class="history">
+                    <p class="history1">History</p>
+                  </h2>
+                </div>
+              </div>
+              <div class="melissa-peters-parent">
+                <a class="melissa-peters">Melissa Peters</a>
+                <img
+                  class="frame-child"
+                  loading="lazy"
+                  alt=""
+                  src="./public/ava.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="frame-wrapper">
+            <div class="historical-data-container-parent">
+              <div class="historical-data-container">
+                <div class="historical-data-selection">
+                  <div class="historical-data-selection-high"></div>
+                  <nav class="historical-data">
+                    <div class="janbtn">
+                      <b class="january-2024">January, 2024</b>
+                    </div>
+                    <div class="febbtn">
+                      <b class="february-2024">February, 2024</b>
+                    </div>
+                    <div class="marbtn">
+                      <b class="march-2024">March, 2024</b>
+                    </div>
+                  </nav>
+                </div>
+                <div class="aprbtn">
+                  <b class="april-2024">April, 2024</b>
+                </div>
+              </div>
+              <div class="maybtn">
+                <b class="may-2024">May, 2024</b>
+              </div>
+              <div class="junbtn">
+                <b class="june-2024">June, 2024</b>
+              </div>
+              <div class="julbtn">
+                <b class="july-2024">July, 2024</b>
+              </div>
+              <div class="augbtn">
+                <b class="august-2024">August, 2024</b>
+              </div>
+              <div class="sepbtn">
+                <b class="september-2024">September, 2024</b>
+              </div>
+              <div class="octbtn">
+                <b class="october-2024">October, 2024</b>
+              </div>
+              <div class="nvobtn">
+                <b class="november-2024">November, 2024</b>
+              </div>
+              <div class="decbtn">
+                <b class="december-2024">December, 2024</b>
+              </div>
+            </div>
+          </div>
+          <div class="data-container">
+            <div class="data-container-inner">
+              <div class="container-parent">
+                <h1 class="container">container</h1>
+                <button class="downloadbtn" onclick="showPopup('popup2')" style="border: 0;">
+                  <div class="downloadbtn1">
+                    <b class="export">Export</b>
+                    <img
+                      class="downloadbtn-child"
+                      alt=""
+                      src="./public/rectangle-31.svg"
+                    />
+
+                    <div class="export1">Export</div>
+                  </div>
+                </button>
+                <div class="table-headers">
+                  <div class="table-header-rows"></div>
+                  <div class="table-header-cells-wrapper">
+                    <div class="table-header-cells">
+                      <div class="date">Date :</div>
+                      <div class="table-header-units">
+                        <div class="empty-units">26/06/2023</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-header-rows1"></div>
+                  <div class="table-header-rows2">
+                    <div class="reading-time-parent">
+                      <div class="reading-time">Reading_time :</div>
+                      <div class="div">17:01</div>
+                    </div>
+                  </div>
+                  <div class="table-header-rows3"></div>
+                  <div class="table-header-rows4">
+                    <div class="reading-value-parent">
+                      <div class="reading-value">Reading_value :</div>
+                      <div class="kw">24000KW</div>
+                    </div>
+                  </div>
+                  <div class="table-header-rows5"></div>
+                  <div class="table-header-rows6">
+                    <div class="last-reading-time-parent">
+                      <div class="last-reading-time">Last_reading_time :</div>
+                      <div class="table-header-units1">
+                        <div class="div1">17:01</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-header-rows7"></div>
+                  <div class="table-header-rows8">
+                    <div class="last-reading-value-parent">
+                      <div class="last-reading-value">Last_reading_value :</div>
+                      <b class="kw1">1000KW</b>
+                    </div>
+                  </div>
+                  <div class="table-header-rows9"></div>
+                  <div class="table-header-rows10">
+                    <div class="last-reading-date-parent">
+                      <div class="last-reading-date">Last_reading_date :</div>
+                      <div class="wrapper">
+                        <div class="div2">26/06/2023</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-header-rows11"></div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-group">
+              <div class="execution-recommendation-patte-wrapper">
+                <h1 class="execution-recommendation-patte-container">
+                  <span>
+                    <p class="execution-recommendation">
+                      Execution Recommendation
+                    </p>
+                    <p class="pattern">Pattern</p>
+                  </span>
+                </h1>
+              </div>
+              <div class="frame-container">
+                <div class="rectangle-parent">
+                  <div class="frame-item"></div>
+                  <div class="weekly-chart-month-labels">
+                    <div class="weekly-chart-day-labels">
+                      <b class="sunday">Sunday</b>
+                      <div class="calendar-month-cells">
+                        <b class="june">10 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-12h">10h - 12h</div>
+                </div>
+                <div class="vector-parent">
+                  <img
+                    class="frame-inner"
+                    alt=""
+                    src="./public/rectangle-32.svg"
+                  />
+
+                  <div class="frame-div">
+                    <div class="monday-parent">
+                      <b class="monday">Monday</b>
+                      <div class="june-wrapper">
+                        <b class="june1">11 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-10h">8h - 10h</div>
+                </div>
+                <div class="rectangle-group">
+                  <div class="rectangle-div"></div>
+                  <div class="frame-wrapper1">
+                    <div class="tuesday-parent">
+                      <b class="tuesday">Tuesday</b>
+                      <div class="june-container">
+                        <b class="june2">13 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-10h1">7h - 10h</div>
+                </div>
+                <div class="weekly-chart-highlight">
+                  <div class="weekly-chart-highlight-bar"></div>
+                  <b class="june3">14 June</b>
+                  <b class="wednesday">Wednesday</b>
+                  <div class="h-10h2">8h - 10h</div>
+                </div>
+                <div class="weekly-chart-columns">
+                  <div class="weekly-chart-columns-child"></div>
+                  <div class="weekly-chart-columns-inner">
+                    <div class="thursday-parent">
+                      <b class="thursday">Thursday</b>
+                      <div class="june-frame">
+                        <b class="june4">15 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-10h3">8h - 10h</div>
+                </div>
+                <div class="weekly-chart-columns1">
+                  <div class="weekly-chart-columns-item"></div>
+                  <div class="weekly-chart-columns-inner1">
+                    <div class="friday-parent">
+                      <b class="friday">Friday</b>
+                      <div class="june-wrapper1">
+                        <b class="june5">16 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-15h">13h - 15h</div>
+                </div>
+                <div class="weekly-chart-columns2">
+                  <div class="weekly-chart-columns-child1"></div>
+                  <div class="weekly-chart-columns-inner2">
+                    <div class="saturday-parent">
+                      <b class="saturday">Saturday</b>
+                      <div class="june-wrapper2">
+                        <b class="june6">17 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-18h">16h - 18h</div>
+                </div>
+                <div class="weekly-chart-columns3">
+                  <div class="weekly-chart-columns-child2"></div>
+                  <div class="weekly-chart-columns-inner3">
+                    <div class="sunday-parent">
+                      <b class="sunday1">Sunday</b>
+                      <div class="june-wrapper3">
+                        <b class="june7">18 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-12h1">10h - 12h</div>
+                </div>
+                <div class="weekly-chart-columns4">
+                  <img
+                    class="rectangle-icon"
+                    alt=""
+                    src="./public/rectangle-32.svg"
+                  />
+
+                  <div class="weekly-chart-columns-inner4">
+                    <div class="monday-group">
+                      <b class="monday1">Monday</b>
+                      <div class="june-wrapper4">
+                        <b class="june8">19 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-10h4">8h - 10h</div>
+                </div>
+                <div class="weekly-chart-columns5">
+                  <div class="weekly-chart-columns-child3"></div>
+                  <div class="weekly-chart-columns-inner5">
+                    <div class="tuesday-group">
+                      <b class="tuesday1">Tuesday</b>
+                      <div class="june-wrapper5">
+                        <b class="june9">20 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-10h5">7h - 10h</div>
+                </div>
+                <div class="weekly-chart-columns6">
+                  <div class="weekly-chart-columns-child4"></div>
+                  <div class="weekly-chart-columns-inner6">
+                    <div class="wednesday-parent">
+                      <b class="wednesday1">Wednesday</b>
+                      <div class="june-wrapper6">
+                        <b class="june10">21 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-10h6">8h - 10h</div>
+                </div>
+                <div class="weekly-chart-columns7">
+                  <div class="weekly-chart-columns-child5"></div>
+                  <div class="weekly-chart-columns-inner7">
+                    <div class="thursday-group">
+                      <b class="thursday1">Thursday</b>
+                      <div class="june-wrapper7">
+                        <b class="june11">22 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-10h7">8h - 10h</div>
+                </div>
+                <div class="weekly-chart-columns8">
+                  <div class="weekly-chart-columns-child6"></div>
+                  <div class="weekly-chart-columns-inner8">
+                    <div class="friday-group">
+                      <b class="friday1">Friday</b>
+                      <div class="june-wrapper8">
+                        <b class="june12">23 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-15h1">13h - 15h</div>
+                </div>
+                <div class="weekly-chart-columns9">
+                  <div class="weekly-chart-columns-child7"></div>
+                  <div class="weekly-chart-columns-inner9">
+                    <div class="saturday-group">
+                      <b class="saturday1">Saturday</b>
+                      <div class="june-wrapper9">
+                        <b class="june13">24 June</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-18h1">16h - 18h</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-wrapper2">
+            <div class="dash-parent">
+              <div class="dash">
+                <h1 class="total-electricity-consumption">
+                  Total electricity consumption
+                </h1>
+                <div class="consumption-chart-container">
+                  <div class="chart">
+                    <div class="chart-y-axis-parent">
+                      <div class="chart-y-axis">
+                        <div class="y-axis-title">1000</div>
+                        <div class="y-axis-padding-label-wrapper">
+                          <div class="y-axis-padding">750</div>
+                        </div>
+                        <div class="y-axis-labels">500</div>
+                        <div class="y-axis-labels1">250</div>
+                      </div>
+                      <div class="chart-x-axis-elements-wrapper">
+                        <div class="chart-x-axis-elements">
+                          <img
+                            class="vector-icon"
+                            loading="lazy"
+                            alt=""
+                            src="./public/d.png"
+                          />
+
+                          <div class="chart-points">
+                            <div class="chart-point-parent">
+                              <img
+                                class="chart-point-icon"
+                                alt=""
+                                src="./public/d.png"
+                              />
+
+                              <div class="chart-point-value-parent">
+                                <img
+                                  class="chart-point-value"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="chart-point-indicator"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <div class="chart-point-label">0</div>
+                              </div>
+                              <img
+                                class="chart-legend-indicator"
+                                loading="lazy"
+                                alt=""
+                                src="./public/d.png"
+                              />
+
+                              <img
+                                class="group-icon"
+                                loading="lazy"
+                                alt=""
+                                src="./public/grid.png"
+                              />
+
+                              <div class="chart-point-labels">
+                                <img
+                                  class="vector-icon1"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="vector-icon2"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="vector-icon3"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="vector-icon4"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="vector-icon5"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="vector-icon6"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="vector-icon7"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="vector-icon8"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="vector-icon9"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="vector-icon10"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="vector-icon11"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="vector-icon12"
+                                  alt=""
+                                  src="./public/d.png"
+                                />
+
+                                <img
+                                  class="group-icon1"
+                                  alt=""
+                                  src="./public/bluedots.png"
+                                />
+                              </div>
+                              <img
+                                class="group-icon2"
+                                alt=""
+                                src="./public/reddots.png"
+                              />
+                            </div>
+                            <div class="y-axis-padding1">
+                              <div class="parent">
+                                <div class="div3">0</div>
+                                <div class="div4">1</div>
+                                <div class="div5">2</div>
+                                <div class="div6">3</div>
+                                <div class="div7">4</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chart-x-labels">
+                      <div class="div8">5</div>
+                      <div class="div9">6</div>
+                      <div class="div10">7</div>
+                      <div class="chart-x-label-wrapper">
+                        <div class="chart-x-label">8</div>
+                      </div>
+                      <div class="div11">9</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-wrapper3">
+                <div class="percentage-wrapper">
+                  <div class="percentage">
+                    <b class="kwh">2400KWH</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer-section">
+        <div class="footer-content">
+          <div class="logo-parent">
+            <img
+              class="logo-icon"
+              loading="lazy"
+              alt=""
+              src="./public/biglogo.svg"
+            />
+
+            <h1 class="watcal">WatCal</h1>
+          </div>
+        </div>
+        <div class="footer-navigation">
+          <div class="footer-links">
+            <div class="text-button" id="textButton">Home</div>
+            <div class="text-button1" id="textButton1">Help Desk</div>
+            <div class="text-button2" id="textButton2">About</div>
+            <div class="text-button3" id="textButton3">Security</div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="social-media">
+          <div class="language-settings">
+            <div class="button1">
+              <div class="language-icons">
+                <img
+                  class="icon1"
+                  loading="lazy"
+                  alt=""
+                  src="./public/mail.svg"
+                />
+              </div>
+              <div class="text-button4">manuelansah955@gmail.com</div>
+            </div>
+            <div class="button2">
+              <div class="icon-wrapper">
+                <img
+                  class="icon2"
+                  loading="lazy"
+                  alt=""
+                  src="./public/phone.svg"
+                />
+              </div>
+              <div class="text-button5">+233 59 829 6141</div>
+            </div>
+          </div>
+        </div>
+        <div class="line1"></div>
+        <div class="container1">
+          <div class="legal-wrapper">
+            <div class="legal">WatCal All Rights Reserved</div>
+          </div>
+          <div class="social-media-icons">
+            <div class="button3">
+              <img
+                class="icon3"
+                loading="lazy"
+                alt=""
+                src="./public/facebook.svg"
+              />
+            </div>
+            <div class="button4">
+              <img
+                class="icon4"
+                loading="lazy"
+                alt=""
+                src="./public/twitter.svg"
+              />
+            </div>
+            <div class="button5">
+              <img
+                class="icon5"
+                loading="lazy"
+                alt=""
+                src="./public/linkedin.svg"
+              />
+            </div>
+          </div>
+          <div class="legal-links">
+            <div class="terms-and-conditions">
+              <a href="/website/other/Privacy.html" class="text-button6">Privacy Policy</a>
+              <div class="footer-divider"></div>
+              <a href="/website/other/Terms.html" class="text-button7">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+   </div> 
+
+    <script>
+        function showPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            const overlay = document.getElementById('overlay' + popupId.replace('popup', ''));
+            const content = document.querySelector('.content');
+
+            overlay.style.display = 'flex';
+            popup.style.display = 'block';
+            content.classList.add('blur-background');
+            document.body.classList.add('disable-scroll');
+            document.body.classList.add('popup-open');
+
+            overlay.onclick = function() {
+                hidePopup(popupId);
+            };
+        }
+
+        function hidePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            const overlay = document.getElementById('overlay' + popupId.replace('popup', ''));
+            const content = document.querySelector('.content');
+
+            overlay.style.display = 'none';
+            popup.style.display = 'none';
+            content.classList.remove('blur-background');
+            document.body.classList.remove('disable-scroll');
+            document.body.classList.remove('popup-open');
+        }
+
+      var textButton1 = document.getElementById("textButton1");
+      if (textButton1) {
+        textButton1.addEventListener("click", function (e) {
+            window.location.href = "../other/Helpdesk.html";
+        });
+      }
+      
+      var textButton = document.getElementById("textButton");
+      if (textButton) {
+        textButton.addEventListener("click", function (e) {
+            window.location.href = "../other/Home.html";
+        });
+      }
+      
+      var textButton2 = document.getElementById("textButton2");
+      if (textButton2) {
+        textButton2.addEventListener("click", function (e) {
+            window.location.href = "../other/About.html"; 
+        });
+      }
+      
+      var textButton3 = document.getElementById("textButton3");
+      if (textButton3) {
+        textButton3.addEventListener("click", function (e) {
+            window.location.href = "../other/Security.html";
+        });
+      }
+      
+     /*  var textButton6 = document.getElementById("textButton6");
+      if (textButton6) {
+        textButton6.addEventListener("click", function (e) {
+            window.location.href = "../other/Privacy.html";
+        });
+      }
+      
+      var textButton7 = document.getElementById("textButton7");
+      if (textButton7) {
+        textButton7.addEventListener("click", function (e) {
+            window.location.href = "../other/Terms.html";
+        });
+      } */
+
+      var genre = document.getElementById("genre");
+      if (genre) {
+        genre.addEventListener("click", function (e) {
+          window.location.href = "EditProfile.html";
+        });
+      }
+      
+      var boardbtnContainer = document.getElementById("boardbtnContainer");
+      if (boardbtnContainer) {
+        boardbtnContainer.addEventListener("click", function (e) {
+            window.location.href = "Dashboard.html";
+        });
+      }
+      
+      var setbtnContainer = document.getElementById("setbtnContainer");
+      if (setbtnContainer) {
+        setbtnContainer.addEventListener("click", function (e) {
+            window.location.href = "Settings.html";
+        });
+      }
+      
+      var hisbtnContainer = document.getElementById("hisbtnContainer");
+      if (hisbtnContainer) {
+        hisbtnContainer.addEventListener("click", function (e) {
+            window.location.href = "History.html";
+        });
+      }
+      
+      var OutBtnContainer = document.getElementById("OutBtnContainer");
+      if (OutBtnContainer) {
+        OutBtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../other/Home.html";
+        });
+      }
+      
+     /*  var tB = document.getElementById("tB");
+      if (tB) {
+        tB.addEventListener("click", function (e) {
+            window.location.href = "../other/Privacy.html";
+        });
+      }
+      
+      var tB1 = document.getElementById("tB1");
+      if (tB1) {
+        tB1.addEventListener("click", function (e) {
+            window.location.href = "../other/Terms.html";
+        });
+      } */
+      </script>
+  </body>
+</html>

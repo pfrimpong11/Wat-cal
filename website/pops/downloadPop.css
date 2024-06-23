@@ -1,0 +1,214 @@
+.Child {
+    height: 335px;
+    width: 500px;
+    position: relative;
+    border-radius: 50px;
+    background-color: #1a1a1a;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .down {
+    text-decoration: none;
+    align-self: stretch;
+    height: 27px;
+    position: relative;
+    font-weight: 700;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .file-pdf-regular-1-icon {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .file-pdf-regular-1-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 75px;
+  }
+  .reports {
+    align-self: stretch;
+    height: 60px;
+    position: relative;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .R,
+  .R-wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+  .R {
+    flex: 1;
+    border-radius: 50px;
+    background-color: #ff0505;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px 0 30px;
+    gap: 13px;
+    z-index: 1;
+  }
+  .R:hover{
+    background-color: #f80101;
+    cursor: pointer;
+  }
+  .csvbtn:hover{
+    background-color: #04fb00;
+    cursor: pointer;
+  }
+  .R-wrapper {
+    width: 224px;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 12px;
+    box-sizing: border-box;
+    color: #1a1a1a;
+  }
+  .downParent {
+    width: 251px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 27px;
+    min-width: 251px;
+  }
+  .close-icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    top: 15px;
+    right: 4px;
+    cursor: pointer;
+  }
+  .file-csv-solid-1-icon {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .file-csv-solid-1-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 75px;
+  }
+  .csvbtn,
+  .dt {
+    align-self: stretch;
+  }
+  .dt {
+    height: 60px;
+    position: relative;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+  }
+  .csvbtn {
+    border-radius: 50px;
+    background-color: #06cc02;
+    overflow: hidden;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 50px 0 30px;
+    gap: 9px;
+    z-index: 1;
+  }
+  .csvbtn:hover{
+    transition: .7s;
+    background-color: #1fe61c;
+  }
+  .R:hover{
+    background-color: #cf1717;
+  }
+  .close-parent,
+  .csvbtn,
+  .cover {
+    display: flex;
+    flex-direction: column;
+  }
+  .close-parent {
+    align-self: stretch;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 42px;
+  }
+  .cover {
+    width: 200px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 4px;
+    box-sizing: border-box;
+    min-width: 200px;
+    color: #1a1a1a;
+  }
+  .downloadmenu,
+  .Parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .Parent {
+    flex: 1;
+    border-radius: 50px;
+    background-color: #1a1a1a;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    align-items: flex-end;
+    padding: 10px 1px 31px;
+    gap: 8px;
+    max-width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-family: Nunito;
+  }
+  .downloadmenu {
+    width: 29.8%;
+    position: relative;
+    align-items: flex-start;
+    line-height: normal;
+    letter-spacing: normal;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+    transition: all .5s ease-in-out;
+  }
+  @media screen and (max-width: 450px) {
+    .dt,
+    .download,
+    .reports {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 438px) {
+    .download-parent,
+    .cover {
+      flex: 1;
+    }
+    .Parent {
+      flex-wrap: wrap;
+    }
+  }

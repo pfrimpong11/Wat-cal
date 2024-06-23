@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./tenantPop.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="popup-wrapper">
+      <section class="popup-wrapper-inner">
+        <img
+          class="avatar"
+          loading="lazy"
+          alt=""
+          src="./public/avatar.png"
+          id="genre"
+        />
+      </section>
+      <section class="userkind-parent">
+        <div class="userkind">Melissa Peters</div>
+        <div class="usergmailcom-wrapper">
+          <div class="usergmailcom">melpeters@gmail.com</div>
+        </div>
+        <div class="U">
+          <div class="meneuver"></div>
+        </div>
+        <div class="U1">
+          <div class="boardbtn" id="boardbtnContainer">
+            <img class="welcomeHome" loading="lazy"  alt=""
+            src="./public/home.svg"/>
+
+            <div class="board-wrapper">
+              <div class="board">Dashboard</div>
+            </div>
+          </div>
+        </div>
+        <div class="U2">
+          <div class="meneuver1"></div>
+        </div>
+        <div class="setbtn-wrapper">
+          <div class="setbtn" id="setbtnContainer">
+            <img
+              class="menu_icon"
+              loading="lazy"
+              alt=""
+              src="./public/tools.svg"
+            />
+
+            <div class="sets-wrapper">
+              <div class="sets">Settings</div>
+            </div>
+          </div>
+        </div>
+        <div class="U3">
+          <div class="meneuver2"></div>
+        </div>
+        <div class="U4">
+          <div class="hisbtn" id="hisbtnContainer">
+            <img class="his-icon" loading="lazy" alt=""
+            src="./public/clk.svg"/>
+
+            <div class="his-wrapper">
+              <div class="his">History</div>
+            </div>
+          </div>
+        </div>
+        <div class="U5">
+          <div class="meneuver3"></div>
+        </div>
+        <div class="U6">
+          <div class="Out-btn" id="OutBtnContainer">
+            <img
+              class="sign-out-alt-icon"
+              loading="lazy"
+              alt=""
+              src="./public/sign-out-alt.svg"
+            />
+
+            <div class="Out">Logout</div>
+          </div>
+        </div>
+        <div class="meneuver4"></div>
+      </section>
+      <div class="under">
+        <div class="t-b" id="tB">Privacy Policy</div>
+        <div class="line"></div>
+        <div class="t-b1" id="tB1">Terms of Service</div>
+      </div>
+    </div>
+
+    <script>
+      var genre = document.getElementById("genre");
+      if (genre) {
+        genre.addEventListener("click", function (e) {
+          window.location.href = "../tenant/EditProfile.html";
+        });
+      }
+      
+      var boardbtnContainer = document.getElementById("boardbtnContainer");
+      if (boardbtnContainer) {
+        boardbtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../tenant/Dashboard.html";
+        });
+      }
+      
+      var setbtnContainer = document.getElementById("setbtnContainer");
+      if (setbtnContainer) {
+        setbtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../tenant/Settings.html";
+        });
+      }
+      
+      var hisbtnContainer = document.getElementById("hisbtnContainer");
+      if (hisbtnContainer) {
+        hisbtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../tenant/History.html";
+        });
+      }
+      
+      var OutBtnContainer = document.getElementById("OutBtnContainer");
+      if (OutBtnContainer) {
+        OutBtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../other/Home.html";
+        });
+      }
+      
+      var tB = document.getElementById("tB");
+      if (tB) {
+        tB.addEventListener("click", function (e) {
+            window.location.href = "../other/Privacy.html";
+        });
+      }
+      
+      var tB1 = document.getElementById("tB1");
+      if (tB1) {
+        tB1.addEventListener("click", function (e) {
+            window.location.href = "../other/Terms.html";
+        });
+      }
+      </script>
+  </body>
+</html>

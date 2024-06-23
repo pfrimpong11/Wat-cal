@@ -1,0 +1,2097 @@
+.icon {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .button {
+    border-radius: 82px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6px 14px;
+  }
+  .dashboard {
+    margin: 0;
+    flex: 1;
+    position: relative;
+    font-size: inherit;
+    line-height: 130%;
+    font-weight: 500;
+    font-family: inherit;
+  }
+  .title,
+  .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .title {
+    height: 25px;
+    flex: 1;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .user {
+    width: 195px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .melissa-peters {
+    text-decoration: none;
+    flex: 1;
+    position: relative;
+    line-height: 28px;
+    color: inherit;
+    display: inline-block;
+    min-width: 119px;
+  }
+  .profile-child {
+    height: 50px;
+    width: 50px;
+    position: relative;
+  }
+  .navbar,
+  .profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .profile {
+    width: 179px;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .navbar {
+    align-self: stretch;
+    border-radius: 100px;
+    background-color: #bfbfbf;
+    border: 1px solid #262626;
+    justify-content: space-between;
+    padding: 0 34px;
+    gap: 20px;
+  }
+  .execution-recommendation,
+  .pattern {
+    margin: 0;
+  }
+  .execution-recommendation-patte-container1 {
+    width: 100%;
+  }
+  .execution-recommendation-patte-container {
+    margin: 0;
+    width: 600px;
+    position: relative;
+    font-size: inherit;
+    font-weight: 500;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    max-width: 100%;
+  }
+  .header {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 1px 0 0;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .frame-child {
+    width: 200px;
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    display: none;
+  }
+  .june,
+  .sunday {
+    position: relative;
+    z-index: 1;
+  }
+  .sunday {
+    align-self: stretch;
+    font-weight: 800;
+  }
+  .june {
+    display: inline-block;
+    min-width: 43px;
+  }
+  .day,
+  .days {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .day {
+    flex-direction: row;
+    padding: 0 60px 0 59px;
+    font-size: 12px;
+  }
+  .days {
+    flex: 1;
+    flex-direction: column;
+    gap: 19px;
+  }
+  .h-12h,
+  .week {
+    align-self: stretch;
+  }
+  .week {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 12px 0 15px;
+  }
+  .h-12h {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .rectangle-parent {
+    width: 200px;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15.5px 5px 103.8px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .frame-item {
+    width: 200px;
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+    display: none;
+  }
+  .june1,
+  .monday {
+    position: relative;
+    z-index: 1;
+  }
+  .monday {
+    align-self: stretch;
+    font-weight: 800;
+  }
+  .june1 {
+    display: inline-block;
+    min-width: 43px;
+  }
+  .june-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 60px 0 59px;
+    font-size: 12px;
+  }
+  .frame-wrapper,
+  .june-wrapper,
+  .monday-parent {
+    display: flex;
+    align-items: flex-start;
+  }
+  .monday-parent {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 19px;
+  }
+  .frame-wrapper {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 12px 0 15px;
+  }
+  .h-10h {
+    text-decoration: none;
+    align-self: stretch;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: inherit;
+    z-index: 1;
+  }
+  .frame-inner,
+  .vector-parent {
+    border-radius: 10px;
+    background-color: #1a1a1a;
+  }
+  .vector-parent {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15.5px 5px 103.8px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .frame-inner {
+    width: 199.9px;
+    height: 250px;
+    position: relative;
+    display: none;
+  }
+  .june2,
+  .tuesday {
+    position: relative;
+    z-index: 1;
+  }
+  .tuesday {
+    align-self: stretch;
+    font-weight: 800;
+  }
+  .june2 {
+    display: inline-block;
+    min-width: 43px;
+  }
+  .june-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 60px 0 59px;
+    font-size: 12px;
+  }
+  .frame-container,
+  .june-container,
+  .tuesday-parent {
+    display: flex;
+    align-items: flex-start;
+  }
+  .tuesday-parent {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 19px;
+  }
+  .frame-container {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 12px 0 15px;
+  }
+  .h-10h1 {
+    align-self: stretch;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .rectangle-div,
+  .rectangle-group {
+    border-radius: 10px;
+    background-color: #1a1a1a;
+  }
+  .rectangle-group {
+    width: 199.9px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15.5px 5px 103.8px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .rectangle-div {
+    width: 199.1px;
+    height: 250px;
+    position: relative;
+    display: none;
+  }
+  .june3,
+  .wednesday {
+    position: relative;
+    z-index: 1;
+  }
+  .wednesday {
+    align-self: stretch;
+    font-weight: 800;
+  }
+  .june3 {
+    display: inline-block;
+    min-width: 43px;
+  }
+  .june-frame {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 58px 0 60px;
+    font-size: 12px;
+  }
+  .wednesday-parent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 19px;
+  }
+  .frame-div {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 12px 0 14px;
+  }
+  .h-10h2 {
+    align-self: stretch;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .frame-child1,
+  .rectangle-container {
+    border-radius: 10px;
+    background-color: #1a1a1a;
+  }
+  .rectangle-container {
+    width: 199.1px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15.5px 6px 103.8px 5px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .frame-child1 {
+    width: 199.9px;
+    height: 250px;
+    position: relative;
+    display: none;
+  }
+  .june4,
+  .thursday {
+    position: relative;
+    z-index: 1;
+  }
+  .thursday {
+    align-self: stretch;
+    font-weight: 800;
+  }
+  .june4 {
+    display: inline-block;
+    min-width: 43px;
+  }
+  .june-wrapper1 {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 60px 0 59px;
+    font-size: 12px;
+  }
+  .frame-wrapper1,
+  .june-wrapper1,
+  .thursday-parent {
+    display: flex;
+    align-items: flex-start;
+  }
+  .thursday-parent {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 19px;
+  }
+  .frame-wrapper1 {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 12px 0 15px;
+  }
+  .h-10h3 {
+    align-self: stretch;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .group-div,
+  .marker {
+    border-radius: 10px;
+    background-color: #1a1a1a;
+  }
+  .group-div {
+    width: 199.9px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15.5px 5px 103.8px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .friday {
+    top: 15.5px;
+    left: 18.7px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 161.4px;
+    height: 22px;
+  }
+  .friday,
+  .h-15h,
+  .june5 {
+    position: absolute;
+    z-index: 1;
+  }
+  .h-15h {
+    top: 124.5px;
+    left: 5.7px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 187.1px;
+    height: 21.7px;
+  }
+  .june5 {
+    top: 56.5px;
+    left: 77.7px;
+    font-size: 12px;
+  }
+  .current-day {
+    height: 250px;
+    width: 199.2px;
+    position: relative;
+    flex-shrink: 0;
+    debug_commit: 448091;
+  }
+  .calendar-grid-child {
+    width: 199.9px;
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    display: none;
+  }
+  .june6,
+  .saturday {
+    align-self: stretch;
+    position: relative;
+    z-index: 1;
+  }
+  .saturday {
+    font-weight: 800;
+  }
+  .june6 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .june-wrapper2,
+  .saturday-parent {
+    flex: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .june-wrapper2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    padding: 0 60px 0 59px;
+    font-size: 12px;
+  }
+  .saturday-parent {
+    flex-direction: column;
+    gap: 19px;
+  }
+  .calendar-grid-inner,
+  .h-18h,
+  .saturday-parent {
+    align-self: stretch;
+    display: flex;
+  }
+  .calendar-grid-inner {
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 12px 0 15px;
+  }
+  .h-18h {
+    height: 21.7px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .calendar-grid,
+  .calendar-grid-item {
+    border-radius: 10px;
+    background-color: #1a1a1a;
+  }
+  .calendar-grid {
+    align-self: stretch;
+    width: 199.9px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15.5px 5px 103.8px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .calendar-grid-item {
+    width: 200px;
+    height: 250px;
+    position: relative;
+    display: none;
+  }
+  .june7,
+  .sunday1 {
+    align-self: stretch;
+    position: relative;
+    z-index: 1;
+  }
+  .sunday1 {
+    font-weight: 800;
+  }
+  .june7 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .june-wrapper3 {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 60px 0 59px;
+    font-size: 12px;
+  }
+  .calendar-grid-inner1,
+  .june-wrapper3,
+  .sunday-parent {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+  .sunday-parent {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 19px;
+  }
+  .calendar-grid-inner1 {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 12px 0 15px;
+  }
+  .calendar-grid1,
+  .h-12h1 {
+    align-self: stretch;
+    flex-shrink: 0;
+    display: flex;
+  }
+  .h-12h1 {
+    height: 21.7px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .calendar-grid1 {
+    width: 200px;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15.5px 5px 103.8px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .rectangle-icon {
+    width: 200px;
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+    display: none;
+  }
+  .monday1 {
+    align-self: stretch;
+    position: relative;
+    font-weight: 800;
+    z-index: 1;
+  }
+  .june-wrapper4,
+  .june8 {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+  }
+  .june8 {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .june-wrapper4 {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 58px 0 60px;
+    font-size: 12px;
+  }
+  .monday-group {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 17.9px;
+  }
+  .calendar-grid-inner2,
+  .h-10h4,
+  .monday-group {
+    align-self: stretch;
+    display: flex;
+  }
+  .calendar-grid-inner2 {
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 14px 0 12px;
+  }
+  .h-10h4 {
+    height: 21.7px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .calendar-grid-child1,
+  .calendar-grid2 {
+    border-radius: 10px;
+    background-color: #1a1a1a;
+  }
+  .calendar-grid2 {
+    align-self: stretch;
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16.6px 6px 103px;
+    box-sizing: border-box;
+    gap: 52.8px;
+    debug_commit: 448091;
+  }
+  .calendar-grid-child1 {
+    width: 199.9px;
+    height: 250px;
+    position: relative;
+    display: none;
+  }
+  .june9,
+  .tuesday1 {
+    align-self: stretch;
+    position: relative;
+    z-index: 1;
+  }
+  .tuesday1 {
+    font-weight: 800;
+  }
+  .june9 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .june-wrapper5,
+  .tuesday-group {
+    flex: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .june-wrapper5 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    padding: 0 59px;
+    font-size: 12px;
+  }
+  .tuesday-group {
+    flex-direction: column;
+    gap: 18.7px;
+  }
+  .calendar-grid-inner3,
+  .h-10h5,
+  .tuesday-group {
+    align-self: stretch;
+    display: flex;
+  }
+  .calendar-grid-inner3 {
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 14px 0 12px;
+  }
+  .h-10h5 {
+    height: 21.7px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .calendar-grid-child2,
+  .calendar-grid3 {
+    border-radius: 10px;
+    background-color: #1a1a1a;
+  }
+  .calendar-grid3 {
+    align-self: stretch;
+    width: 199.9px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15.8px 5px 103.8px 6px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .calendar-grid-child2 {
+    width: 199.1px;
+    height: 250px;
+    position: relative;
+    display: none;
+  }
+  .wednesday1 {
+    align-self: stretch;
+    position: relative;
+    font-weight: 800;
+    z-index: 1;
+  }
+  .june-wrapper6,
+  .june10 {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+  }
+  .june10 {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .june-wrapper6 {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 58px 0 60px;
+    font-size: 12px;
+  }
+  .wednesday-group {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 19px;
+  }
+  .calendar-grid-inner4,
+  .h-10h6,
+  .wednesday-group {
+    align-self: stretch;
+    display: flex;
+  }
+  .calendar-grid-inner4 {
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 12px 0 14px;
+  }
+  .h-10h6 {
+    height: 21.7px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .calendar-grid-child3,
+  .calendar-grid4 {
+    border-radius: 10px;
+    background-color: #1a1a1a;
+  }
+  .calendar-grid4 {
+    align-self: stretch;
+    width: 199.1px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15.5px 6px 103.8px 5px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .calendar-grid-child3 {
+    width: 199.9px;
+    height: 250px;
+    position: relative;
+    display: none;
+  }
+  .june11,
+  .thursday1 {
+    align-self: stretch;
+    position: relative;
+    z-index: 1;
+  }
+  .thursday1 {
+    font-weight: 800;
+  }
+  .june11 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .june-wrapper7,
+  .thursday-group {
+    flex: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .june-wrapper7 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    padding: 0 60px 0 59px;
+    font-size: 12px;
+  }
+  .thursday-group {
+    flex-direction: column;
+    gap: 19px;
+  }
+  .calendar-grid-inner5,
+  .h-10h7,
+  .thursday-group {
+    align-self: stretch;
+    display: flex;
+  }
+  .calendar-grid-inner5 {
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 12px 0 15px;
+  }
+  .h-10h7 {
+    height: 21.7px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .calendar-grid-child4,
+  .calendar-grid5 {
+    border-radius: 10px;
+    background-color: #1a1a1a;
+  }
+  .calendar-grid5 {
+    align-self: stretch;
+    width: 199.9px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15.5px 5px 103.8px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .calendar-grid-child4 {
+    width: 199.1px;
+    height: 250px;
+    position: relative;
+    display: none;
+  }
+  .friday1 {
+    align-self: stretch;
+    position: relative;
+    font-weight: 800;
+    z-index: 1;
+  }
+  .june-wrapper8,
+  .june12 {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+  }
+  .june12 {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .june-wrapper8 {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 58px 0 60px;
+    font-size: 12px;
+  }
+  .friday-parent {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 19px;
+  }
+  .calendar-grid-inner6,
+  .friday-parent,
+  .h-15h1 {
+    align-self: stretch;
+    display: flex;
+  }
+  .calendar-grid-inner6 {
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 12px 0 14px;
+  }
+  .h-15h1 {
+    height: 21.7px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .calendar-grid-child5,
+  .calendar-grid6 {
+    border-radius: 10px;
+    background-color: #1a1a1a;
+  }
+  .calendar-grid6 {
+    align-self: stretch;
+    width: 199.1px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15.5px 6px 103.8px 5px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .calendar-grid-child5 {
+    width: 199.9px;
+    height: 250px;
+    position: relative;
+    display: none;
+  }
+  .june13,
+  .saturday1 {
+    align-self: stretch;
+    position: relative;
+    z-index: 1;
+  }
+  .saturday1 {
+    font-weight: 800;
+  }
+  .june13 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .june-wrapper9 {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 60px 0 59px;
+    font-size: 12px;
+  }
+  .calendar-grid-inner7,
+  .june-wrapper9,
+  .saturday-group {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+  .saturday-group {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 19px;
+  }
+  .calendar-grid-inner7 {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 12px 0 15px;
+  }
+  .calendar-grid7,
+  .h-18h1 {
+    align-self: stretch;
+    flex-shrink: 0;
+    display: flex;
+  }
+  .h-18h1 {
+    height: 21.7px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .calendar-grid7 {
+    width: 199.9px;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15.5px 5px 103.8px;
+    box-sizing: border-box;
+    gap: 52px;
+    debug_commit: 448091;
+  }
+  .body,
+  .calendar {
+    border-radius: 20px;
+    background-color: #bfbfbf;
+    border: 1px solid #000;
+    box-sizing: border-box;
+  }
+  .calendar {
+    width: 1066.5px;
+    height: 322px;
+    overflow-x: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 36px 20px;
+    gap: 30px;
+    max-width: 100%;
+    font-size: 16px;
+    color: #fff;
+  }
+  .body {
+    align-self: stretch;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 31px 64px 28px;
+    gap: 13px;
+    text-align: center;
+    font-family: Nunito;
+  }
+  .body,
+  .navigation,
+  .navigation-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .navigation {
+    flex: 1;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .navigation-wrapper {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 15px 0 14px;
+    box-sizing: border-box;
+  }
+  .total-electricity-consumption {
+    margin: 0;
+    align-self: stretch;
+    position: relative;
+    font-size: inherit;
+    font-weight: 500;
+    font-family: inherit;
+  }
+  .unit-label,
+  .y-axis-label {
+    position: relative;
+    display: inline-block;
+    min-width: 29px;
+  }
+  .unit-label {
+    height: 24px;
+    flex: 1;
+    min-width: 25.3px;
+  }
+  .y-axis-unit {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 1px 0 3px;
+  }
+  .y-axis-labels,
+  .y-axis-labels1 {
+    width: 25.7px;
+    height: 24px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    min-width: 25.7px;
+  }
+  .y-axis {
+    width: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 41px;
+  }
+  .bar-icon {
+    width: 5.8px;
+    height: 1px;
+    position: relative;
+  }
+  .bar-segment-icon {
+    position: absolute;
+    top: 256.5px;
+    left: 0.7px;
+    width: 717.1px;
+    height: 1px;
+  }
+  .bar-label-icon,
+  .bar-value-icon {
+    position: absolute;
+    margin: 0 !important;
+  }
+  .bar-value-icon {
+    height: 9.6px;
+    width: 1px;
+    right: 1.5px;
+    bottom: 2px;
+  }
+  .bar-label-icon {
+    height: 1px;
+    width: 7px;
+    bottom: 10.6px;
+    left: -1.6px;
+    z-index: 1;
+  }
+  .value-label {
+    height: 24px;
+    position: relative;
+    display: inline-block;
+    min-width: 8px;
+    z-index: 2;
+  }
+  .bar-details {
+    position: absolute;
+    top: 244.1px;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .bar-end-icon,
+  .group-icon {
+    position: absolute;
+    top: 2.8px;
+    left: 5.5px;
+    width: 1px;
+    height: 256.5px;
+    z-index: 3;
+  }
+  .group-icon {
+    top: 0;
+    width: 717.1px;
+    z-index: 4;
+  }
+  .legend-item-icon,
+  .legend-item-icon1 {
+    height: 9.6px;
+    width: 1px;
+    position: absolute;
+    margin: 0 !important;
+    bottom: -6.1px;
+    left: 83.2px;
+  }
+  .legend-item-icon1 {
+    left: 162.9px;
+  }
+  .legend-item-icon2 {
+    left: 242.6px;
+  }
+  .legend-item-icon2,
+  .legend-item-icon3,
+  .legend-item-icon4,
+  .legend-item-icon5 {
+    height: 9.6px;
+    width: 1px;
+    position: absolute;
+    margin: 0 !important;
+    bottom: -6.1px;
+  }
+  .legend-item-icon3 {
+    left: 322.3px;
+  }
+  .legend-item-icon4,
+  .legend-item-icon5 {
+    right: 321.4px;
+    z-index: 1;
+  }
+  .legend-item-icon5 {
+    right: 241.7px;
+  }
+  .legend-item-icon6 {
+    right: 162px;
+    bottom: -6.1px;
+    z-index: 1;
+  }
+  .legend-item-icon6,
+  .legend-item-icon7,
+  .legend-item-icon8 {
+    height: 9.6px;
+    width: 1px;
+    position: absolute;
+    margin: 0 !important;
+  }
+  .legend-item-icon7 {
+    right: 82.3px;
+    bottom: -6.1px;
+    z-index: 1;
+  }
+  .legend-item-icon8 {
+    right: 2.7px;
+    bottom: -6px;
+  }
+  .legend-item-icon10,
+  .legend-item-icon11,
+  .legend-item-icon9 {
+    height: 1px;
+    width: 6.7px;
+    position: absolute;
+    margin: 0 !important;
+    left: -3.1px;
+  }
+  .legend-item-icon9 {
+    bottom: 67px;
+  }
+  .legend-item-icon10,
+  .legend-item-icon11 {
+    top: 127.5px;
+  }
+  .legend-item-icon11 {
+    width: 6.9px;
+    top: 63.4px;
+    left: -3.3px;
+  }
+  .group-icon1 {
+    height: 259.7px;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    z-index: 5;
+  }
+  .group-icon2,
+  .legend-items {
+    position: absolute;
+    left: 1.9px;
+    width: 724.3px;
+  }
+  .legend-items {
+    top: 0.3px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .group-icon2 {
+    top: 3.7px;
+    height: 239.7px;
+    z-index: 6;
+  }
+  .bar-elements {
+    align-self: stretch;
+    height: 268.1px;
+    position: relative;
+    max-width: 100%;
+  }
+  .x-axis-label,
+  .x-axis-label1 {
+    position: relative;
+    display: inline-block;
+    min-width: 9.6px;
+  }
+  .x-axis-label1 {
+    min-width: 7.2px;
+  }
+  .x-axis-label2,
+  .x-axis-label3,
+  .x-axis-label4 {
+    position: relative;
+    display: inline-block;
+    min-width: 9.6px;
+  }
+  .bar-elements-parent,
+  .x-axis,
+  .x-axis-labels {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .x-axis-labels {
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .bar-elements-parent,
+  .x-axis {
+    justify-content: flex-start;
+  }
+  .x-axis {
+    width: 715.8px;
+    flex-direction: row;
+    padding: 0 34px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .bar-elements-parent {
+    gap: 11.6px;
+    margin-top: -1px;
+  }
+  .bar-elements-parent,
+  .bars {
+    align-self: stretch;
+    flex-direction: column;
+  }
+  .bars,
+  .chart-area,
+  .graph {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .graph {
+    flex: 1;
+    flex-direction: column;
+    padding: 6px 0 0;
+    box-sizing: border-box;
+    min-width: 473px;
+  }
+  .chart-area {
+    width: 759.7px;
+    flex-direction: row;
+    gap: 4.1px;
+    min-width: 759.7px;
+    flex-shrink: 0;
+    debug_commit: 448091;
+  }
+  .div,
+  .div1 {
+    width: 9.6px;
+    flex-shrink: 0;
+  }
+  .div,
+  .div1,
+  .div2,
+  .label {
+    position: relative;
+    display: inline-block;
+  }
+  .div2 {
+    width: 8.4px;
+    flex-shrink: 0;
+  }
+  .label {
+    width: 9.6px;
+  }
+  .grid-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 31px 0 0;
+  }
+  .div3 {
+    width: 10px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .chart,
+  .chart-container,
+  .parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-shrink: 0;
+  }
+  .parent {
+    width: 427.4px;
+    align-items: flex-start;
+    gap: 149.7px;
+    debug_commit: 448091;
+    max-width: 100%;
+    text-align: center;
+  }
+  .chart,
+  .chart-container {
+    box-sizing: border-box;
+  }
+  .chart {
+    width: 772px;
+    overflow: hidden;
+    align-items: flex-end;
+    padding: 5.2px 0 14.7px;
+    gap: 105.4px;
+    max-width: 100%;
+  }
+  .chart-container {
+    margin-left: -31.5px;
+    border-radius: 5px;
+    background-color: #bfbfbf;
+    border: 2px solid #000;
+    overflow-x: auto;
+    align-items: flex-start;
+    padding: 5px 0 22px 8px;
+    max-width: 110%;
+    text-align: right;
+    font-size: 12px;
+    color: #1a1a1a;
+    font-family: Inter;
+  }
+  .dash,
+  .kwh {
+    display: flex;
+    max-width: 100%;
+  }
+  .dash {
+    width: 781px;
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 27px 30px 3px;
+    box-sizing: border-box;
+    gap: 40px;
+    background-image: url(./public/dash@3x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    opacity: 0.9;
+    min-width: 781px;
+  }
+  .kwh {
+    height: 199px;
+    flex: 1;
+    position: relative;
+    line-height: 150%;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 0 0#bfbfbf, 0 1px 0#bfbfbf, -1px 0 0#bfbfbf, 0-1px 0#bfbfbf;
+    z-index: 1;
+  }
+  .percentage,
+  .percentage-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .percentage {
+    flex: 1;
+    border-radius: 25px;
+    background-color: #1a1a1a;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 104px 16px 104px 17px;
+    min-height: 428px;
+  }
+  .percentage-wrapper {
+    align-self: stretch;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
+  }
+  .percentage-container,
+  .sidebar {
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+  .percentage-container {
+    width: 368px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 0 0;
+    min-width: 368px;
+    max-width: 100%;
+    font-size: 45px;
+    color: #bfbfbf;
+  }
+  .sidebar {
+    border-radius: 20px;
+    background-color: #bfbfbf;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    flex-direction: row;
+    padding: 18px 26px 18px 29px;
+    gap: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: Nunito;
+  }
+  .content,
+  .main,
+  .sidebar {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .content {
+    width: 1226px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 58px;
+  }
+  .main {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 20px;
+    color: #1a1a1a;
+    font-family: Lexend;
+  }
+  .logo-icon {
+    height: 36px;
+    width: 36px;
+    position: relative;
+    object-fit: contain;
+    min-height: 36px;
+  }
+  .watcal {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    line-height: 150%;
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-block;
+    min-width: 86px;
+  }
+  .footer-content,
+  .logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .logo-container {
+    justify-content: flex-start;
+    gap: 6px;
+  }
+  .footer-content {
+    width: 1116px;
+    justify-content: center;
+    max-width: 100%;
+    font-size: 24px;
+  }
+  .text-button {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    min-width: 47px;
+  }
+  .text-button1,
+  .text-button2,
+  .text-button3 {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .text-button1 {
+    min-width: 79px;
+    white-space: nowrap;
+  }
+  .text-button2,
+  .text-button3 {
+    min-width: 47px;
+  }
+  .text-button3 {
+    min-width: 64px;
+  }
+  .navigation-menu,
+  .primary-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .primary-menu {
+    justify-content: flex-start;
+    gap: 26px;
+  }
+  .navigation-menu {
+    width: 1116px;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .icon1,
+  .line {
+    position: relative;
+  }
+  .line {
+    width: 1116px;
+    height: 1px;
+    border-top: 1px solid #262626;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .icon1 {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .button-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2px 0 0;
+  }
+  .text-button4 {
+    position: relative;
+    line-height: 150%;
+    white-space: nowrap;
+  }
+  .button1 {
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+  .icon2 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2px 0 0;
+  }
+  .text-button5 {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    min-width: 129px;
+    white-space: nowrap;
+  }
+  .button2,
+  .social-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .button2 {
+    border-radius: 6px;
+    gap: 6px;
+  }
+  .social-buttons {
+    gap: 20px;
+    max-width: 100%;
+  }
+  .line1,
+  .social {
+    width: 1116px;
+    max-width: 100%;
+  }
+  .social {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .line1 {
+    height: 1px;
+    position: relative;
+    border-top: 1px solid #262626;
+    box-sizing: border-box;
+  }
+  .copyright-message {
+    position: relative;
+    line-height: 150%;
+    font-weight: 300;
+  }
+  .copyright-message-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 0 0;
+  }
+  .icon3 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .button3 {
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    background-color: #2522b9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 14px;
+    box-sizing: border-box;
+  }
+  .icon4 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .button4 {
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    background-color: #2522b9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 14px;
+    box-sizing: border-box;
+  }
+  .icon5 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .button5,
+  .footer-icons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .button5 {
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    background-color: #2522b9;
+    flex-direction: column;
+    padding: 14px;
+    box-sizing: border-box;
+  }
+  .footer-icons {
+    flex-direction: row;
+    gap: 14px;
+  }
+  .text-button6 {
+    position: relative;
+    line-height: 150%;
+    font-weight: 300;
+    display: inline-block;
+    min-width: 105px;
+    cursor: pointer;
+  }
+  .link-divider {
+    height: 25px;
+    width: 1px;
+    position: relative;
+    border-right: 1px solid #1a1a1a;
+    box-sizing: border-box;
+  }
+  .text-button7 {
+    position: relative;
+    line-height: 150%;
+    font-weight: 300;
+    display: inline-block;
+    min-width: 125px;
+    cursor: pointer;
+  }
+  .container,
+  .footer-links,
+  .text-button-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .text-button-parent {
+    height: 24px;
+    flex-direction: row;
+    gap: 11.5px;
+  }
+  .container,
+  .footer-links {
+    flex-direction: column;
+    padding: 12px 0 0;
+  }
+  .container {
+    width: 1116px;
+    border-radius: 100px;
+    background-color: #bfbfbf;
+    border: 1px solid #262626;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6px 30px 6px 16px;
+    gap: 20px;
+    max-width: 100%;
+  }
+  .dashboard-page-desktop,
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .footer-section {
+    align-self: stretch;
+    background-color: #bfbfbf;
+    border-top: 1px solid #000;
+    align-items: center;
+    padding: 98px 20px 50px;
+    gap: 49.6px;
+    max-width: 100%;
+    text-align: left;
+    font-size: 16px;
+    color: #1a1a1a;
+    font-family: Lexend;
+  }
+  .dashboard-page-desktop {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    align-items: flex-start;
+    padding: 50px 0 0;
+    gap: 114px;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  @media screen and (max-width: 1400px) {
+    .body {
+      padding-left: 32px;
+      padding-right: 32px;
+      box-sizing: border-box;
+    }
+    .chart-area {
+      flex: 1;
+    }
+    .chart {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .dash,
+    .percentage-container {
+      flex: 1;
+    }
+    .sidebar {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 1125px) {
+    .chart-area,
+    .dash {
+      min-width: 100%;
+    }
+  }
+  @media screen and (max-width: 825px) {
+    .navbar {
+      flex-wrap: wrap;
+    }
+    .navigation {
+      gap: 25px;
+    }
+    .graph {
+      min-width: 100%;
+    }
+    .chart-area {
+      flex-wrap: wrap;
+    }
+    .div,
+    .div1 {
+      width: 100%;
+      height: 9.6px;
+    }
+    .div2,
+    .div3 {
+      width: 100%;
+      height: 8.4px;
+    }
+    .div3 {
+      height: 10px;
+    }
+    .parent {
+      flex-wrap: wrap;
+      gap: 75px;
+    }
+    .chart {
+      gap: 53px;
+    }
+    .kwh {
+      font-size: 36px;
+      line-height: 54px;
+    }
+    .percentage-container {
+      min-width: 100%;
+    }
+    .content {
+      gap: 29px;
+    }
+    .container {
+      flex-wrap: wrap;
+    }
+    .footer-section {
+      gap: 25px;
+      padding-top: 64px;
+      padding-bottom: 32px;
+      box-sizing: border-box;
+    }
+    .dashboard-page-desktop {
+      gap: 57px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .dashboard {
+      line-height: 21px;
+    }
+    .dashboard,
+    .execution-recommendation-patte-container {
+      font-size: 16px;
+    }
+    .body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      box-sizing: border-box;
+    }
+    .total-electricity-consumption {
+      font-size: 16px;
+    }
+    .x-axis-label {
+      width: 100%;
+      height: 9.6px;
+    }
+    .x-axis-label1 {
+      width: 100%;
+      height: 7.2px;
+    }
+    .x-axis-label2,
+    .x-axis-label3,
+    .x-axis-label4 {
+      width: 100%;
+      height: 9.6px;
+    }
+    .x-axis-labels {
+      flex-wrap: wrap;
+    }
+    .parent {
+      gap: 37px;
+    }
+    .chart {
+      gap: 26px;
+    }
+    .dash {
+      gap: 20px;
+    }
+    .kwh {
+      font-size: 27px;
+      line-height: 40px;
+    }
+    .percentage {
+      padding-top: 68px;
+      padding-bottom: 68px;
+      box-sizing: border-box;
+    }
+    .watcal {
+      font-size: 19px;
+      line-height: 29px;
+    }
+    .social-buttons {
+      flex-wrap: wrap;
+    }
+    .dashboard-page-desktop {
+      gap: 28px;
+    }
+  }

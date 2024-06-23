@@ -1,0 +1,42 @@
+.as-a-landlord,
+.as-a-tenant {
+  position: relative;
+  line-height: 150%;
+  font-weight: 300;
+}
+.as-a-tenant {
+  width: 145px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.as-a-landlord {
+  flex: 1;
+  white-space: pre-wrap;
+}
+.as-a-landlord-wrapper,
+.signup-llt {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.as-a-landlord-wrapper {
+  flex: 1;
+  border-left: 1px solid #2522b9;
+}
+.signup-llt {
+  width: 100%;
+  position: relative;
+  border-radius: 88px;
+  background-color: #bfbfbf;
+  border: 1px solid #1a1a1a;
+  box-sizing: border-box;
+  padding: 24px 16px;
+  gap: 10px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  font-size: 20px;
+  color: #1a1a1a;
+  font-family: Lexend;
+}

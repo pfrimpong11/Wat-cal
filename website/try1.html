@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Aladin:wght@400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
+    />
+    <title>Room Analysis</title>
+  </head>
+  <body>
+    <div class="analysis-dark-mobile">
+      <section class="bars-status-bar-iphone-l-parent">
+        <header class="bars-status-bar-iphone-l">
+          <div class="time-style">
+            <b class="time">9:41</b>
+          </div>
+          <div class="cellular-connection-parent">
+            <img
+              class="cellular-connection-icon"
+              loading="lazy"
+              alt=""
+              src="./public/cellular-connection.svg"
+            />
+            <img
+              class="wifi-icon"
+              loading="lazy"
+              alt=""
+              src="./public/wifi.svg"
+            />
+            <div class="battery">
+              <div class="border"></div>
+              <img
+                class="cap-icon"
+                loading="lazy"
+                alt=""
+                src="./public/cap.svg"
+              />
+              <div class="capacity"></div>
+            </div>
+          </div>
+        </header>
+        <div class="frame-wrapper">
+          <div class="rectangle-parent">
+            <div class="frame-child"></div>
+            <a class="watcalcom">WatCal.com</a>
+          </div>
+        </div>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="material-symbolsarrow-back-io-parent">
+              <img
+                class="material-symbolsarrow-back-io-icon"
+                alt=""
+                src="./public/materialsymbolsarrowbackios.svg"
+              />
+              <input class="frame-item" placeholder="Analysis" type="text" />
+            </div>
+          </div>
+          <div class="button">
+            <img class="icon" alt="" src="./public/icon.svg" />
+          </div>
+        </div>
+      </section>
+      <section class="containers-wrapper">
+        <div class="containers" id="roomsContainer">
+          <!-- Room containers will be dynamically inserted here -->
+        </div>
+      </section>
+      <section class="footer-section">
+        <div class="frame-parent">
+          <div class="frame-container">
+            <div class="logo-parent">
+              <img
+                class="logo-icon"
+                loading="lazy"
+                alt=""
+                src="./public/logo@2x.png"
+              />
+              <h2 class="watcal">WatCal</h2>
+            </div>
+          </div>
+          <div class="frame-wrapper1">
+            <div class="text-button-parent">
+              <div class="text-button">Home</div>
+              <div class="text-button1">Help Desk</div>
+              <div class="text-button2">About</div>
+              <div class="text-button3">Security</div>
+            </div>
+          </div>
+          <div class="line-wrapper">
+            <div class="line"></div>
+          </div>
+          <div class="frame-wrapper2">
+            <div class="button-parent">
+              <div class="button1">
+                <img
+                  class="icon1"
+                  loading="lazy"
+                  alt=""
+                  src="./public/icon-1.svg"
+                />
+                <div class="text-button4">manuelansah955@gmail.com</div>
+              </div>
+              <div class="button-wrapper">
+                <div class="button2">
+                  <img
+                    class="icon2"
+                    loading="lazy"
+                    alt=""
+                    src="./public/icon-2.svg"
+                  />
+                  <div class="text-button5">+233 59 829 6141</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line1"></div>
+        <div class="frame-group">
+          <div class="frame-wrapper3">
+            <div class="facebook-button-parent">
+              <div class="facebook-button">
+                <img
+                  class="icon3"
+                  loading="lazy"
+                  alt=""
+                  src="./public/icon-3.svg"
+                />
+              </div>
+              <div class="twitter-button">
+                <img
+                  class="icon4"
+                  loading="lazy"
+                  alt=""
+                  src="./public/icon-4.svg"
+                />
+              </div>
+              <div class="linkedin-button">
+                <img
+                  class="icon5"
+                  loading="lazy"
+                  alt=""
+                  src="./public/icon-5.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="sub-container">
+            <div class="text-wrapper">
+              <div class="text">WatCal All Rights Reserved</div>
+            </div>
+            <div class="frame-parent1">
+              <div class="text-button-group">
+                <div class="text-button6">Privacy Policy</div>
+                <div class="line2"></div>
+              </div>
+              <div class="text-button7">Terms of Service</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      async function fetchRooms() {
+        const userId = 1; // Replace with the actual user ID
+        try {
+          const response = await fetch(`/api/user/${userId}/rooms`);
+          if (response.ok) {
+            const data = await response.json();
+            return data.rooms;
+          } else {
+            console.error('Failed to fetch room data');
+          }
+        } catch (error) {
+          console.error('Error fetching room data:', error);
+        }
+      }
+
+      function createRoomContainer(roomName, index) {
+        const roomContainer = document.createElement('div');
+        roomContainer.classList.add('rectangle-parent');
+        
+        const instanceChild = document.createElement('div');
+        instanceChild.classList.add('instance-child');
+        
+        const roomInput = document.createElement('input');
+        roomInput.type = 'text';
+        roomInput.placeholder = roomName;
+        roomInput.disabled = true;
+        roomInput.classList.add('container');
+        
+        const rectangleParent = document.createElement('div');
+        rectangleParent.classList.add('rectangle-parent');
+        
+        for (let i = 0; i < 4; i++) {
+          const frameChild = document.createElement('div');
+          frameChild.classList.add('frame-child');
+          rectangleParent.appendChild(frameChild);
+        }
+        
+        roomContainer.appendChild(instanceChild);
+        roomContainer.appendChild(roomInput);
+        roomContainer.appendChild(rectangleParent);
+        
+        return roomContainer;
+      }
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        const rooms = await fetchRooms();
+        const roomsContainer = document.getElementById('roomsContainer');
+
+        rooms.forEach((room, index) => {
+          const roomContainer = createRoomContainer(room.room_name, index + 1);
+          roomsContainer.appendChild(roomContainer);
+        });
+      });
+    </script>
+  </body>
+</html>

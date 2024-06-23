@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./llPop.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="popper">
+      <section class="popper-inner">
+        <img
+          class="kid"
+          loading="lazy"
+          alt=""
+          src="./public/avatar.png"
+          id="group"
+        />
+      </section>
+      <section class="chartbar">
+        <div class="mp">Melissa Peters</div>
+        <div class="mpcom-wrapper">
+          <div class="mpcom">melpeters@gmail.com</div>
+        </div>
+        <div class="chartbar-buttons">
+          <div class="chartbar-icons"></div>
+        </div>
+        <div class="chartbar-buttons1">
+          <div class="dbtn" id="dbtnContainer">
+            <div class="house">
+              <div class="chart-icons">
+                <img
+                  class="v-icon"
+                  loading="lazy"
+                  alt=""
+                  src="./public/home.svg"
+                />
+              </div>
+            </div>
+            <div class="sidebar-labels">
+              <s class="d_b">Dashboard</s>
+            </div>
+          </div>
+        </div>
+        <div class="chartbar-buttons2">
+          <div class="lenght"></div>
+        </div>
+        <div class="chartbar-buttons3">
+          <div class="pienabtn" id="pienabtnContainer">
+            <div class="chart-bar">
+              <div class="v-wrapper">
+                <img
+                  class="v-icon1"
+                  loading="lazy"
+                  alt=""
+                  src="./public/stat.svg"
+                />
+              </div>
+            </div>
+            <div class="piena-wrapper">
+              <div class="piena">Analysis</div>
+            </div>
+          </div>
+        </div>
+        <div class="chartbar-buttons4">
+          <div class="lenght1"></div>
+        </div>
+        <div class="mousebtn-wrapper">
+          <div class="mousebtn" id="mousebtnContainer">
+            <img
+              class="toolkit-icon"
+              loading="lazy"
+              alt=""
+              src="./public/tools.svg"
+            />
+
+            <div class="mouses-wrapper">
+              <div class="mouses">Settings</div>
+            </div>
+          </div>
+        </div>
+        <div class="chartbar-buttons5">
+          <div class="lenght2"></div>
+        </div>
+        <div class="chartbar-buttons6">
+          <div class="trendbtn" id="trendbtnContainer">
+            <div class="trend">
+              <div class="v-container">
+                <img
+                  class="v-icon2"
+                  loading="lazy"
+                  alt=""
+                  src="./public/clk.svg"
+                />
+              </div>
+            </div>
+            <div class="trend-wrapper">
+              <div class="trend1">History</div>
+            </div>
+          </div>
+        </div>
+        <div class="chartbar-buttons7">
+          <div class="lenght3"></div>
+        </div>
+        <div class="chartbar-buttons8">
+          <div class="opener-btn" id="openerBtnContainer">
+            <img
+              class="opener-alt-icon"
+              loading="lazy"
+              alt=""
+              src="./public/sign-out-alt.svg"
+            />
+
+            <div class="opener">Logout</div>
+          </div>
+        </div>
+        <div class="lenght4"></div>
+      </section>
+      <div class="btt-bar">
+        <div class="txt-button" id="txtButton">Privacy Policy</div>
+        <div class="lenght5"></div>
+        <div class="txt-button1" id="txtButton1">Terms of Service</div>
+      </div>
+    </div>
+
+    <script>
+      var group = document.getElementById("group");
+      if (group) {
+        group.addEventListener("click", function (e) {
+            window.location.href = "../landlord/EditProfile.html";
+        });
+      }
+      
+      var dbtnContainer = document.getElementById("dbtnContainer");
+      if (dbtnContainer) {
+        dbtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../landlord/Dashboard.html";
+        });
+      }
+      
+      var pienabtnContainer = document.getElementById("pienabtnContainer");
+      if (pienabtnContainer) {
+        pienabtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../landlord/Analysis.html";
+        });
+      }
+      
+      var mousebtnContainer = document.getElementById("mousebtnContainer");
+      if (mousebtnContainer) {
+        mousebtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../landlord/Settings.html";
+        });
+      }
+      
+      var trendbtnContainer = document.getElementById("trendbtnContainer");
+      if (trendbtnContainer) {
+        trendbtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../landlord/History.html";
+        });
+      }
+      
+      var openerBtnContainer = document.getElementById("openerBtnContainer");
+      if (openerBtnContainer) {
+        openerBtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../other/Home.html";
+        });
+      }
+      
+      var txtButton = document.getElementById("txtButton");
+      if (txtButton) {
+        txtButton.addEventListener("click", function (e) {
+            window.location.href = "../other/Privacy.html";
+        });
+      }
+      
+      var txtButton1 = document.getElementById("txtButton1");
+      if (txtButton1) {
+        txtButton1.addEventListener("click", function (e) {
+            window.location.href = "../other/Terms.html";
+        });
+      }
+      </script>
+  </body>
+</html>

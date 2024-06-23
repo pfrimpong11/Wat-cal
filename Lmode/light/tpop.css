@@ -1,0 +1,350 @@
+.content-child {
+    height: 107.3px;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .content {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 62px;
+  }
+  .melissa-peters {
+    align-self: stretch;
+    position: relative;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: Lexend;
+    text-align: center;
+  }
+  .melpetersgmailcom {
+    flex: 1;
+    position: relative;
+    letter-spacing: 0.25px;
+    line-height: 17.8px;
+    white-space: nowrap;
+  }
+  .user-email {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 13px;
+    text-align: center;
+    font-size: 9px;
+    font-family: Lexend;
+  }
+  .button-icons {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #2522b9;
+    box-sizing: border-box;
+  }
+  .topbar-buttons {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .avatar-icons {
+    width: 20px;
+    height: 15.6px;
+    position: relative;
+  }
+  .home,
+  .user-avatar {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .user-avatar {
+    margin-left: -10px;
+    margin-bottom: -7.8px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    debug_commit: 448091;
+  }
+  .home {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .dashboard {
+    position: relative;
+    line-height: 18px;
+    display: inline-block;
+    min-width: 104px;
+  }
+  .dashboardbtn,
+  .topbar-buttons1,
+  .user-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .user-details {
+    flex-direction: column;
+    padding: 1px 0 0;
+  }
+  .dashboardbtn,
+  .topbar-buttons1 {
+    flex-direction: row;
+  }
+  .dashboardbtn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .topbar-buttons1 {
+    padding: 0 0 13px;
+  }
+  .line {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #2522b9;
+    box-sizing: border-box;
+  }
+  .topbar-buttons2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .tools-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 20px;
+  }
+  .settings {
+    position: relative;
+    line-height: 18px;
+    display: inline-block;
+    min-width: 79px;
+  }
+  .settingbtn,
+  .settings-dropdown,
+  .settings-label {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .settings-label {
+    flex-direction: column;
+    padding: 1px 0 0;
+  }
+  .settingbtn,
+  .settings-dropdown {
+    flex-direction: row;
+  }
+  .settingbtn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .settings-dropdown {
+    padding: 0 0 13px;
+  }
+  .line1 {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #2522b9;
+    box-sizing: border-box;
+  }
+  .topbar-buttons3 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .vector-icon {
+    width: 19.4px;
+    height: 19.4px;
+    position: relative;
+  }
+  .history,
+  .vector-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .vector-wrapper {
+    margin-left: -9.7px;
+    margin-bottom: -9.7px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+    debug_commit: 448091;
+    width: 39.4px;
+    height: 39.4px;
+  }
+  .history {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .history1 {
+    position: relative;
+    line-height: 18px;
+    display: inline-block;
+    min-width: 69px;
+  }
+  .history-wrapper,
+  .historybtn,
+  .topbar-buttons4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .history-wrapper {
+    flex-direction: column;
+    padding: 1px 0 0;
+  }
+  .historybtn,
+  .topbar-buttons4 {
+    flex-direction: row;
+  }
+  .historybtn {
+    gap: 9px;
+    cursor: pointer;
+  }
+  .topbar-buttons4 {
+    padding: 0 0 13px;
+  }
+  .line2 {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #2522b9;
+    box-sizing: border-box;
+  }
+  .topbar-buttons5 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .sign-out-alt-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 20px;
+  }
+  .logout {
+    position: relative;
+    line-height: 18px;
+    display: inline-block;
+    min-width: 68px;
+  }
+  .logout-btn,
+  .topbar-buttons6 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .logout-btn {
+    gap: 10px;
+    cursor: pointer;
+  }
+  .topbar-buttons6 {
+    padding: 0 0 13px;
+  }
+  .topbar-divider {
+    align-self: stretch;
+    height: 1px;
+    position: relative;
+    border-top: 1px solid #2522b9;
+    box-sizing: border-box;
+  }
+  .topbar {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 20px;
+    color: #1a1a1a;
+    font-family: Inter;
+  }
+  .text-button {
+    position: relative;
+    line-height: 150%;
+    font-weight: 300;
+    display: inline-block;
+    min-width: 92px;
+    cursor: pointer;
+  }
+  .bottom-divider {
+    height: 22px;
+    width: 1px;
+    position: relative;
+    border-right: 1px solid #464444;
+    box-sizing: border-box;
+  }
+  .text-button1 {
+    position: relative;
+    line-height: 150%;
+    font-weight: 300;
+    display: inline-block;
+    min-width: 109px;
+    cursor: pointer;
+  }
+  .bottom-bar,
+  .menu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .bottom-bar {
+    height: 21px;
+    flex-direction: row;
+    gap: 11.5px;
+  }
+  .menu {
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    background-color: #bfbfbf;
+    border-right: 1px solid #2522b9;
+    border-left: 1px solid #2522b9;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 39px 21px;
+    gap: 12px;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 14px;
+    color: #464444;
+    font-family: Lexend;
+  }

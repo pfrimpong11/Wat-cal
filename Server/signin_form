@@ -1,0 +1,84 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const pool = require('./db');
+const app = express();
+const PORT = 3000; // Ensure this is set appropriately
+
+app.use(bodyParser.json());
+
+// Manually generated secret key
+const secretKey = 'Tg4@2r7^mLp$eA8!sYh&dFsBn'; // Replace this with your manually generated secret key
+
+// Middleware to check if user is logged in
+const checkLoggedIn = (req, res, next) => {
+  const token = req.headers['authorization'];
+  
+  if (!token) {
+    return res.status(401).json({ error: 'Access denied. No token provided.' });
+  }
+
+  try {
+    const decoded = jwt.verify(token, secretKey);
+    req.user = decoded;
+    next();
+  } catch (err) {
+    res.status(401).json({ error: 'Invalid token.' });
+  }
+};
+
+// Login endpoint
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const result = await pool.query('SELECT * FROM "MeterUsers"."Users" WHERE "Username" = $1', [username]);
+
+    if (result.rows.length === 0) {
+      return res.status(401).json({ error: 'Invalid username or password' });
+    }
+
+    const user = result.rows[0];
+    const validPassword = await bcrypt.compare(password, user.Password);
+
+    if (!validPassword) {
+      return res.status(401).json({ error: 'Invalid username or password' });
+    }
+
+    // Generate JWT token
+    const token = jwt.sign({ userId: user.User_ID, userType: user.User_Type }, secretKey, { expiresIn: '1h' });
+
+    res.json({ token });
+  } 
+  catch (error) {
+    console.error('Error during login:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Landlord Dashboard
+app.get('/landlord/dashboard', checkLoggedIn, (req, res) => {
+  // Check if the user is a landlord
+  if (req.user.userType !== 'Landlord') {
+    return res.status(403).json({ error: 'Access denied. Not a landlord.' });
+  }
+
+  // Render landlord dashboard, passing user ID and user type if needed
+  res.send(`Landlord Dashboard - User ID: ${req.user.userId}, User Type: ${req.user.userType}`);
+});
+
+// Tenant Dashboard
+app.get('/tenant/dashboard', checkLoggedIn, (req, res) => {
+  // Check if the user is a tenant
+  if (req.user.userType !== 'Tenant') {
+    return res.status(403).json({ error: 'Access denied. Not a tenant.' });
+  }
+
+  // Render tenant dashboard, passing user ID and user type if needed
+  res.send(`Tenant Dashboard - User ID: ${req.user.userId}, User Type: ${req.user.userType}`);
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
