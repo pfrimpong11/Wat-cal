@@ -31,11 +31,9 @@
               />
             </section>
             <section class="chartbar">
-              <!-- insert username after login -->
-              <div class="mp"><span id="panelUsername"></span></div>
+              <div class="mp">Melissa Peters</div>
               <div class="mpcom-wrapper">
-                <!-- insert email after login -->
-                <div class="mpcom"><span id="panelEmail"></span></div>
+                <div class="mpcom">melpeters@gmail.com</div>
               </div>
               <div class="chartbar-buttons">
                 <div class="chartbar-icons"></div>
@@ -159,8 +157,7 @@
               </div>
             </div>
             <div class="melissa-peters-parent">
-              <!-- insert username after login -->
-              <a class="melissa-peters"><span id="username"></span></a>
+              <a class="melissa-peters">Melissa Peters</a>
               <img
                 class="frame-child"
                 loading="lazy"
@@ -373,6 +370,7 @@
                     </div>
                     <div class="y-axis-labels">500</div>
                     <div class="y-axis-labels1">250</div>
+                    <div class="target-value">0</div>
                   </div>
                   <div class="chart-bars">
                     <div class="bar-parent">
@@ -396,16 +394,16 @@
                               class="bar-value-label"
                               loading="lazy"
                               alt=""
-                              src="./images/d.png"
+                              src="./images/.png"
                             />
 
                             <img
                               class="vector-icon"
                               alt=""
-                              src="./images/d.png"
+                              src="./images/png"
                             />
 
-                            <div class="target-value">0</div>
+
                           </div>
                           <img
                             class="target-marker-icon"
@@ -643,28 +641,28 @@
       var textButton1 = document.getElementById("textButton1");
       if (textButton1) {
         textButton1.addEventListener("click", function (e) {
-            window.location.href = "../Helpdesk.html";
+            window.location.href = "../other/Helpdesk.html";
         });
       }
       
       var textButton = document.getElementById("textButton");
       if (textButton) {
         textButton.addEventListener("click", function (e) {
-            window.location.href = "../Home.html";
+            window.location.href = "../other/Home.html";
         });
       }
       
       var textButton2 = document.getElementById("textButton2");
       if (textButton2) {
         textButton2.addEventListener("click", function (e) {
-            window.location.href = "../About.html"; 
+            window.location.href = "../other/About.html"; 
         });
       }
       
       var textButton3 = document.getElementById("textButton3");
       if (textButton3) {
         textButton3.addEventListener("click", function (e) {
-            window.location.href = "../Security.html";
+            window.location.href = "../other/Security.html";
         });
       }
 
@@ -703,41 +701,12 @@
         });
       }
       
-      // var openerBtnContainer = document.getElementById("openerBtnContainer");
-      // if (openerBtnContainer) {
-      //   openerBtnContainer.addEventListener("click", function (e) {
-      //       window.location.href = "../Home.html";
-      //   });
-      // }
-
-
-      //Getting username after authentication
-      async function checkAuth() {
-      const response = await fetch('/api/landlordIsAuthenticated');
-      const data = await response.json();
-
-      if (!data.isAuthenticated) {
-        window.location.href = '../Home.html';
-      } else {
-        document.getElementById('username').textContent = data.landlord.username;
-        document.getElementById('panelUsername').textContent = data.landlord.username;
-        document.getElementById('panelEmail').textContent = data.landlord.email;
+      var openerBtnContainer = document.getElementById("openerBtnContainer");
+      if (openerBtnContainer) {
+        openerBtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../other/Home.html";
+        });
       }
-    }
-
-
-      // event listener for logout
-      document.getElementById('openerBtnContainer').addEventListener('click', async function() {
-      const response = await fetch('/api/landlordLogout', { method: 'POST' });
-
-      if (response.ok) {
-        window.location.href = '../Home.html';
-      } else {
-        alert('Logout failed');
-      }
-    });
-    checkAuth();
-
       </script>
   </body>
 </html>

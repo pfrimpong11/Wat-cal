@@ -27,11 +27,9 @@
               />
             </section>
             <section class="chartbar">
-              <!-- insert username after login -->
-              <div class="mp"><span id="panelUsername"></span></div>
+              <div class="mp">Melissa Peters</div>
               <div class="mpcom-wrapper">
-                <!-- insert email after login -->
-                <div class="mpcom"><span id="panelEmail"></span></div>
+                <div class="mpcom">melpeters@gmail.com</div>
               </div>
               <div class="chartbar-buttons">
                 <div class="chartbar-icons"></div>
@@ -320,7 +318,7 @@
                       <div class="report-a-problem">Report a problem</div>
                     </div>
                   </div>
-                  <div class="mdilogout-parent" id="logout">
+                  <div class="mdilogout-parent">
                     <img
                       class="mdilogout-icon"
                       loading="lazy"
@@ -480,70 +478,70 @@ function showPopup(popupId) {
       var groupContainer1 = document.getElementById("groupContainer1");
       if (groupContainer1) {
         groupContainer1.addEventListener("click", function (e) {
-            window.location.href = "../Privacy.html";
+            window.location.href = "../other/Privacy.html";
         });
       }
       
       var groupContainer2 = document.getElementById("groupContainer2");
       if (groupContainer2) {
         groupContainer2.addEventListener("click", function (e) {
-            window.location.href = "../Help.html";
+            window.location.href = "../other/Help.html";
         });
       }
       
       var groupContainer3 = document.getElementById("groupContainer3");
       if (groupContainer3) {
         groupContainer3.addEventListener("click", function (e) {
-            window.location.href = "../Terms.html";
+            window.location.href = "../other/Terms.html";
         });
       }
       
       var groupContainer4 = document.getElementById("groupContainer4");
       if (groupContainer4) {
         groupContainer4.addEventListener("click", function (e) {
-          window.location.href = "../ReportProblem.html";
+          window.location.href = "../other/ReportProblem.html";
         });
       }
       
       var textButton1 = document.getElementById("textButton1");
       if (textButton1) {
         textButton1.addEventListener("click", function (e) {
-            window.location.href = "../Helpdesk.html";
+            window.location.href = "../other/Helpdesk.html";
         });
       }
       
       var textButton = document.getElementById("textButton");
       if (textButton) {
         textButton.addEventListener("click", function (e) {
-            window.location.href = "../Home.html";
+            window.location.href = "../other/Home.html";
         });
       }
       
       var textButton2 = document.getElementById("textButton2");
       if (textButton2) {
         textButton2.addEventListener("click", function (e) {
-            window.location.href = "../About.html"; 
+            window.location.href = "../other/About.html"; 
         });
       }
       
       var textButton3 = document.getElementById("textButton3");
       if (textButton3) {
         textButton3.addEventListener("click", function (e) {
-            window.location.href = "../Security.html";
+            window.location.href = "../other/Security.html";
         });
       }
       
      /*  var textButton6 = document.getElementById("textButton6");
       if (textButton6) {
         textButton6.addEventListener("click", function (e) {
-            window.location.href = "../Privacy.html";
+            window.location.href = "../other/Privacy.html";
         });
       }
       
       var textButton7 = document.getElementById("textButton7");
       if (textButton7) {
         textButton7.addEventListener("click", function (e) {
-            window.location.href = "../Terms.html";
+            window.location.href = "../other/Terms.html";
         });
       }
  */
@@ -583,81 +581,37 @@ function showPopup(popupId) {
         });
       }
       
-      // var openerBtnContainer = document.getElementById("openerBtnContainer");
-      // if (openerBtnContainer) {
-      //   openerBtnContainer.addEventListener("click", function (e) {
-      //       window.location.href = "../Home.html";
-      //   });
-      // }
-
-
-      //Getting username after authentication
-      async function checkAuth() {
-      const response = await fetch('/api/landlordIsAuthenticated');
-      const data = await response.json();
-
-      if (!data.isAuthenticated) {
-        window.location.href = '../Home.html';
-      } else {
-        document.getElementById('panelUsername').textContent = data.landlord.username;
-        document.getElementById('panelEmail').textContent = data.landlord.email;
+      var openerBtnContainer = document.getElementById("openerBtnContainer");
+      if (openerBtnContainer) {
+        openerBtnContainer.addEventListener("click", function (e) {
+            window.location.href = "../other/Home.html";
+        });
       }
-    }
-
-    
-      // event listener for logout in panel
-      document.getElementById('openerBtnContainer').addEventListener('click', async function() {
-      const response = await fetch('/api/landlordLogout', { method: 'POST' });
-
-      if (response.ok) {
-        window.location.href = '../Home.html';
-      } else {
-        alert('Logout failed');
-      }
-    });
-
-
-
-    
-    // event listener for logout in page
-    document.getElementById('logout').addEventListener('click', async function() {
-      const response = await fetch('/api/landlordLogout', { method: 'POST' });
-
-      if (response.ok) {
-        window.location.href = '../Home.html';
-      } else {
-        alert('Logout failed');
-      }
-    });
-    
-    checkAuth();
-
-
       
    /*    var txtButton = document.getElementById("txtButton");
       if (txtButton) {
         txtButton.addEventListener("click", function (e) {
-            window.location.href = "../Privacy.html";
+            window.location.href = "../other/Privacy.html";
         });
       }
       
       var txtButton1 = document.getElementById("txtButton1");
       if (txtButton1) {
         txtButton1.addEventListener("click", function (e) {
-            window.location.href = "../Terms.html";
+            window.location.href = "../other/Terms.html";
         });
       } */
 
       var tenant = document.getElementById("tenant");
       if (tenant) {
         tenant.addEventListener("click", function (e) {
-            window.location.href = "../TSignup.html";
+            window.location.href = "../other/TSignup.html";
         });
       }
       var landlord = document.getElementById("landlord");
       if (landlord) {
         landlord.addEventListener("click", function (e) {
-            window.location.href = "../LSignup.html";
+            window.location.href = "../other/LSignup.html";
         });
       }
       </script>

@@ -40,7 +40,7 @@
                     <div class="text-button4">Sign Up</div>
                   </div>
                 </div>
-                <div class="button" id="buttonContainer">
+                <div class="button" data-popup="popupMenu4">
                   <div class="text">Login</div>
                 </div>
               </div>
@@ -58,7 +58,7 @@
               </div>
             </div>
             <div class="image-parent">
-              <img class="image-icon" alt="" src="./images/con-img.png" />
+              <img class="image-icon" alt="" src="./images/con-img.png"  />
 
               <img
                 class="abstract-design-icon"
@@ -153,7 +153,7 @@
       <footer class="footer-section">
         <div class="footer-content">
           <div class="footer-branding">
-            <img class="logo-icon1" alt="" src="./images/biglogo.svg" />
+            <img class="logo-icon1" alt=""src="./images/biglogo.svg" />
 
             <div class="watcal2">WatCal</div>
           </div>
@@ -190,7 +190,7 @@
           </div>
           <div class="social-media-icons">
             <div class="button3">
-              <img class="icon2" alt="" src="./images/facebook.svg" />
+              <img class="icon2" alt="" src="./images/facebook.svg"/>
             </div>
             <div class="button4">
               <img class="icon3" alt="" src="./images/twitter.svg" />
@@ -221,9 +221,17 @@
            </div>
        </div>
    </div>
+   <div class="popup-menu" id="popupMenu4">
+    <div class="signupllt">
+        <div class="astenant" id="t4">As a Tenant</div>
+        <div class="userroles">
+            <div class="aslandlord" id="l4">As a Landlord</div>
+        </div>
+    </div>
+</div>
 
     <script>
-         document.querySelectorAll(".text-button-wrapper").forEach(button => {
+         document.querySelectorAll(".text-button-wrapper,.button").forEach(button => {
             button.addEventListener("click", function() {
                 const popupId = button.getAttribute("data-popup");
                 const popup = document.getElementById(popupId);
@@ -272,13 +280,6 @@
       if (contactUsText) {
         contactUsText.addEventListener("click", function (e) {
           window.location.href = "Contactus.html";
-        });
-      }
-      
-      var buttonContainer = document.getElementById("buttonContainer");
-      if (buttonContainer) {
-        buttonContainer.addEventListener("click", function (e) {
-          window.location.href = "openAccount.html";
         });
       }
       
@@ -335,6 +336,20 @@
         if (landlord1) {
             landlord1.addEventListener("click", function (e) {
                 window.location.href = "LSignup.html";
+            });
+        }
+
+        var t4 = document.getElementById("t4");
+        if (t4) {
+          t4.addEventListener("click", function (e) {
+                window.location.href = "TLogin.html";
+            });
+        }
+
+        var l4 = document.getElementById("l4");
+        if (l4) {
+          l4.addEventListener("click", function (e) {
+                window.location.href = "LLogin.html";
             });
         }
       </script>

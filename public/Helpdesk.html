@@ -40,7 +40,7 @@
                     <div class="text-button4">Sign Up</div>
                   </div>
                 </div>
-                <div class="button" id="buttonContainer">
+                <div class="button" data-popup="popupMenu4">
                   <div class="text">Login</div>
                 </div>
               </div>
@@ -283,8 +283,17 @@
        </div>
    </div>
 
+   <div class="popup-menu" id="popupMenu4">
+    <div class="signupllt">
+        <div class="astenant" id="t4">As a Tenant</div>
+        <div class="userroles">
+            <div class="aslandlord" id="l4">As a Landlord</div>
+        </div>
+    </div>
+</div>
+
     <script>
-         document.querySelectorAll(".text-button-wrapper, .button1").forEach(button => {
+         document.querySelectorAll(".text-button-wrapper, .button1, .button").forEach(button => {
             button.addEventListener("click", function() {
                 const popupId = button.getAttribute("data-popup");
                 const popup = document.getElementById(popupId);
@@ -333,13 +342,6 @@
       if (contactUsText) {
         contactUsText.addEventListener("click", function (e) {
           window.location.href = "Contactus.html";
-        });
-      }
-      
-      var buttonContainer = document.getElementById("buttonContainer");
-      if (buttonContainer) {
-        buttonContainer.addEventListener("click", function (e) {
-          window.location.href = "openAccount.html";
         });
       }
       
@@ -410,6 +412,20 @@
         if (landlord2) {
             landlord2.addEventListener("click", function (e) {
                 window.location.href = "LSignup.html";
+            });
+        }
+
+        var t4 = document.getElementById("t4");
+        if (t4) {
+          t4.addEventListener("click", function (e) {
+                window.location.href = "TLogin.html";
+            });
+        }
+
+        var l4 = document.getElementById("l4");
+        if (l4) {
+          l4.addEventListener("click", function (e) {
+                window.location.href = "LLogin.html";
             });
         }
       </script>

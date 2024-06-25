@@ -62,6 +62,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+    document.querySelectorAll(".button2, .button").forEach(button => {
+        button.addEventListener("click", function() {
+            const popupId = button.getAttribute("data-popup");
+            const popup = document.getElementById(popupId);
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.classList.add("active");
+            }, 10); // Small delay to allow the display change to take effect
+            document.getElementById("overlay").classList.add("active");
+            document.querySelector('.content').classList.add('blur-background');
+        });
+    });
+
+    document.getElementById("overlay").addEventListener("click", function() {
+        document.querySelectorAll(".popup-menu").forEach(popup => {
+            popup.classList.remove("active");
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 500); // Match this timeout with the animation duration
+        });
+        document.getElementById("overlay").classList.remove("active");
+        document.querySelector('.content').classList.remove('blur-background');
+    });
+
+
+
     document.querySelector('.addroombtn').addEventListener('click', addRoom);
 
         let roomIndex = 1;
@@ -90,9 +116,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // event listener for login button
-    document.getElementById("login").addEventListener("click", function () {
-        window.location.href = "LLogin.html";
-    })
+        var t4 = document.getElementById("t4");
+        if (t4) {
+          t4.addEventListener("click", function (e) {
+                window.location.href = "TLogin.html";
+            });
+        }
+
+        var l4 = document.getElementById("l4");
+        if (l4) {
+          l4.addEventListener("click", function (e) {
+                window.location.href = "LLogin.html";
+            });
+        }
+
+        var t5 = document.getElementById("t5");
+        if (t5) {
+          t5.addEventListener("click", function (e) {
+                window.location.href = "TLogin.html";
+            });
+        }
+
+        var l5 = document.getElementById("l5");
+        if (l5) {
+          l5.addEventListener("click", function (e) {
+                window.location.href = "LLogin.html";
+            });
+        }
 
     
         // Add event listeners for navigation buttons
@@ -114,10 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById("contactUsText").addEventListener("click", function () {
             window.location.href = "Contactus.html";
-        });
-
-        document.getElementById("buttonContainer").addEventListener("click", function () {
-            window.location.href = "TLogin.html";
         });
 
         document.getElementById("textButton1").addEventListener("click", function () {

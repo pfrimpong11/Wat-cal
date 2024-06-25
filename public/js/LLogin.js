@@ -159,3 +159,10 @@ if (landlord2) {
         window.location.href = "LSignup.html";
     });
 }
+
+var forgotpassword = document.getElementById("forgotpassword");
+if (forgotpassword) {
+    forgotpassword.addEventListener("click", function (e) {
+        window.location.href = "forgotpassword.html";
+    });
+}

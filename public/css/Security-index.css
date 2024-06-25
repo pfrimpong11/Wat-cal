@@ -268,7 +268,7 @@
 .abstract-design-icon {
   position: absolute;
   top: 0;
-  left: 438px;
+  left: 478px;
   width: 317px;
   height: 334px;
   object-fit: contain;
@@ -441,7 +441,7 @@
   padding: 48px 49px;
   box-sizing: border-box;
   gap: 24px;
-  background-image: url(./public/Card2.png);
+  background-image: url(../images/Card2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -525,7 +525,7 @@
   align-items: center;
   padding: 48px 49px 72px;
   gap: 24px;
-  background-image: url(./public/Card2.png);
+  background-image: url(../images/Card2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -612,7 +612,7 @@
   padding: 48px 49px 72px;
   box-sizing: border-box;
   gap: 24px;
-  background-image: url(./public/Card2.png);
+  background-image: url(../images/Card2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -718,7 +718,7 @@
 .features-description-parent {
   width: 1197px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 47px;
 }
 .features {
@@ -730,7 +730,6 @@
   text-align: left;
   font-size: 20px;
   font-family: Lexend;
-  padding-left: 230px;
   
 }
 .asked-questions,
@@ -1364,7 +1363,8 @@
   position: relative;
   background-color: #1a1a1a;
   overflow: hidden;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 50px 0 0;
   gap: 100px;
   line-height: normal;
@@ -1613,3 +1613,6 @@
   background-color: #06cc02;
   color: #1c1c1c;
 }
+
+
+

@@ -45,7 +45,7 @@
                   <div class="text-button4">Sign Up</div>
                 </button>
               </div>
-              <button class="bot"  data-popup="popupMenu">
+              <button class="bot" id="tbutton" onclick="toggleSurface()">
                 <div class="text">Login</div>
               </button>
             </div>
@@ -572,8 +572,16 @@
        </div>
    </div>
 
+   <div class="covering" id="covering" onclick="hideSurface()"></div>
+    <div class="surface" id="surface">
+        <div class="content">
+            <div class="option" id="t4">As a Tenant<span class="loader"></span></div>
+            <div class="option" id="l4">As a Landlord<span class="loader"></span></div>
+        </div>
+    </div>
+
     <script>
-         document.querySelectorAll(".text-button-wrapper, .open-account-btn, .button2, .bot").forEach(button => {
+         document.querySelectorAll(".text-button-wrapper, .open-account-btn, .button").forEach(button => {
             button.addEventListener("click", function() {
                 const popupId = button.getAttribute("data-popup");
                 const popup = document.getElementById(popupId);
@@ -625,13 +633,19 @@
         });
       }
       
-      // var button = document.getElementById("button");
-      // if (button) {
-      //   button.addEventListener("click", function (e) {
-      //     window.location.href = "openAccount.html";
-      //   });
-      // }
-  
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          window.location.href = "Login.html";
+        });
+      }
+      
+      var btn = document.getElementById("btn");
+      if (btn) {
+        btn.addEventListener("click", function (e) {
+         ////////////////////////////////
+        });
+      }
       
       var textButton1 = document.getElementById("textButton1");
       if (textButton1) {
@@ -710,5 +724,72 @@
             });
         }
       </script>
+       <script>
+        function toggleSurface() {
+            const covering = document.getElementById('covering');
+            const surface = document.getElementById('surface');
+            covering.classList.toggle('active');
+            surface.classList.toggle('active');
+        }
+
+        function hideSurface() {
+            const covering = document.getElementById('covering');
+            const surface = document.getElementById('surface');
+            const t4 = document.getElementById('t4');
+            const l4 = document.getElementById('l4');
+            
+            covering.classList.remove('active');
+            surface.classList.remove('active');
+            
+            t4.classList.remove('loading');
+            l4.classList.remove('loading');
+            t4.disabled = false;
+            l4.disabled = false;
+        }
+
+        var t4 = document.getElementById("t4");
+        if (t4) {
+            t4.addEventListener("click", function(e) {
+                if (!t4.classList.contains('loading') && !l4.classList.contains('loading')) {
+                    showLoading(t4, "TLogin.html");
+                }
+            });
+        }
+
+        var l4 = document.getElementById("l4");
+        if (l4) {
+            l4.addEventListener("click", function(e) {
+                if (!t4.classList.contains('loading') && !l4.classList.contains('loading')) {
+                    showLoading(l4, "LLogin.html");
+                }
+            });
+        }
+
+        function showLoading(button, url) {
+            button.classList.add('loading');
+            button.disabled = true;
+            setTimeout(() => {
+                window.location.href = url;
+            }, 2000); // Simulate a 2-second loading time
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const buttonContainers = ['textButton8', 'textButton9', 'textButton10'];
+        const delay = 5000; // delay time in milliseconds (5000ms = 5 seconds)
+
+        setTimeout(function() {
+          buttonContainers.forEach(containerId => {
+            const buttonContainer = document.getElementById(containerId);
+            if (buttonContainer) {
+                const button = document.createElement('button');
+                button.setAttribute('loading', 'lazy'); // Set the loading attribute to lazy
+                buttonContainer.appendChild(button);
+            }
+          });
+        }, delay);
+       });
+    </script>
+
+    
   </body>
 </html>

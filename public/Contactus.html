@@ -40,7 +40,7 @@
                     <div class="text-button4">Sign Up</div>
                   </div>
                 </div>
-                <div class="button" id="buttonContainer">
+                <div class="button" data-popup="popupMenu4">
                   <div class="button-label">Login</div>
                 </div>
               </div>
@@ -64,7 +64,7 @@
                   needs, and prioritizing transparency, we strive to redefine
                   how electricity expenses are managed. Come join us on this
                   journey of transformation and experience a new level of
-                  billing excellence. You can contact us via email
+                  billing excellence.You can contact us via email
                   (manuelansah955@gmail.com), live chat (+233598296141), or
                   phone (0598296141) during our business hours.
                 </p>
@@ -102,7 +102,7 @@
           <div class="button-parent">
             <div class="button1">
               <div class="icon-wrapper">
-                <img class="icon" alt="" src="./images/mail.svg" />
+                <img class="icon" alt="" src="./images/mail.svg"/>
               </div>
               <div class="text-button9">manuelansah955@gmail.com</div>
             </div>
@@ -153,8 +153,17 @@
        </div>
    </div>
 
+   <div class="popup-menu" id="popupMenu4">
+    <div class="signupllt">
+        <div class="astenant" id="t4">As a Tenant</div>
+        <div class="userroles">
+            <div class="aslandlord" id="l4">As a Landlord</div>
+        </div>
+    </div>
+</div>
+
     <script>
-         document.querySelectorAll(".hero-button").forEach(button => {
+         document.querySelectorAll(".hero-button, .button").forEach(button => {
             button.addEventListener("click", function() {
                 const popupId = button.getAttribute("data-popup");
                 const popup = document.getElementById(popupId);
@@ -212,13 +221,6 @@
         });
       }
       
-      var buttonContainer = document.getElementById("buttonContainer");
-      if (buttonContainer) {
-        buttonContainer.addEventListener("click", function (e) {
-          window.location.href = "openAccount.html";
-        });
-      }
-      
       var textButton = document.getElementById("textButton");
       if (textButton) {
         textButton.addEventListener("click", function (e) {
@@ -272,6 +274,20 @@
         if (landlord1) {
             landlord1.addEventListener("click", function (e) {
                 window.location.href = "LSignup.html";
+            });
+        }
+
+        var t4 = document.getElementById("t4");
+        if (t4) {
+          t4.addEventListener("click", function (e) {
+                window.location.href = "TLogin.html";
+            });
+        }
+
+        var l4 = document.getElementById("l4");
+        if (l4) {
+          l4.addEventListener("click", function (e) {
+                window.location.href = "LLogin.html";
             });
         }
       </script>

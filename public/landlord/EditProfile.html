@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="./css/EditProfile.css" />
     <link
       rel="stylesheet"
-      href="ht../other/tps://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
     />
     <link
       rel="stylesheet"
-      href="ht../other/tps://fonts.googleapis.com/css2?family=Lexend:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400&display=swap"
     />
   </head>
   <body>
@@ -23,13 +23,13 @@
               <div class="material-symbolsarrow-back-io" onclick="goBack()">
                 <img class="back-icon" alt="" src="./images/back.svg" />
               </div>
-              <div class="profile-title">
-                <b class="edit-profile">Edit Profile</b>
+              <div class="edit-profile-wrapper">
+                <div class="edit-profile">Edit Profile</div>
               </div>
             </button>
           </div>
-          <div class="frame-group">
-            <div class="frame-wrapper">
+          <div class="content-wrapper">
+            <div class="profile-info">
               <div class="outer-circle-parent">
                 <div class="outer-circle"></div>
                 <div class="picdefault-wrapper">
@@ -37,156 +37,122 @@
                     class="picdefault-icon"
                     loading="lazy"
                     alt=""
-                    src="./images/avatar.png"
+                    src="./images/avata.png"
                   />
                 </div>
               </div>
             </div>
             <div class="container">
-              <div class="name-email-field-parent">
-                <div class="name-email-field">
+              <div class="address-field">
+                <div class="username-field">
                   <div class="name-email-input">
                     <b class="username">Username</b>
                     <b class="email">Email</b>
                   </div>
                 </div>
-                <div class="user-details">
-                  <div class="rectangle-parent">
-                    <div class="frame-child"></div>
-                    <input
-                    class="melissa-peters"
-                    placeholder="Melissa Peters"
-                    type="text"
-                  />
+                <div class="name-address">
+                  <div class="name-address-fields">
+                    <div class="rectangle-parent">
+                      <div class="frame-child"></div>
+                      <input
+                        class="melissa-peters"
+                        placeholder="Melissa Peters"
+                        type="text"
+                      />
+                    </div>
+                    <div class="address-field1">
+                      <b class="date-of-birth">Date of Birth</b>
+                    </div>
                   </div>
-                  <div class="user-email">
+                  <div class="password-icon-field">
                     <div class="rectangle-group">
                       <div class="frame-item"></div>
                       <input
-                      class="melpetersgmailcom"
-                      placeholder="melpeters@gmail.com"
-                      type="text"
-                    />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="frame-container">
-                <div class="password-input-wrapper">
-                  <div class="password-input">
-                    <b class="enter-password">Enter password</b>
-                    <b class="confirm-password">Confirm password</b>
-                  </div>
-                </div>
-                <div class="password-visibility">
-                  <div class="password-icon-field">
-                    <div class="component-10">
-                      <div class="visibility-background"></div>
-                      <div class="password-value">
-                        <input
-                        class="visibility-state"
-                        placeholder="*********"
-                        type="password"
+                        class="melpetersgmailcom"
+                        placeholder="melpeters@gmail.com"
+                        type="text"
                       />
-                      </div>
-                      <img class="eye-icon" alt="" src="./images/eye.svg" />
                     </div>
-                    <div class="frame-div">
-                      <div class="date-of-birth-wrapper">
-                        <b class="date-of-birth">Date of Birth</b>
-                      </div>
-                      <div class="rectangle-container">
-                        <div class="frame-inner"></div>
-                        <input
+                    <div class="meter-details">
+                      <b class="meter-serial-number">Meter_Serial_Number</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="name-address1">
+                  <div class="additional-details">
+                    <div class="rectangle-container">
+                      <div class="frame-inner"></div>
+                      <input
                         class="ddmmyyyy"
                         placeholder="DD/MM/YYYY"
                         type="text"
                       />
-                      </div>
                     </div>
-                    <div class="address-field">
-                      <div class="detail-types">
-                        <b class="house-address">House address</b>
-                      </div>
-                      <div class="group-div">
-                        <div class="rectangle-div"></div>
-                        <div class="optional-label">
-                            <input
-                            class="optional"
-                            placeholder="(Optional)"
-                            type="text"
-                          />
-                        </div>
-                        <img
-                          class="iconoutlinequestion"
-                          alt=""
-                          src="./images/question.png"
-                        />
-                      </div>
+                    <div class="user-email">
+                      <b class="house-address">House address</b>
                     </div>
                   </div>
-                  <div class="additional-details">
-                    <div class="component-101">
-                      <div class="visibility-back"></div>
-                      <div class="meter-type-value">
-                        <input
-                        class="detail-state"
-                        placeholder="*********"
-                        type="password"
-                      />
-                      </div>
-                      <img class="eye-icon1" alt="" src="./images/eye.svg" />
-                    </div>
-                    <div class="details-input">
-                      <div class="password-fields">
-                        <b class="meter-serial-number">Meter_Serial_Number</b>
-                      </div>
-                      <div class="rectangle-parent1">
-                        <div class="frame-child1"></div>
-                        <input
+                  <div class="frame-group">
+                    <div class="group-div">
+                      <div class="rectangle-div"></div>
+                      <input
                         class="xxxxxxx"
                         placeholder="131xxxxxxx"
                         type="text"
                       />
-                      </div>
                     </div>
-                    <div class="details-input1">
-                      <div class="meter-type-wrapper">
-                        <b class="meter-type">Meter_type</b>
-                      </div>
-                      <div class="rectangle-parent2">
-                        <div class="frame-child2"></div>
+                    <div class="name-email-field">
+                      <b class="meter-type">Meter_type</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="optional-field">
+                  <div class="rectangle-parent1">
+                    <div class="frame-child1"></div>
+                    <div class="optional-label">
                         <input
+                        class="optional"
+                        placeholder="(Optional)"
+                        type="text"
+                      />
+                    </div>
+                    <img
+                      class="iconoutlinequestion"
+                      src="./images/q.svg"
+                    />
+                  </div>
+                  <div class="optional-field-inner">
+                    <div class="rectangle-parent2">
+                      <div class="frame-child2"></div>
+                      <input
                         class="prepaidpostpaid"
                         placeholder="Prepaid/Postpaid"
                         type="text"
                       />
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="addroombtn-wrapper">
-                <button class="addroombtn" style="border: 0;">
+              <div class="add-room">
+                <button class="addroombtn">
                   <img class="broom-icon" alt="" src="./images/broom.svg" />
-
                   <div class="add-room-label">
-                    <div class="add-room">Add room</div>
+                    <div class="add-room1">Add room</div>
                   </div>
                 </button>
               </div>
               <div class="add-room-container"></div> <!-- Container for dynamically added rooms -->
             </div>
           </div>
-          <div class="button-wrapper">
+          <div class="save-button">
             <button class="button">
-              <div class="save-changes">Save changes</div>
+              <div class="save-changes" loading="lazy">Save changes</div>
             </button>
           </div>
-        </div>
+        </form>
       </section>
       <section class="footer-section">
-        <div class="social-links">
+        <div class="footer-content">
           <div class="logo">
             <img
               class="logo-icon"
@@ -207,10 +173,10 @@
           </div>
         </div>
         <div class="footer-dividers"></div>
-        <div class="social-links1">
+        <div class="social-icons">
           <div class="icons">
             <div class="button1">
-              <div class="social-button-content">
+              <div class="icon-button-containers">
                 <img
                   class="icon"
                   loading="lazy"
@@ -234,8 +200,8 @@
           </div>
         </div>
         <div class="footer-dividers1"></div>
-        <footer class="container1">
-          <div class="info-wrapper">
+        <div class="container1">
+          <div class="copyright">
             <div class="info">WatCal All Rights Reserved</div>
           </div>
           <div class="contact-icons">
@@ -264,7 +230,7 @@
               />
             </div>
           </div>
-          <div class="contact-info">
+          <div class="contact-us">
             <div class="legal-info">
               <!-- <div class="text-button6" id="textButton6">Privacy Policy</div> -->
               <a href="../Privacy.html"class="text-button6" >Privacy Policy</a>
@@ -273,7 +239,7 @@
               <a href="../Terms.html" class="text-button7">Terms of Service</a>
             </div>
           </div>
-        </footer>
+        </div>
       </section>
     </div>
 
@@ -284,42 +250,42 @@
       var textButton1 = document.getElementById("textButton1");
       if (textButton1) {
         textButton1.addEventListener("click", function (e) {
-            window.location.href = "../Helpdesk.html";
+            window.location.href = "../other/Helpdesk.html";
         });
       }
       
       var textButton = document.getElementById("textButton");
       if (textButton) {
         textButton.addEventListener("click", function (e) {
-            window.location.href = "../Home.html";
+            window.location.href = "../other/Home.html";
         });
       }
       
       var textButton2 = document.getElementById("textButton2");
       if (textButton2) {
         textButton2.addEventListener("click", function (e) {
-            window.location.href = "../About.html"; 
+            window.location.href = "../other/About.html"; 
         });
       }
       
       var textButton3 = document.getElementById("textButton3");
       if (textButton3) {
         textButton3.addEventListener("click", function (e) {
-            window.location.href = "../Security.html";
+            window.location.href = "../other/Security.html";
         });
       }
       
       /* var textButton6 = document.getElementById("textButton6");
       if (textButton6) {
         textButton6.addEventListener("click", function (e) {
-            window.location.href = "../Privacy.html";
+            window.location.href = "../other/Privacy.html";
         });
       }
       
       var textButton7 = document.getElementById("textButton7");
       if (textButton7) {
         textButton7.addEventListener("click", function (e) {
-            window.location.href = "../Terms.html";
+            window.location.href = "../other/Terms.html";
         });
       } */
       </script>
@@ -349,6 +315,5 @@
           roomIndex++;
         }
        </script>
-  
   </body>
 </html>

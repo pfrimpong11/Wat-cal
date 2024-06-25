@@ -1,0 +1,428 @@
+*{ margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+  }
+.abstract-design-icon {
+    position: absolute;
+    top: -90px;
+    left: -35px;
+    width: 650.2px;
+    height: 693.8px;
+    object-fit: contain;
+  }
+  .undraw-verified-re-4io7-1-icon {
+    position: absolute;
+    top: 199.3px;
+    left: 97px;
+    width: 622px;
+    height: 626.3px;
+    overflow: hidden;
+    z-index: 1;
+    margin-left: 130px;
+  }
+  .abstract-design-parent {
+    align-self: stretch;
+    height: 825.6px;
+    position: relative;
+  }
+  .desktop-3-inner {
+    height: 879px;
+    width: 719px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 719px;
+    max-width: 100%;
+  }
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0 solid #262626;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  .logo-icon {
+    position: absolute;
+    top: 40px;
+    left: 34px;
+    width: 70px;
+    height: 70.4px;
+    object-fit: contain;
+    z-index: 1;
+  }
+  .circle-parent {
+    height: 150px;
+    flex: 1;
+    position: relative;
+  }
+  .side-bar-inner {
+    width: 150px;
+    margin: 0 !important;
+    position: absolute;
+    top: 47px;
+    left: 150.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .abstract-design-icon1 {
+    height: 173px;
+    width: 173px;
+    position: relative;
+    object-fit: contain;
+    mix-blend-mode: lighten;
+    z-index: 2;
+  }
+  .watcal {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    line-height: 150%;
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-block;
+    min-width: 128px;
+  }
+  .abstract-design-icon2 {
+    height: 172px;
+    width: 172px;
+    position: absolute;
+    margin: 0 !important;
+    top: -95px;
+    right: -150.5px;
+    object-fit: contain;
+    mix-blend-mode: lighten;
+    z-index: 1;
+  }
+  .email-field,
+  .form-fields {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .email-field {
+    flex-direction: row;
+    position: relative;
+  }
+  .form-fields {
+    flex-direction: column;
+    padding: 95.6px 0 0;
+    box-sizing: border-box;
+    min-width: 128px;
+  }
+  .abstract-design-group {
+    margin-top: -321.6px;
+    margin-left: -36.1px;
+    width: 428.6px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 100%;
+  }
+  .side-bar-child {
+    width: 579px;
+    height: 324px;
+    position: relative;
+    display: none;
+    max-width: 100%;
+    z-index: 2;
+  }
+  .enter-email {
+    width: 136px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .frame-child {
+    height: 54px;
+    width: 498px;
+    position: relative;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #262626;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .melpetersgmailcom {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    display: flex;
+    font-family: Nunito;
+    font-size: 18px;
+    background-color: transparent;
+    height: 25px;
+    flex: 1;
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-align: left;
+    align-items: center;
+    min-width: 250px;
+    white-space: nowrap;
+    max-width: 100%;
+    padding: 0;
+    z-index: 1;
+  }
+  .password-input,
+  .rectangle-parent {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .rectangle-parent {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #262626;
+    flex-direction: row;
+    padding: 12px 18px 13px 21px;
+    z-index: 1;
+  }
+  .password-input {
+    flex-direction: column;
+    padding: 0 0 40px;
+  }
+  .new-password {
+    width: 160px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .frame-item {
+    height: 54px;
+    width: 498px;
+    position: relative;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #262626;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .icon,
+  .strength-value {
+    position: relative;
+    z-index: 1;
+  }
+  .strength-value {
+    width: 321px;
+    border: 0;
+    outline: 0;
+    display: flex;
+    font-family: Nunito;
+    font-size: 18px;
+    background-color: transparent;
+    height: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-align: left;
+    align-items: center;
+    max-width: calc(100% - 40px);
+    padding: 0;
+  }
+  .icon {
+    width: 20px;
+    height: 21px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .strength-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1px 0 0;
+  }
+  .password-strength,
+  .rectangle-group {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .rectangle-group {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #262626;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 13px 17px 12px 20px;
+    gap: 20px;
+    z-index: 1;
+  }
+  .password-strength {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .button-label {
+    flex: 1;
+    position: relative;
+    font-size: 16px;
+    line-height: 150%;
+    font-family: Lexend;
+    color: #262626;
+    text-align: center;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .button,
+  .button-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .button {
+    cursor: pointer;
+    border: 0;
+    padding: 18px 20px;
+    background-color: #06cc02;
+    width: 400px;
+    border-radius: 63px;
+    justify-content: flex-start;
+  }
+  .button:hover {
+    background-color: #1fe61c;
+    transition: 0.7s;
+  }
+  .button-wrapper {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 44px;
+  }
+  .desktop-3,
+  .password-field,
+  .side-bar {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .password-field {
+    align-self: stretch;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 41px;
+    max-width: 100%;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 18px;
+    color: #bfbfbf;
+    font-family: Nunito;
+  }
+  .desktop-3,
+  .side-bar {
+    position: relative;
+    box-sizing: border-box;
+  }
+  .side-bar {
+    height: 733px;
+    width: 579px;
+    border-radius: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 321px 36px 72px;
+    gap: 148.6px;
+    background-image: url(../images/paper.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    min-width: 579px;
+    max-width: 100%;
+    border: 1px solid #262626;
+    margin-left: 150px;
+  }
+  .desktop-3 {
+    width: 100%;
+    background-color: #1a1a1a;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0 0 145px;
+    gap: 45px;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 36px;
+    color: #fff;
+    font-family: Lexend;
+  }
+  @media screen and (max-width: 1275px) {
+    .desktop-3-inner,
+    .side-bar {
+      flex: 1;
+    }
+    .desktop-3 {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    .side-bar {
+      padding-top: 209px;
+      padding-bottom: 47px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .desktop-3-inner {
+      min-width: 100%;
+    }
+    .watcal {
+      font-size: 29px;
+      line-height: 43px;
+    }
+    .button-wrapper {
+      padding-left: 22px;
+      padding-right: 22px;
+      box-sizing: border-box;
+    }
+    .password-field {
+      gap: 20px;
+    }
+    .side-bar {
+      gap: 74px;
+      min-width: 100%;
+    }
+    .desktop-3 {
+      gap: 22px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .abstract-design-icon1 {
+      flex: 1;
+    }
+    .watcal {
+      font-size: 22px;
+      line-height: 32px;
+    }
+    .form-fields {
+      flex: 1;
+    }
+    .abstract-design-group {
+      flex-wrap: wrap;
+    }
+    .side-bar {
+      height: auto;
+      gap: 37px;
+      padding-top: 136px;
+      padding-bottom: 31px;
+      box-sizing: border-box;
+    }
+  }

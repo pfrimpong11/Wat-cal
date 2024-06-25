@@ -45,7 +45,7 @@
                     <div class="text-button4">Sign Up</div>
                   </button>
                 </div>
-                <button class="bot" id="button">
+                <button class="bot" data-popup="popupMenu4">
                   <div class="text">Login</div>
                 </button>
               </div>
@@ -67,7 +67,7 @@
               </div>
             </div>
             <div class="hero-image">
-              <img class="image-icon" alt="" src="./public/secure.png" />
+              <img class="image-icon" alt="" src="./images/secure.png" />
 
               <img
                 class="abstract-design-icon"
@@ -352,9 +352,17 @@
            </div>
        </div>
    </div>
+   <div class="popup-menu" id="popupMenu4">
+    <div class="signupllt">
+        <div class="astenant" id="t4">As a Tenant</div>
+        <div class="userroles">
+            <div class="aslandlord" id="l4">As a Landlord</div>
+        </div>
+    </div>
+</div>
 
     <script>
-         document.querySelectorAll(".text-button-wrapper").forEach(button => {
+         document.querySelectorAll(".text-button-wrapper,.bot").forEach(button => {
             button.addEventListener("click", function() {
                 const popupId = button.getAttribute("data-popup");
                 const popup = document.getElementById(popupId);
@@ -403,13 +411,6 @@
       if (contactUsText) {
         contactUsText.addEventListener("click", function (e) {
           window.location.href = "Contactus.html";
-        });
-      }
-      
-      var button = document.getElementById("button");
-      if (button) {
-        button.addEventListener("click", function (e) {
-          window.location.href = "openAccount.html";
         });
       }
       
@@ -466,6 +467,20 @@
         if (landlord1) {
             landlord1.addEventListener("click", function (e) {
                 window.location.href = "LSignup.html";
+            });
+        }
+
+        var t4 = document.getElementById("t4");
+        if (t4) {
+          t4.addEventListener("click", function (e) {
+                window.location.href = "TLogin.html";
+            });
+        }
+
+        var l4 = document.getElementById("l4");
+        if (l4) {
+          l4.addEventListener("click", function (e) {
+                window.location.href = "LLogin.html";
             });
         }
       </script>

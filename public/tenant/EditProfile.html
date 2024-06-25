@@ -16,20 +16,20 @@
   </head>
   <body>
     <div class="tenant-edit-profile-page-des">
-      <section class="tenant-edit-profile-page-des-inner">
-        <div class="frame-parent">
-          <div class="navbar-wrapper">
+      <section class="top-navigation-container-wrapper">
+        <form class="top-navigation-container">
+          <div class="top-navigation">
             <button class="navbar">
               <div class="material-symbolsarrow-back-io" onclick="goBack()">
                 <img class="back-icon" alt="" src="./images/back.svg" />
               </div>
-              <div class="edit-profile-wrapper">
-                <b class="edit-profile">Edit Profile</b>
+              <div class="edit-profile-title">
+                <div class="edit-profile">Edit Profile</div>
               </div>
             </button>
           </div>
-          <div class="frame-group">
-            <div class="frame-wrapper">
+          <div class="content">
+            <div class="profile-details">
               <div class="ellipse-parent">
                 <div class="frame-child"></div>
                 <div class="picdefault-wrapper">
@@ -37,20 +37,20 @@
                     class="picdefault-icon"
                     loading="lazy"
                     alt=""
-                    src="./images/avatar.png"
+                    src="./images/avata.png"
                   />
                 </div>
               </div>
             </div>
             <div class="container">
-              <div class="frame-container">
-                <div class="frame-div">
-                  <div class="username-parent">
-                    <b class="username">Username</b>
-                    <b class="email">Email</b>
-                  </div>
+              <div class="container-inner">
+                <div class="username-parent">
+                  <b class="username">Username</b>
+                  <b class="email">Email</b>
                 </div>
-                <div class="frame-parent1">
+              </div>
+              <div class="name-and-d-o-b">
+                <div class="name-row">
                   <div class="rectangle-parent">
                     <div class="frame-item"></div>
                     <input
@@ -59,125 +59,91 @@
                       type="text"
                     />
                   </div>
-                  <div class="frame-wrapper1">
-                    <div class="rectangle-group">
-                      <div class="frame-inner"></div>
-                      <input
-                        class="melpetersgmailcom"
-                        placeholder="melpeters@gmail.com"
-                        type="text"
-                      />
-                    </div>
+                  <div class="d-o-b-row">
+                    <b class="date-of-birth">Date of Birth</b>
+                  </div>
+                </div>
+                <div class="password-input">
+                  <div class="rectangle-group">
+                    <div class="frame-inner"></div>
+                    <input
+                      class="melpetersgmailcom"
+                      placeholder="melpeters@gmail.com"
+                      type="text"
+                    />
+                  </div>
+                  <div class="meter-details">
+                    <b class="meter-serial-number">Meter_Serial_Number</b>
                   </div>
                 </div>
               </div>
-              <div class="frame-parent2">
-                <div class="frame-wrapper2">
-                  <div class="enter-password-parent">
-                    <b class="enter-password">Enter password</b>
-                    <b class="confirm-password">Confirm password</b>
+              <div class="name-and-d-o-b1">
+                <div class="frame-parent">
+                  <div class="rectangle-container">
+                    <div class="rectangle-div"></div>
+                    <input
+                      class="ddmmyyyy"
+                      placeholder="DD/MM/YYYY"
+                      type="text"
+                    />
+                  </div>
+                  <div class="house-address-wrapper">
+                    <b class="house-address">House address</b>
                   </div>
                 </div>
-                <div class="password-input-parent">
-                  <div class="password-input">
-                    <div class="component-10">
-                      <div class="password-input-border"></div>
-                      <div class="password-input-placeholder-wrapper">
-                        <input
-                        class="password-input-placeholder"
-                        placeholder="*********"
-                        type="password"
-                      /> 
-                      </div>
-                      <img class="eye-icon" alt="" src="./images/eye.svg" />
-                    </div>
-                    <div class="frame-parent3">
-                      <div class="date-of-birth-wrapper">
-                        <b class="date-of-birth">Date of Birth</b>
-                      </div>
-                      <div class="rectangle-container">
-                        <div class="rectangle-div"></div>
-                        <input
-                          class="ddmmyyyy"
-                          placeholder="DD/MM/YYYY"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                    <div class="frame-parent4">
-                      <div class="house-address-wrapper">
-                        <b class="house-address">House address</b>
-                      </div>
-                      <div class="group-div">
-                        <div class="frame-child1"></div>
-                        <div class="optional-wrapper">
-                            <input
-                            class="optional"
-                            placeholder="(Optional)"
-                            type="text"
-                          />
-                        </div>
-                        <img
-                          class="iconoutlinequestion"
-                          loading="lazy"
-                          alt=""
-                          src="./images/question.png"
-                        />
-                      </div>
-                    </div>
+                <div class="frame-group">
+                  <div class="group-div">
+                    <div class="frame-child1"></div>
+                    <input
+                      class="xxxxxxx"
+                      placeholder="131xxxxxxx"
+                      type="text"
+                    />
                   </div>
-                  <div class="component-10-parent">
-                    <div class="component-101">
-                      <div class="meter-password-input-border"></div>
-                      <div class="meter-password-input-placehold-wrapper">
-                        <input
-                        class="meter-password-input"
-                        placeholder="*********"
-                        type="password"
-                      /> 
-                      </div>
-                      <img class="eye-icon1" alt="" src="./images/eye.svg" />
-                    </div>
-                    <div class="frame-parent5">
-                      <div class="meter-serial-number-wrapper">
-                        <b class="meter-serial-number">Meter_Serial_Number</b>
-                      </div>
-                      <div class="rectangle-parent1">
-                        <div class="frame-child2"></div>
-                        <input
-                          class="xxxxxxx"
-                          placeholder="131xxxxxxx"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                    <div class="frame-parent6">
-                      <div class="meter-type-wrapper">
-                        <b class="meter-type">Meter_type</b>
-                      </div>
-                      <div class="rectangle-parent2">
-                        <div class="frame-child3"></div>
-                        <input
-                          class="prepaidpostpaid"
-                          placeholder="Prepaid/Postpaid"
-                          type="text"
-                        />
-                      </div>
-                    </div>
+                  <div class="meter-type-wrapper">
+                    <b class="meter-type">Meter_type</b>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-container">
+                <div class="rectangle-parent1">
+                  <div class="frame-child2"></div>
+                  <div class="optional-label">
+                    <input
+                    class="optional"
+                    placeholder="(Optional)"
+                    type="text"
+                  />
+                  </div>
+                  <img
+                    class="iconoutlinequestion"
+                    loading="lazy"
+                    alt=""
+                    src="./images/q.svg"
+                  />
+                </div>
+                <div class="frame-wrapper">
+                  <div class="rectangle-parent2">
+                    <div class="frame-child3"></div>
+                    <input
+                      class="prepaidpostpaid"
+                      placeholder="Prepaid/Postpaid"
+                      type="text"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="button-wrapper">
+          <div class="save-button-container">
             <button class="button">
-              <div class="save-changes">Save changes</div>
+              <div class="save-changes" loading="lazy">Save changes</div>
             </button>
           </div>
-        </div>
+        </form>
       </section>
-      <footer class="footer-section">
-        <div class="footer-section-inner">
+      <section class="footer-section">
+        <div class="footer-content">
           <div class="logo-parent">
             <img
               class="logo-icon"
@@ -189,7 +155,7 @@
             <h3 class="watcal">WatCal</h3>
           </div>
         </div>
-        <div class="footer-section-child">
+        <div class="navigation-links">
           <div class="text-button-parent">
             <div class="text-button" id="textButton">Home</div>
             <div class="text-button1" id="textButton1">Help Desk</div>
@@ -198,10 +164,10 @@
           </div>
         </div>
         <div class="line"></div>
-        <div class="footer-section-inner1">
+        <div class="social-links">
           <div class="button-parent">
             <div class="button1">
-              <div class="icon-wrapper">
+              <div class="social-icon-containers">
                 <img
                   class="icon"
                   loading="lazy"
@@ -212,7 +178,7 @@
               <div class="text-button4">manuelansah955@gmail.com</div>
             </div>
             <div class="button2">
-              <div class="icon-container">
+              <div class="icon-wrapper">
                 <img
                   class="icon1"
                   loading="lazy"
@@ -255,60 +221,62 @@
               />
             </div>
           </div>
-          <div class="container-inner">
+          <div class="legal-links">
             <div class="text-button-group">
-              <a href="../Privacy.html" class="text-button6">Privacy Policy</a>
-              <div class="legal-links-separator"></div>
-              <a href="../Terms.html" class="text-button7">Terms of Service</a>            
+              <!-- <div class="text-button6" id="textButton6">Privacy Policy</div> -->
+              <a href="../Privacy.html"class="text-button6" >Privacy Policy</a>
+              <div class="info-divider"></div>
+              <!-- <div class="text-button7" id="textButton7">Terms of Service</div> -->
+              <a href="../Terms.html" class="text-button7">Terms of Service</a>
             </div>
           </div>
         </footer>
-      </footer>
+      </section>
     </div>
 
     <script>
-       function goBack() {
+        function goBack() {
       window.history.back();
     }
       var textButton1 = document.getElementById("textButton1");
       if (textButton1) {
         textButton1.addEventListener("click", function (e) {
-            window.location.href = "../Helpdesk.html";
+            window.location.href = "../other/Helpdesk.html";
         });
       }
       
       var textButton = document.getElementById("textButton");
       if (textButton) {
         textButton.addEventListener("click", function (e) {
-            window.location.href = "../Home.html";
+            window.location.href = "../other/Home.html";
         });
       }
       
       var textButton2 = document.getElementById("textButton2");
       if (textButton2) {
         textButton2.addEventListener("click", function (e) {
-            window.location.href = "../About.html"; 
+            window.location.href = "../other/About.html"; 
         });
       }
       
       var textButton3 = document.getElementById("textButton3");
       if (textButton3) {
         textButton3.addEventListener("click", function (e) {
-            window.location.href = "../Security.html";
+            window.location.href = "../other/Security.html";
         });
       }
       
-     /*  var textButton6 = document.getElementById("textButton6");
+      /* var textButton6 = document.getElementById("textButton6");
       if (textButton6) {
         textButton6.addEventListener("click", function (e) {
-            window.location.href = "../Privacy.html";
+            window.location.href = "../other/Privacy.html";
         });
       }
       
       var textButton7 = document.getElementById("textButton7");
       if (textButton7) {
         textButton7.addEventListener("click", function (e) {
-            window.location.href = "../Terms.html";
+            window.location.href = "../other/Terms.html";
         });
       } */
       </script>

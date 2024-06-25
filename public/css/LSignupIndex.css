@@ -199,8 +199,8 @@
   width: 325px;
   position: absolute;
   margin: 0 !important;
-  right: -269px;
-  bottom: -152px;
+  right: -267px;
+  bottom: -156px;
   object-fit: contain;
   z-index: 2;
 }
@@ -1138,7 +1138,8 @@
   padding: 98px 20px;
   box-sizing: border-box;
   gap: 80px;
-  background-image: url(./public/p.svg);
+  border: 1px solid black;
+  background-image: url(../images/paper.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -1626,3 +1627,77 @@
         border: 1px solid #ccc;
         border-radius: 20px;
       }
+
+
+
+      .wrap {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+        box-sizing: border-box;
+    }
+    
+    .overlay.active {
+        display: block;
+    }
+    
+    .popup-menu {
+        font-family: 'Lexend', sans-serif;
+        width: 300px;
+        position: fixed;
+        top: 50%;
+        right: -300px;
+        transform: translateY(-50%);
+        background-color: #1c1c1c;
+        border: 1px solid #06cc02;
+        border-radius: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.5s ease, transform 0.5s ease;
+        z-index: 9999;
+        color: #b3b3b3;
+    }
+    
+    .popup-menu.active {
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+    
+    .blur-background {
+        transition: 0.5s;
+        filter: blur(5px);
+    }
+    
+    .signupllt {
+        text-align: center;
+    }
+    
+    .astenant, .aslandlord {
+        cursor: pointer;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #06cc02;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .astenant:hover, .aslandlord:hover {
+        background-color: #06cc02;
+        color: #1c1c1c;
+    }
+      

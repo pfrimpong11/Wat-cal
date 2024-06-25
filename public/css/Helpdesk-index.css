@@ -232,7 +232,7 @@
 .abstract-design-icon {
   position: absolute;
   top: 0;
-  left: 438px;
+  left: 433px;
   width: 317px;
   height: 334px;
   object-fit: contain;
@@ -686,7 +686,7 @@
   flex-shrink: 0;
   justify-content: space-between;
   padding: 89px 81px 89px 79px;
-  background-image: url(./public/Card2.png);
+  background-image: url(../images/Card2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -1259,3 +1259,7 @@
   background-color: #06cc02;
   color: #1c1c1c;
 }
+
+
+
+

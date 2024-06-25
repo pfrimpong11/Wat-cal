@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./css/setpasscode.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="desktop-3">
+      <div class="desktop-3-inner">
+        <div class="abstract-design-parent">
+          <img
+            class="abstract-design-icon"
+            alt=""
+            src="./images/top.png"
+          />
+
+          <img
+            class="undraw-verified-re-4io7-1-icon"
+            loading="lazy"
+            alt=""
+            src="./images/undraw_verified_re_4io7 1.png"
+          />
+        </div>
+      </div>
+      <div class="side-bar">
+        <div class="side-bar-inner">
+          <div class="circle-parent">
+            <div class="circle"></div>
+            <img
+              class="logo-icon"
+              loading="lazy"
+              alt=""
+              src="./images/dlogo.png"
+            />
+          </div>
+        </div>
+        <div class="abstract-design-group">
+          <img
+            class="abstract-design-icon1"
+            alt=""
+            src="./images/topl.png"
+          />
+
+          <div class="form-fields">
+            <div class="email-field">
+              <h1 class="watcal">WatCal</h1>
+              <img
+                class="abstract-design-icon2"
+                alt=""
+                src="./images/topr.png"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="side-bar-child"></div>
+        <div class="password-field">
+          <div class="password-input">
+            <b class="enter-email">Enter Email</b>
+            <div class="rectangle-parent">
+              <div class="frame-child"></div>
+              <input
+                class="melpetersgmailcom"
+                placeholder="melpeters@gmail.com"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="password-strength">
+            <b class="new-password">New Password </b>
+            <div class="rectangle-group">
+              <div class="frame-item"></div>
+              <input
+                class="strength-value"
+                placeholder="*********"
+                type="password"
+              />
+
+              <div class="strength-icon">
+                <img class="icon" alt="" src="./images/e.png" />
+              </div>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button class="button" id="bat" loading="lazy">
+              <div class="button-label">Submit</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        const buttonContainer = document.getElementById('bat');
+        const button = document.createElement('button');
+        button.setAttribute('loading', 'lazy'); // Set the loading attribute to lazy
+        buttonContainer.appendChild(button);
+    }, 5000); // delay time in milliseconds (5000ms = 5 seconds)
+});
+</script>
