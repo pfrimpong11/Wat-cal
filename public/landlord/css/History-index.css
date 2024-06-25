@@ -454,10 +454,14 @@
   align-items: center;
 }
 .room-name {
+  margin: 0;
   width: 353px;
+  font-size: inherit;
+  font-weight: 500;
+  font-family: inherit;
   flex-shrink: 0;
   max-width: 100%;
-  padding-top: 10px;
+  padding-top: 8px;
 }
 .month {
   width: 151px;
@@ -466,6 +470,14 @@
   padding-top: 10px;
 }
 .month-navigation-wrapper .month-navigation div.active {
+  color: #06cc02;
+}
+.aprbtn:hover {
+  transition: .7s;
+  color: #06cc02;
+}
+.maybtn:hover {
+  transition: .7s;
   color: #06cc02;
 }
 .june-wrapper {

@@ -279,3 +279,39 @@ openerBtnContainer.addEventListener("click", function (e) {
   document.querySelector('.octbtn').addEventListener('click', () => updateData('october-2024'));
   document.querySelector('.nvobtn').addEventListener('click', () => updateData('november-2024'));
   document.querySelector('.decbtn').addEventListener('click', () => updateData('december-2024'));
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Set current date for .empty-units
+    const dateElement = document.querySelector('.header-placeholders');
+    // Set current time for .div
+    const timeElements = document.querySelectorAll('.div');
+
+    const currentDate = new Date();
+    const formattedDate = formatDate(currentDate);
+    const formattedTime = formatTime(currentDate);
+    
+    if (dateElement) {
+        dateElement.textContent = formattedDate;
+    }
+
+    timeElements.forEach(element => {
+        if (element) {
+            element.textContent = formattedTime;
+        }
+    });
+});
+
+
+
+function formatDate(date) {
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+}
+
+function formatTime(date) {
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+}

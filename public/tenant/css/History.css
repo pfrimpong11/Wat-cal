@@ -126,7 +126,14 @@
    color: #06cc02;
    cursor: pointer;
 }
-
+.aprbtn:hover {
+  transition: .7s;
+  color: #06cc02;
+}
+.maybtn:hover {
+  transition: .7s;
+  color: #06cc02;
+}
 .janbtn {
   height: 58px;
   width: 203px;
@@ -417,6 +424,9 @@
   padding: 18px 50px;
   white-space: nowrap;
 }
+.active-btn {
+  color: #06cc02;
+}
 .body,
 .rectangle-parent {
   max-width: 100%;
@@ -494,9 +504,11 @@
   justify-content: flex-start;
 }
 .button:hover{
+  transition: .7s;
   background-color: #06cc02;
 }
 .downloadbtn:hover {
+  transition: .7s;
   background-color: #1fe61c;
 }
 .downloadbtn {
