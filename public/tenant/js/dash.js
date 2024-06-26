@@ -91,44 +91,27 @@ OutBtnContainer.addEventListener("click", function (e) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-// Set current date for .empty-units
-const dateElement = document.querySelector('.empty-units');
-// Set current time for .div
-const timeElements = document.querySelectorAll('.div');
+    // Set current date for .empty-units
+    const dateElement = document.querySelector('.empty-units');
+    // Set current time for .div
+    const timeElements = document.querySelectorAll('.div');
 
-const currentDate = new Date();
-const formattedDate = formatDate(currentDate);
-const formattedTime = formatTime(currentDate);
+    const currentDate = new Date();
+    const formattedDate = formatDate(currentDate);
+    const formattedTime = formatTime(currentDate);
 
-if (dateElement) {
-    dateElement.textContent = formattedDate;
-}
-
-timeElements.forEach(element => {
-    if (element) {
-        element.textContent = formattedTime;
+    if (dateElement) {
+        dateElement.textContent = formattedDate;
     }
-});
-});
 
-function formatDate(date) {
-const day = date.getDate().toString().padStart(2, '0');
-const month = (date.getMonth() + 1).toString().padStart(2, '0');
-const year = date.getFullYear();
-return `${day}/${month}/${year}`;
-}
+    timeElements.forEach(element => {
+        if (element) {
+            element.textContent = formattedTime;
+        }
+    });
 
-function formatTime(date) {
-const hours = date.getHours().toString().padStart(2, '0');
-const minutes = date.getMinutes().toString().padStart(2, '0');
-return `${hours}:${minutes}`;
-}
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
     // Get today's date
-    let today = new Date();
+    const today = new Date();
 
     // Array of day names in order
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -172,3 +155,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+function formatDate(date) {
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+}
+
+function formatTime(date) {
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+}
+

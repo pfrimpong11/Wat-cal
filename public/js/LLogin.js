@@ -5,29 +5,33 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     const password = document.getElementById('password').value;
 
     try {
-    const response = await fetch('/api/landlordLogin', {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ username, password })
-    });
+        const response = await fetch('/api/landlordLogin', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        });
 
-    const data = await response.json();
+        const data = await response.json();
 
-    if (!response.ok) {
-        throw new Error(data.msg || 'Login failed');
-    }
+        if (!response.ok) {
+            throw new Error(data.msg || 'Login failed');
+        }
 
-    // document.getElementById('message').innerHTML = `<p style="color: green;">${data.msg}. Redirecting to homepage...</p>`;
-    setTimeout(() => {
-        window.location.href = '/landlord/Dashboard.html';
-    }, 1000);
+        // Save the username to local storage
+        localStorage.setItem('username', username);
+
+        // Redirect to the dashboard
+        setTimeout(() => {
+            window.location.href = '/landlord/Dashboard.html';
+        }, 1000);
     } catch (error) {
         console.log("Login Failed");
-    // document.getElementById('message').innerHTML = `<p style="color: red;">${error.message}</p>`;
+        // document.getElementById('message').innerHTML = `<p style="color: red;">${error.message}</p>`;
     }
 });
+
 
 
 

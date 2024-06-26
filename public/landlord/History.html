@@ -145,12 +145,12 @@
               <div class="downParent">
                 <a class="down">Download</a>
                 <div class="R-wrapper">
-                  <div class="R">
+                  <div class="R"  onclick="downloadPDF()">
                     <div class="file-pdf-regular-1-wrapper">
                       <img
                         class="file-pdf-regular-1-icon"
                         loading="lazy"
-                        alt=""
+                        alt="PDF"
                         src="./images/file-pdf-regular 1.svg"
                       />
                     </div>
@@ -163,16 +163,16 @@
                   <img
                     class="close-icon"
                     loading="lazy"
-                    alt=""
+                    alt="Close"
                     src="./images/close.svg"
                   />
       
-                  <div class="csvbtn">
+                  <div class="csvbtn" onclick="downloadCSV()">
                     <div class="file-csv-solid-1-wrapper">
                       <img
                         class="file-csv-solid-1-icon"
                         loading="lazy"
-                        alt=""
+                        alt="CSV"
                         src="./images/file-csv-solid 1.svg"
                       />
                     </div>
@@ -862,10 +862,8 @@
           </div>
           <div class="language-switcher-wrapper">
             <div class="language-switcher">
-              <!-- <div class="text-button6" id="textButton6">Privacy Policy</div> -->
              <a href="../Privacy.html" class="text-button6" >Privacy Policy</a>
              <div class="theme-separator"></div>
-             <!-- <div class="text-button7" id="textButton7">Terms of Service</div> -->
              <a href="../Terms.html" class="text-button7">Terms of Service</a>
             </div>
           </div>
@@ -873,7 +871,8 @@
       </div>
     </div>
    </div>
-
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+   <script src="js/download1.js"></script>
     <script src="js/his.js"></script>
   </body>
 </html>

@@ -2,18 +2,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to extract data
     function extractData() {
       return {
-        date: document.querySelector('.empty-k-w').innerText,
-        reading_time: document.querySelector('.div1').innerText,
-        reading_value: document.querySelector('.kw').innerText,
-        last_reading_time: document.querySelector('.div2').innerText,
-        last_reading_value: document.querySelector('.kw1').innerText,
-        last_reading_date: document.querySelector('.div3').innerText,
-        percentage: document.querySelector('.percentage-number').innerText
+        date: document.querySelector('.date .header-placeholders').innerText,
+        reading_time: document.querySelector('.reading-time .div').innerText,
+        reading_value: document.querySelector('.reading-value .kw').innerText,
+        last_reading_time: document.querySelector('.last-reading-time .div1').innerText,
+        last_reading_value: document.querySelector('.last-reading-value .kw1').innerText,
+        last_reading_date: document.querySelector('.last-reading-date .div2').innerText,
+        percentage: document.querySelector('.usage-percentage').innerText
       };
     }
   
     // CSV Download
-    document.querySelector('.csvbtn').addEventListener('click', function () {
+    document.querySelector('.downloadbtn').addEventListener('click', function () {
       const data = extractData();
       const csvData = [
         ['Label', 'Value'],
@@ -42,13 +42,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   
     // PDF Download
-    document.querySelector('.R').addEventListener('click', function () {
+    document.querySelector('.download-solid-1-icon').addEventListener('click', function () {
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
       const data = extractData();
   
       // Add background image
-      const imageUrl = 'base64img.js' 
+      const imageUrl = 'base64img.js'// (truncated example)
   
       const imageWidth = 100; // Width of the image in the PDF
       const imageHeight = 100; // Height of the image in the PDF
