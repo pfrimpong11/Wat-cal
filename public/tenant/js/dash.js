@@ -91,8 +91,8 @@ OutBtnContainer.addEventListener("click", function (e) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-// Set current date for .unit-placeholder
-const dateElement = document.querySelector('.unit-placeholder');
+// Set current date for .empty-units
+const dateElement = document.querySelector('.empty-units');
 // Set current time for .div
 const timeElements = document.querySelectorAll('.div');
 

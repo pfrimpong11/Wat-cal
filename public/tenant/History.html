@@ -27,11 +27,10 @@
               <a class="down">Download</a>
               <div class="R-wrapper">
                 <div class="R">
-                  <div class="file-pdf-regular-1-wrapper">
+                  <div class="file-pdf-regular-1-wrapper" id="downloadPdf">
                     <img
                       class="file-pdf-regular-1-icon"
-                      loading="lazy"
-                      alt=""
+                      loading="lazy" alt="PDF"
                       src="./images/file-pdf-regular 1.svg"
                     />
                   </div>
@@ -43,17 +42,15 @@
               <div class="close-parent">
                 <img
                   class="close-icon"
-                  loading="lazy"
-                  alt=""
+                  loading="lazy" alt="Close"
                   src="./images/close.svg"
                 />
     
-                <div class="csvbtn">
+                <div class="csvbtn" id="downloadCsv">
                   <div class="file-csv-solid-1-wrapper">
                     <img
                       class="file-csv-solid-1-icon"
-                      loading="lazy"
-                      alt=""
+                      loading="lazy" alt="CSV"
                       src="./images/file-csv-solid 1.svg"
                     />
                   </div>
@@ -765,7 +762,8 @@
       </section>
     </div>
    </div>
-
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+   <script src="js/download.js"></script>
     <script src="js/his.js"></script>
   </body>
 </html>

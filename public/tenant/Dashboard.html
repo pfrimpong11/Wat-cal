@@ -21,49 +21,46 @@
   </head>
   <body>
     <div class="overlay" id="overlay2">
-        <div class="downloadmenu" id="popup2">
-            <section class="Parent">
-              <div class="Child"></div>
-              <div class="downParent">
-                <a class="down">Download</a>
-                <div class="R-wrapper">
-                  <div class="R">
-                    <div class="file-pdf-regular-1-wrapper">
-                      <img
-                        class="file-pdf-regular-1-icon"
-                        loading="lazy"
-                        alt=""
-                        src="./images/file-pdf-regular 1.svg"
-                      />
-                    </div>
-                    <div class="reports">Reports</div>
+      <div class="downloadmenu" id="popup2">
+          <section class="Parent">
+            <div class="Child"></div>
+            <div class="downParent">
+              <a class="down">Download</a>
+              <div class="R-wrapper">
+                <div class="R">
+                  <div class="file-pdf-regular-1-wrapper" id="downloadPdf">
+                    <img
+                      class="file-pdf-regular-1-icon"
+                      loading="lazy" alt="PDF"
+                      src="./images/file-pdf-regular 1.svg"
+                    />
                   </div>
+                  <div class="reports">Reports</div>
                 </div>
               </div>
-              <div class="cover">
-                <div class="close-parent">
-                  <img
-                    class="close-icon"
-                    loading="lazy"
-                    alt=""
-                    src="./images/close.svg"
-                  />
-      
-                  <div class="csvbtn">
-                    <div class="file-csv-solid-1-wrapper">
-                      <img
-                        class="file-csv-solid-1-icon"
-                        loading="lazy"
-                        alt=""
-                        src="./images/file-csv-solid 1.svg"
-                      />
-                    </div>
-                    <div class="dt">Data</div>
+            </div>
+            <div class="cover">
+              <div class="close-parent">
+                <img
+                  class="close-icon"
+                  loading="lazy" alt="Close"
+                  src="./images/close.svg"
+                />
+    
+                <div class="csvbtn" id="downloadCsv">
+                  <div class="file-csv-solid-1-wrapper">
+                    <img
+                      class="file-csv-solid-1-icon"
+                      loading="lazy" alt="CSV"
+                      src="./images/file-csv-solid 1.svg"
+                    />
                   </div>
+                  <div class="dt">Data</div>
                 </div>
               </div>
-            </section>
-        </div>
+            </div>
+          </section>
+      </div>
     </div>
 
     <div class="overlay" id="overlay1">
@@ -203,7 +200,7 @@
                     <div class="header-row">
                       <div class="date">Date :</div>
                       <div class="header-units">
-                        <div class="unit-placeholder">26/06/2023</div>
+                        <div class="empty-units">26/06/2023</div>
                       </div>
                     </div>
                   </div>
@@ -720,7 +717,8 @@
       </footer>
     </div>
    </div> 
-
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+   <script src="js/download.js"></script>
     <script src="js/dash.js"></script>
   </body>
 </html>

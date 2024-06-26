@@ -54,7 +54,7 @@
   border: 1px solid #262626;
   padding: 4px 12px;
   background-color: #1c1c1c;
-  width: 200px;
+  width: 210px;
   margin-right: 150px;
   border-radius: 100px;
   gap: 10px;
@@ -1033,7 +1033,7 @@
   align-items: flex-end;
   padding: 50px 0 0;
   gap: 134.5px;
-  background-image: url(../images/surf.png);
+  background-image: url(../images/surf1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
