@@ -2442,7 +2442,7 @@
 }
 .chart-visualization {
   margin-left: -31.5px;
-  border-radius: 5px;
+  border-radius: 0 0 20px 20px;
   background-color: #313131;
   color: white;
   overflow-x: auto;
@@ -2460,7 +2460,7 @@
   flex-direction: column;
   padding: 28px 30px 4px;
   gap: 40px;
-  background-image: url(../images/paper.png);
+  background-image: url(../images/Card2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -2930,7 +2930,7 @@ text-decoration: none;
 .history-page-desktop {
   width: 100%;
   position: relative;
-  background-image: url(../images/surface.png);
+  background-image: url(../images/surf.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -3394,7 +3394,6 @@ text-decoration: none;
   margin-left: -10px;
   flex-direction: column;
   padding: 10px;
-  debug_commit: 69da668;
 }
 .house {
   height: 20px;
@@ -3474,7 +3473,6 @@ text-decoration: none;
   margin-left: -10px;
   flex-direction: column;
   padding: 10px;
-  debug_commit: 69da668;
 }
 .chart-bar {
   height: 20px;
@@ -3591,7 +3589,6 @@ text-decoration: none;
   align-items: flex-start;
   padding: 10px;
   box-sizing: border-box;
-  debug_commit: 69da668;
   width: 39.4px;
   height: 39.4px;
 }

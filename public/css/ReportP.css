@@ -55,11 +55,12 @@
     border: 1px solid #262626;
     flex-wrap: wrap;
     padding: 4px 9px 4px 11px;
-    gap: 50px;
+    gap: 10px;
   }
   .navbar-wrapper {
-    width: 404px;
+    width: 340px;
     padding: 0 37px;
+    right: 100px;
   }
   .wrench-icon {
     height: 25px;
@@ -491,7 +492,7 @@
   .report-problem-page-desktop {
     width: 100%;
     position: relative;
-    background-image: url(../images/surface.png);
+    background-image: url(../images/surf.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;

@@ -30,7 +30,7 @@
     font-weight: 300;
   }
   .help-support-wrapper {
-    width: 189px;
+    width: 170px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -49,14 +49,13 @@
     border-radius: 100px;
     background-color: #1c1c1c;
     border: 1px solid #262626;
-    justify-content: space-between;
     padding: 4px 14px;
-    gap: 20px;
+    gap: 10px;
   }
   .navbar-wrapper {
-    width: 400px;
+    width: 310px;
     justify-content: flex-start;
-    padding: 0 40px;
+    padding: 0 37px;
     box-sizing: border-box;
     max-width: 100%;
   }
@@ -731,7 +730,7 @@
   .help-page-desktop {
     width: 100%;
     position: relative;
-    background-image: url(../images/surface.png);
+    background-image: url(../images/surf.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;

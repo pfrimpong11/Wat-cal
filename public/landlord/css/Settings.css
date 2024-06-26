@@ -1219,7 +1219,6 @@
   margin-left: -10px;
   flex-direction: column;
   padding: 10px;
-  debug_commit: 69da668;
 }
 .house {
   height: 20px;
@@ -1299,7 +1298,6 @@
   margin-left: -10px;
   flex-direction: column;
   padding: 10px;
-  debug_commit: 69da668;
 }
 .chart-bar {
   height: 20px;
@@ -1416,7 +1414,6 @@
   align-items: flex-start;
   padding: 10px;
   box-sizing: border-box;
-  debug_commit: 69da668;
   width: 39.4px;
   height: 39.4px;
 }

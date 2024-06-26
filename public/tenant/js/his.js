@@ -264,3 +264,48 @@ function formatTime(date) {
     const minutes = date.getMinutes().toString().padStart(2, '0');
     return `${hours}:${minutes}`;
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const today = new Date();
+    const currentMonth = today.getMonth();
+    const currentYear = today.getFullYear();
+  
+    // Function to format date as DD/MM/YYYY
+    function formatDate(date) {
+      const day = date.getDate();
+      const month = date.getMonth() + 1; // Months are zero-indexed
+      const year = date.getFullYear();
+      return `${day < 10 ? '0' : ''}${day}/${month < 10 ? '0' : ''}${month}/${year}`;
+    }
+  
+    // Get all the date and day elements
+    const dates = document.querySelectorAll('[class^=june]');
+    const days = document.querySelectorAll('[class$=day]');
+  
+    // Function to populate the dates and days
+    function populateDatesAndDays() {
+      let currentDate = new Date(currentYear, currentMonth, 1); // Start from the first of the current month
+  
+      dates.forEach((dateElement, index) => {
+        if (index < dates.length) {
+          const date = new Date(currentYear, currentMonth, index + 1);
+          if (date > today) {
+            dateElement.textContent = 'u/a';
+          } else {
+            dateElement.textContent = `${date.getDate()} ${date.toLocaleString('default', { month: 'long' })}`;
+          }
+        }
+      });
+  
+      days.forEach((dayElement, index) => {
+        const day = currentDate.toLocaleString('default', { weekday: 'long' });
+        dayElement.textContent = day;
+        currentDate.setDate(currentDate.getDate() + 1); // Move to the next day
+      });
+    }
+  
+    // Populate the dates and days on page load
+    populateDatesAndDays();
+  });
+  

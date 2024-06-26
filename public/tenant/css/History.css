@@ -2244,7 +2244,7 @@
 }
 .chart-container {
   margin-left: -31.5px;
-  border-radius: 5px;
+  border-radius: 0 0 20px 20px;
   background-color: #313131;
   overflow-x: auto;
   padding: 7.4px 0 25px 12px;
@@ -2268,7 +2268,7 @@
   padding: 28px 30px 0;
   box-sizing: border-box;
   gap: 40px;
-  background-image: url(../images/surface.png);
+  background-image: url(../images/Card2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -2695,7 +2695,7 @@
 .tenant-history-page-desktop {
   width: 100%;
   position: relative;
-  background-image: url(../images/paper.png);
+  background-image: url(../images/surf.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;

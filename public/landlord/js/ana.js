@@ -156,3 +156,51 @@ function formatTime(date) {
     const minutes = date.getMinutes().toString().padStart(2, '0');
     return `${hours}:${minutes}`;
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get today's date
+    let today = new Date();
+
+    // Array of day names in order
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    // Array of elements to update in descending order
+    const dateElements = [
+        { dateClass: '.june', dayClass: '.sunday' },
+        { dateClass: '.june1', dayClass: '.monday' },
+        { dateClass: '.june2', dayClass: '.tuesday' },
+        { dateClass: '.june3', dayClass: '.wednesday' },
+        { dateClass: '.june4', dayClass: '.thursday' },
+        { dateClass: '.june5', dayClass: '.friday' },
+        { dateClass: '.june6', dayClass: '.saturday' },
+        { dateClass: '.june7', dayClass: '.sunday1' },
+        { dateClass: '.june8', dayClass: '.monday1' },
+        { dateClass: '.june9', dayClass: '.tuesday1' },
+        { dateClass: '.june10', dayClass: '.wednesday1' },
+        { dateClass: '.june11', dayClass: '.thursday1' },
+        { dateClass: '.june12', dayClass: '.friday1' },
+        { dateClass: '.june13', dayClass: '.saturday1' }
+    ];
+
+    dateElements.forEach((element, index) => {
+        let dateElement = document.querySelector(element.dateClass);
+        let dayElement = document.querySelector(element.dayClass);
+
+        if (dateElement && dayElement) {
+            // Calculate the date for each element (decreasing)
+            let currentDate = new Date(today);
+            currentDate.setDate(today.getDate() - index);
+
+            // Extract day and date parts
+            let dayName = daysOfWeek[currentDate.getDay()];
+            let dayDate = currentDate.getDate();
+            let monthName = currentDate.toLocaleString('default', { month: 'long' });
+
+            // Update the element with the new date
+            dateElement.innerText = `${dayDate} ${monthName}`;
+            // Update the corresponding day name element
+            dayElement.innerText = dayName;
+        }
+    });
+});

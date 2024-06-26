@@ -49,14 +49,15 @@
   max-width: 100%;
 }
 .navbar {
-  width: 350px;
+  width: 275px;
   border-radius: 100px;
   background-color: #1c1c1c;
   border: 1px solid #262626;
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 4px 11px 4px 12px;
-  gap: 50px;
+  gap: 10px;
+  margin-left: 150px;
 }
 .navbar-wrapper {
   width: 864px;
@@ -711,7 +712,7 @@
 .terms-page-desktop {
   width: 100%;
   position: relative;
-  background-image: url(../images/surface.png);
+  background-image: url(../images/surf.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;

@@ -518,7 +518,6 @@
   padding: 15.5px 5px 103.8px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .frame-item {
   width: 200px;
@@ -587,7 +586,6 @@
   padding: 15.5px 5px 103.8px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .frame-inner {
   width: 199.9px;
@@ -655,7 +653,6 @@
   padding: 15.5px 5px 103.8px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .highlight-shape {
   position: absolute;
@@ -698,7 +695,6 @@
   width: 199.2px;
   position: relative;
   flex-shrink: 0;
-  debug_commit: 69da668;
   font-size: 12px;
 }
 .calendar-weeks-child {
@@ -779,7 +775,6 @@
   padding: 15.5px 5px 103.8px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .calendar-weeks-item {
   width: 199.1px;
@@ -857,7 +852,6 @@
   padding: 15.5px 6px 103.8px 5px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .rectangle-div {
   width: 199.9px;
@@ -935,7 +929,6 @@
   padding: 15.5px 5px 103.8px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .calendar-weeks-child1 {
   width: 200px;
@@ -1006,7 +999,6 @@
   padding: 15.5px 5px 103.8px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .rectangle-icon {
   width: 200px;
@@ -1089,7 +1081,6 @@
   padding: 16.6px 6px 103px;
   box-sizing: border-box;
   gap: 52.8px;
-  debug_commit: 69da668;
 }
 .calendar-weeks-child2 {
   width: 199.9px;
@@ -1161,7 +1152,6 @@
   padding: 15.8px 5px 103.8px 6px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .calendar-weeks-child3 {
   width: 199.1px;
@@ -1240,7 +1230,6 @@
   padding: 15.5px 6px 103.8px 5px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .calendar-weeks-child4 {
   width: 199.9px;
@@ -1314,7 +1303,6 @@
   padding: 15.5px 5px 103.8px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .calendar-weeks-child5 {
   width: 199.1px;
@@ -1390,7 +1378,6 @@
   padding: 15.5px 6px 103.8px 5px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .calendar-weeks-child6 {
   width: 199.9px;
@@ -1461,7 +1448,6 @@
   padding: 15.5px 5px 103.8px;
   box-sizing: border-box;
   gap: 52px;
-  debug_commit: 69da668;
 }
 .calendar,
 .frame-parent {
@@ -1821,7 +1807,6 @@
   gap: 4.1px;
   min-width: 759.7px;
   flex-shrink: 0;
-  debug_commit: 69da668;
 }
 .time-period-value,
 .time-period-value1,
@@ -1864,7 +1849,6 @@
   width: 432.4px;
   align-items: flex-start;
   gap: 149.7px;
-  debug_commit: 69da668;
   max-width: 100%;
   text-align: center;
 }
@@ -1882,7 +1866,7 @@
 }
 .chart-container {
   margin-left: -31.5px;
-  border-radius: 5px;
+  border-radius: 0 0 20px 20px;
   background-color: #313131;
   overflow-x: auto;
   align-items: flex-start;
@@ -1907,7 +1891,7 @@
   padding: 28px 30px 4px;
   box-sizing: border-box;
   gap: 40px;
-  background-image: url(../images/surface.png);
+  background-image: url(../images/Card2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -2305,7 +2289,7 @@
   align-items: flex-end;
   padding: 50px 0 0;
   gap: 134.5px;
-  background-image: url(../images/paper.png);
+  background-image: url(../images/surf.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
