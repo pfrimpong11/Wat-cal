@@ -1,3 +1,5 @@
+
+
 *{ margin: 0;
   border: 0;
   box-sizing: border-box;
@@ -860,57 +862,72 @@
   line-height: 150%;
   font-family: 'Lexend', sans-serif;
   color: #bfbfbf;
-  text-align: center;
+  text-align: center; 
 }
-.add-room-label {
-  flex: 1;
+
+
+
+
+
+
+
+.add-room-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 2px 0 0;
+  align-items: center; /* Center the add-room-container */
+  justify-content: center;
+  padding: 0 0 9px;
+  gap: 10px;
 }
-.add-room-button,
-.addroombtn {
+
+.room-container {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 10px; /* Adjust spacing as needed */
 }
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the inputs and labels */
+  gap: 10px; /* Adjust gap between the room and email containers */
+}
+
+.add-room-label {
+  display: block;
+  padding: -2px 0 0;
+  color: white;
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align labels and inputs to the start */
+  gap: 5px; /* Adjust gap between label and input */
+}
+
+.room-input, .email-input {
+  margin-left: 5px; /* Adjust spacing as needed */
+}
+
 .addroombtn {
   cursor: pointer;
   border: 0;
-  padding: 9.5px 54px;
+  padding: 9.5px 20px;
   background-color: #262626;
+  color: white;
   width: 218px;
   border-radius: 20px;
   overflow: hidden;
   flex-shrink: 0;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  gap: 5px;
-}
-.add-room-button {
-  align-self: stretch;
   justify-content: center;
-  padding: 0 20px;
-}
-.line {
-  align-self: stretch;
-  height: 1px;
-  position: relative;
-  border-top: 1px solid #b3b3b3;
   box-sizing: border-box;
-  bottom: 15px;
-}
-.add-room-container {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 0 9px;
   gap: 5px;
 }
+
+
+
+
 .plan-name {
   position: relative;
   line-height: 150%;
@@ -1109,7 +1126,8 @@
 .add-room-container-parent {
   align-self: stretch;
   align-items: flex-start;
-  gap: 30px;
+  justify-content: center;
+  gap: 10px;
   text-align: center;
   color: #262626;
   font-family: 'Lexend', sans-serif;

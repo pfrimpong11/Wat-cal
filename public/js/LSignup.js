@@ -2,7 +2,10 @@
 
 // Function to handle form submission
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.addroombtn').addEventListener('click', addRoom);
+    document.querySelector('.addroombtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        addRoom();
+    });
 
     let roomIndex = 1;
 
@@ -10,23 +13,48 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.createElement('div');
         container.className = 'room-container';
 
-        const label = document.createElement('label');
-        label.className = 'room-label';
-        label.innerText = `Room ${roomIndex}`;
+        // Room label and input
+        const roomLabel = document.createElement('label');
+        roomLabel.className = 'add-room-label';
+        roomLabel.innerText = `Room ${roomIndex}`;
 
-        const input = document.createElement('input');
-        input.className = 'room-input';
-        input.type = 'text';
-        input.name = `room${roomIndex}`; // Give each input a unique name
-        input.placeholder = `Enter room name`;
+        const roomInput = document.createElement('input');
+        roomInput.className = 'room-input';
+        roomInput.type = 'text';
+        roomInput.name = `room${roomIndex}`; // Give each input a unique name
+        roomInput.placeholder = `Enter room name`;
 
-        container.appendChild(label);
-        container.appendChild(input);
+        // Email label and input
+        const emailLabel = document.createElement('label');
+        emailLabel.className = 'add-room-label';
+        emailLabel.innerText = `Email`;
 
+        const emailInput = document.createElement('input');
+        emailInput.className = 'room-input';
+        emailInput.type = 'email';
+        emailInput.name = `email${roomIndex}`; // Give each input a unique name
+        emailInput.placeholder = `Enter tenant email`;
+
+        // Container for room and email inputs
+        const inputContainer = document.createElement('div');
+        inputContainer.className = 'input-container';
+
+        inputContainer.appendChild(roomLabel);
+        inputContainer.appendChild(roomInput);
+        inputContainer.appendChild(emailLabel);
+        inputContainer.appendChild(emailInput);
+
+        container.appendChild(inputContainer);
         document.querySelector('.add-room-container').appendChild(container);
 
         roomIndex++;
     }
+
+
+
+
+
+
 
     document.getElementById('signUpForm').addEventListener('submit', async function(event) {
         event.preventDefault();
