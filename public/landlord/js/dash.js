@@ -204,3 +204,107 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+  
+
+
+
+//get the kwh value from database and peroform calculations on it to display on the board    !!!!!!!!!!!!!IMPORTANT
+/* document.addEventListener('DOMContentLoaded', function() {
+    const kwhElements = document.querySelectorAll('.kwh');
+    const costElements = document.querySelectorAll('.ghs-120');
+    const username = localStorage.getItem('username'); // Assuming the username is stored in localStorage
+
+    // Replace with your actual MongoDB connection and query
+    fetch('/getUserData', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username })
+    })
+    .then(response => response.json())
+    .then(data => {
+        const kwhValue = data.kwh; // Retrieve the kWh value from the database
+        const totalCost = calculateTieredCost(kwhValue); // Calculate the total cost based on tiered pricing
+
+        kwhElements.forEach(kwhElement => {
+            kwhElement.textContent = `${kwhValue}KWH`;
+        });
+
+        costElements.forEach(costElement => {
+            costElement.textContent = `Ghs ${totalCost.toFixed(2)}`;
+        });
+    })
+    .catch(error => console.error('Error:', error));
+});
+
+// Function to calculate cost based on tiered pricing
+function calculateTieredCost(kwh) {
+    const tiers = [
+        { upperLimit: 50, rate: 0.00 },      // Tier 1 (Lifeline)
+        { upperLimit: 150, rate: 0.2460 },   // Tier 2
+        { upperLimit: 300, rate: 0.3409 },   // Tier 3
+        { upperLimit: 600, rate: 0.4642 },   // Tier 4
+        { upperLimit: 1000, rate: 0.5693 },  // Tier 5
+        { upperLimit: Infinity, rate: 0.6758 } // Tier 6
+    ];
+
+    let cost = 0;
+    let remainingKwh = kwh;
+
+    for (let i = 0; i < tiers.length; i++) {
+        if (remainingKwh <= 0) break;
+
+        const tier = tiers[i];
+        const kwhInTier = Math.min(remainingKwh, tier.upperLimit - (tiers[i-1]?.upperLimit || 0));
+        cost += kwhInTier * tier.rate;
+        remainingKwh -= kwhInTier;
+    }
+
+    return cost;
+}
+
+ */
+
+
+
+ ////for just calculating the cost per the kwh consumption available in the code
+ const tierRates = [
+    { upperLimit: 50, rate: 0.00 },     // Tier 1 (Lifeline)
+    { upperLimit: 150, rate: 0.2460 },  // Tier 2
+    { upperLimit: 300, rate: 0.3409 },  // Tier 3
+    { upperLimit: 600, rate: 0.4642 },  // Tier 4
+    { upperLimit: 1000, rate: 0.5693 }, // Tier 5
+    { upperLimit: Infinity, rate: 0.6758 } // Tier 6
+];
+
+function calculateCost(consumption) {
+    let cost = 0;
+    let remainingConsumption = consumption;
+
+    for (const tier of tierRates) {
+        if (remainingConsumption > 0) {
+            const tierConsumption = Math.min(remainingConsumption, tier.upperLimit);
+            cost += tierConsumption * tier.rate;
+            remainingConsumption -= tierConsumption;
+        } else {
+            break;
+        }
+    }
+
+    return `Gh₵ ${cost.toFixed(2)}`; // Format to two decimal places
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const kwhElements = document.querySelectorAll('.kwh');
+    const costElements = document.querySelectorAll('.ghs-120');
+
+    kwhElements.forEach((kwhElement, index) => {
+        const kwhValue = parseFloat(kwhElement.textContent.replace('KWH', '').trim());
+        const cost = calculateCost(kwhValue);
+        costElements[index].textContent = cost;
+    });
+});
+
+

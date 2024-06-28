@@ -203,4 +203,275 @@ document.addEventListener('DOMContentLoaded', function() {
             dayElement.innerText = dayName;
         }
     });
+});   
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to get the current date and time
+            const now = new Date();
+            const currentTime = formatTime(now);
+            const currentDate = formatDate(now);
+
+            // Retrieve last visit time and date from localStorage
+            const lastVisitTime = localStorage.getItem('lastVisitTime') || "N/A";
+            const lastVisitDate = localStorage.getItem('lastVisitDate') || "N/A";
+
+            // Update div1 and div2 with the last visit time and date
+            document.querySelector('.div2').textContent = lastVisitTime;
+            document.querySelector('.div3').textContent = lastVisitDate;
+
+            // Update the stored last visit time and date to the current time and date
+            localStorage.setItem('lastVisitTime', currentTime);
+            localStorage.setItem('lastVisitDate', currentDate);
+
+            // Helper functions to format date and time
+            function formatDate(date) {
+                let d = date.getDate();
+                let m = date.getMonth() + 1; // Months are zero-based
+                let y = date.getFullYear();
+                return `${d < 10 ? '0' + d : d}/${m < 10 ? '0' + m : m}/${y}`;
+            }
+
+            function formatTime(date) {
+                let h = date.getHours();
+                let m = date.getMinutes();
+                return `${h < 10 ? '0' + h : h}:${m < 10 ? '0' + m : m}`;
+            }
+        });
+
+
+
+
+
+
+/// to add containers to the page                                        !!!!!IMPORTANT
+/* document.addEventListener('DOMContentLoaded', async function() {
+    try {
+        const response = await fetch('/api/rooms');
+        if (!response.ok) {
+            throw new Error('Failed to fetch rooms');
+        }
+        const roomsData = await response.json();
+
+        // Process roomsData as needed (e.g., creating room containers dynamically)
+        createRoomContainers(roomsData);
+    } catch (error) {
+        console.error('Error fetching rooms:', error);
+        // Handle error
+    }
 });
+
+function createRoomContainers(roomsData) {
+    const containersParent = document.querySelector('.containers');
+
+    roomsData.forEach(room => {
+        const roomContainer = document.createElement('div');
+        roomContainer.className = 'room-name-parent';
+
+        const roomNameHeader = document.createElement('h2');
+        roomNameHeader.className = 'room-name';
+        roomNameHeader.textContent = room.roomName;
+
+        // Add other room container elements here
+
+        roomContainer.appendChild(roomNameHeader);
+        containersParent.appendChild(roomContainer);
+    });
+} */
+
+
+
+
+
+
+        ////Database pull for data                                         !!!!!IMPORTANT
+/*         const tierRates = [
+            { upperLimit: 50, rate: 0.00 },     // Tier 1 (Lifeline)
+            { upperLimit: 150, rate: 0.2460 },  // Tier 2
+            { upperLimit: 300, rate: 0.3409 },  // Tier 3
+            { upperLimit: 600, rate: 0.4642 },  // Tier 4
+            { upperLimit: 1000, rate: 0.5693 }, // Tier 5
+            { upperLimit: Infinity, rate: 0.6758 } // Tier 6
+        ];
+
+        function calculateCost(consumption) {
+            let cost = 0;
+            let remainingConsumption = consumption;
+
+            for (const tier of tierRates) {
+                if (remainingConsumption > 0) {
+                    const tierConsumption = Math.min(remainingConsumption, tier.upperLimit);
+                    cost += tierConsumption * tier.rate;
+                    remainingConsumption -= tierConsumption;
+                } else {
+                    break;
+                }
+            }
+
+            return `GHS ${cost.toFixed(2)}`; // Format to two decimal places
+        }
+
+        async function fetchData() {
+            try {
+                const response = await fetch('/api/readings');
+                const rooms = await response.json();
+                return rooms;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        function calculatePercentagesAndCosts(rooms) {
+            const totalConsumption = rooms.reduce((total, room) => total + room.readingValue, 0);
+            
+            rooms.forEach(room => {
+                room.percentageConsumption = ((room.readingValue / totalConsumption) * 100).toFixed(2) + '%';
+                room.cost = calculateCost(room.readingValue);
+            });
+
+            return rooms;
+        }
+
+        function updateDOM(rooms) {
+            const container = document.getElementById('rooms-container');
+            container.innerHTML = ''; // Clear existing content
+
+            rooms.forEach(room => {
+                const roomDiv = document.createElement('div');
+                roomDiv.classList.add('percentage-wrapper');
+
+                roomDiv.innerHTML = `
+                    <div class="percentage">
+                        <b class="percentage-number">${room.percentageConsumption}</b>
+                        <div class="price">
+                            <b class="ghs-120">${room.cost}</b>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(roomDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', async function() {
+            const rooms = await fetchData();
+            const updatedRooms = calculatePercentagesAndCosts(rooms);
+            updateDOM(updatedRooms);
+        }); */
+
+
+       
+        
+
+        // Updated calculateCost function with tier rates
+const tierRates = [
+    { upperLimit: 50, rate: 0.00 },     // Tier 1 (Lifeline)
+    { upperLimit: 150, rate: 0.2460 },  // Tier 2
+    { upperLimit: 300, rate: 0.3409 },  // Tier 3
+    { upperLimit: 600, rate: 0.4642 },  // Tier 4
+    { upperLimit: 1000, rate: 0.5693 }, // Tier 5
+    { upperLimit: Infinity, rate: 0.6758 } // Tier 6
+];
+
+function calculateCost(consumption) {
+    let cost = 0;
+    let remainingConsumption = consumption;
+
+    for (const tier of tierRates) {
+        if (remainingConsumption > 0) {
+            const tierConsumption = Math.min(remainingConsumption, tier.upperLimit);
+            cost += tierConsumption * tier.rate;
+            remainingConsumption -= tierConsumption;
+        } else {
+            break;
+        }
+    }
+
+    return `Gh₵ ${cost.toFixed(2)}`; // Format to two decimal places
+}
+
+// Function to update the DOM with the total kWh sum and calculated values
+function updateData() {
+    const kwElements = document.querySelectorAll('.kw'); // Select all elements with class .kw
+
+    let totalKwh = 0;
+    kwElements.forEach(element => {
+        const readingValueText = element.textContent.trim(); // Get text content and trim any extra whitespace
+        const readingValue = parseFloat(readingValueText.replace('KW', '')); // Extract numeric value and convert to float
+        totalKwh += readingValue; // Accumulate total kWh
+    });
+
+    const maxCapacity = 1000; // Maximum assumed capacity in kWh
+    const percentage = (totalKwh / (kwElements.length * maxCapacity)) * 100; // Calculate percentage based on total kWh sum
+
+    document.querySelector('.percentage-number').textContent = `${percentage.toFixed(1)}%`; // Update percentage number
+
+    const cost = calculateCost(totalKwh); // Calculate cost based on totalKwh
+    document.querySelector('.ghs-120').textContent = cost; // Update cost
+}
+
+// Call updateData initially and whenever needed
+updateData();
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// SERVER SIDE 
+/* const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const Room = require('./models/Room'); // Adjust the path based on your project structure
+
+const app = express();
+const port = 3000;
+
+// MongoDB connection
+mongoose.connect('mongodb://localhost:27017/myapp', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error('MongoDB connection error:', err));
+
+// Middleware
+app.use(bodyParser.json());
+
+// Route to fetch room data
+app.get('/api/rooms', async (req, res) => {
+    try {
+        // Fetch all rooms from the database
+        const rooms = await Room.find({}, 'roomName'); // Adjust fields as needed
+
+        res.json(rooms);
+    } catch (error) {
+        console.error('Error fetching rooms:', error);
+        res.status(500).json({ message: 'Failed to fetch rooms' });
+    }
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+ */
+
+
+
+
+
+
+
+///ROOM.model
+// models/Room.js (example)
+/* const mongoose = require('mongoose');
+
+const roomSchema = new mongoose.Schema({
+    roomName: String,
+    // Add more fields as needed
+});
+
+module.exports = mongoose.model('Room', roomSchema); */

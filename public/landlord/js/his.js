@@ -139,152 +139,215 @@ openerBtnContainer.addEventListener("click", function (e) {
       changeMonth(document.querySelector('.janbtn'), 'January');
   });
 
+
+
+
+
+
+  
+////Functions for Date, Time, and Cost Calculation
+const tierRates = [
+    { upperLimit: 50, rate: 0.00 },     // Tier 1 (Lifeline)
+    { upperLimit: 150, rate: 0.2460 },  // Tier 2
+    { upperLimit: 300, rate: 0.3409 },  // Tier 3
+    { upperLimit: 600, rate: 0.4642 },  // Tier 4
+    { upperLimit: 1000, rate: 0.5693 }, // Tier 5
+    { upperLimit: Infinity, rate: 0.6758 } // Tier 6
+];
+
+function calculateCost(consumption) {
+    let cost = 0;
+    let remainingConsumption = consumption;
+
+    for (const tier of tierRates) {
+        if (remainingConsumption > 0) {
+            const tierConsumption = Math.min(remainingConsumption, tier.upperLimit);
+            cost += tierConsumption * tier.rate;
+            remainingConsumption -= tierConsumption;
+        } else {
+            break;
+        }
+    }
+
+    return `GHS ${cost.toFixed(2)}`; // Format to two decimal places
+}
+
+function formatDate(date) {
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+}
+
+function formatTime(date) {
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+}
+
+
+
+
+
+
+
+  
  /// Mock data for each month
-  const data = {
-      "january-2024": {
-          percentageConsumption: "23%",
-          readingValue: "23000KW",
-          readingTime: "16:00",
-          date: "25/01/2024",
-          lastReadingTime: "16:00",
-          lastReadingValue: "23000KW",
-          lastReadingDate: "24/01/2024"
-      },
-      "february-2024": {
-          percentageConsumption: "22%",
-          readingValue: "22000KW",
-          readingTime: "15:00",
-          date: "26/02/2024",
-          lastReadingTime: "15:00",
-          lastReadingValue: "22000KW",
-          lastReadingDate: "25/02/2024"
-      },
-      "march-2024": {
-          percentageConsumption: "21%",
-          readingValue: "21000KW",
-          readingTime: "14:00",
-          date: "27/03/2024",
-          lastReadingTime: "14:00",
-          lastReadingValue: "21000KW",
-          lastReadingDate: "26/03/2024"
-      },
-      "april-2024": {
-          percentageConsumption: "20%",
-          readingValue: "20000KW",
-          readingTime: "13:00",
-          date: "28/04/2024",
-          lastReadingTime: "13:00",
-          lastReadingValue: "20000KW",
-          lastReadingDate: "27/04/2024"
-      },
-      "may-2024": {
-          percentageConsumption: "19%",
-          readingValue: "19000KW",
-          readingTime: "12:00",
-          date: "29/05/2024",
-          lastReadingTime: "12:00",
-          lastReadingValue: "19000KW",
-          lastReadingDate: "28/05/2024"
-      },
-      "june-2024": {
-          percentageConsumption: "18%",
-          readingValue: "18000KW",
-          readingTime: "11:00",
-          date: "30/06/2024",
-          lastReadingTime: "11:00",
-          lastReadingValue: "18000KW",
-          lastReadingDate: "29/06/2024"
-      },
-      "july-2024": {
-          percentageConsumption: "17%",
-          readingValue: "17000KW",
-          readingTime: "10:00",
-          date: "31/07/2024",
-          lastReadingTime: "10:00",
-          lastReadingValue: "17000KW",
-          lastReadingDate: "30/07/2024"
-      },
-      "august-2024": {
-          percentageConsumption: "16%",
-          readingValue: "16000KW",
-          readingTime: "09:00",
-          date: "01/08/2024",
-          lastReadingTime: "09:00",
-          lastReadingValue: "16000KW",
-          lastReadingDate: "31/07/2024"
-      },
-      "september-2024": {
-          percentageConsumption: "15%",
-          readingValue: "15000KW",
-          readingTime: "08:00",
-          date: "02/09/2024",
-          lastReadingTime: "08:00",
-          lastReadingValue: "15000KW",
-          lastReadingDate: "01/09/2024"
-      },
-      "october-2024": {
-          percentageConsumption: "14%",
-          readingValue: "14000KW",
-          readingTime: "07:00",
-          date: "03/10/2024",
-          lastReadingTime: "07:00",
-          lastReadingValue: "14000KW",
-          lastReadingDate: "02/10/2024"
-      },
-      "november-2024": {
-          percentageConsumption: "13%",
-          readingValue: "13000KW",
-          readingTime: "06:00",
-          date: "04/11/2024",
-          lastReadingTime: "06:00",
-          lastReadingValue: "13000KW",
-          lastReadingDate: "03/11/2024"
-      },
-      "december-2024": {
-          percentageConsumption: "12%",
-          readingValue: "12000KW",
-          readingTime: "05:00",
-          date: "05/12/2024",
-          lastReadingTime: "05:00",
-          lastReadingValue: "12000KW",
-          lastReadingDate: "04/12/2024"
-      }
-  };
+ const data = {
+    "january-2024": {
+        percentageConsumption: "23%",
+        readingValue: 900,
+        lastReadingValue: 850,
+        cost: calculateCost(900)
+    },
+    "february-2024": {
+        percentageConsumption: "22%",
+        readingValue: 850,
+        lastReadingValue: 800,
+        cost: calculateCost(850)
+    },
+    "march-2024": {
+        percentageConsumption: "21%",
+        readingValue: 800,
+        lastReadingValue: 750,
+        cost: calculateCost(800)
+    },
+    "april-2024": {
+        percentageConsumption: "20%",
+        readingValue: 750,
+        lastReadingValue: 700,
+        cost: calculateCost(750)
+    },
+    "may-2024": {
+        percentageConsumption: "19%",
+        readingValue: 700,
+        lastReadingValue: 650,
+        cost: calculateCost(700)
+    },
+    "june-2024": {
+        percentageConsumption: "18%",
+        readingValue: 650,
+        lastReadingValue: 600,
+        cost: calculateCost(650)
+    },
+    "july-2024": {
+        percentageConsumption: "17%",
+        readingValue: 600,
+        lastReadingValue: 550,
+        cost: calculateCost(600)
+    },
+    "august-2024": {
+        percentageConsumption: "16%",
+        readingValue: 550,
+        lastReadingValue: 500,
+        cost: calculateCost(550)
+    },
+    "september-2024": {
+        percentageConsumption: "15%",
+        readingValue: 500,
+        lastReadingValue: 450,
+        cost: calculateCost(500)
+    },
+    "october-2024": {
+        percentageConsumption: "14%",
+        readingValue: 450,
+        lastReadingValue: 400,
+        cost: calculateCost(450)
+    },
+    "november-2024": {
+        percentageConsumption: "13%",
+        readingValue: 400,
+        lastReadingValue: 350,
+        cost: calculateCost(400)
+    },
+    "december-2024": {
+        percentageConsumption: "12%",
+        readingValue: 350,
+        lastReadingValue: 300,
+        cost: calculateCost(350)
+    }
+};
 
-  // Function to update the DOM with the selected month's data
-  function updateData(month) {
-      const containersInner = document.querySelector('.containers-inner');
-      const monthData = data[month];
 
-      // Update elements in containers-inner based on monthData
-      containersInner.querySelector('.header-placeholders').textContent = monthData.date;
-      containersInner.querySelector('.div').textContent = monthData.readingTime;
-      containersInner.querySelector('.kw').textContent = monthData.readingValue;
-      containersInner.querySelector('.div1').textContent = monthData.lastReadingTime;
-      containersInner.querySelector('.kw1').textContent = monthData.lastReadingValue;
-      containersInner.querySelector('.div2').textContent = monthData.lastReadingDate;
-      containersInner.querySelector('.usage-percentage').textContent = monthData.percentageConsumption;
-  }
 
-  // Event listeners for month buttons
-  document.querySelector('.janbtn').addEventListener('click', () => updateData('january-2024'));
-  document.querySelector('.febbtn').addEventListener('click', () => updateData('february-2024'));
-  document.querySelector('.marbtn').addEventListener('click', () => updateData('march-2024'));
-  document.querySelector('.aprbtn').addEventListener('click', () => updateData('april-2024'));
-  document.querySelector('.maybtn').addEventListener('click', () => updateData('may-2024'));
-  document.querySelector('.junbtn').addEventListener('click', () => updateData('june-2024'));
-  document.querySelector('.julbtn').addEventListener('click', () => updateData('july-2024'));
-  document.querySelector('.augbtn').addEventListener('click', () => updateData('august-2024'));
-  document.querySelector('.sepbtn').addEventListener('click', () => updateData('september-2024'));
-  document.querySelector('.octbtn').addEventListener('click', () => updateData('october-2024'));
-  document.querySelector('.nvobtn').addEventListener('click', () => updateData('november-2024'));
-  document.querySelector('.decbtn').addEventListener('click', () => updateData('december-2024'));
+
+document.addEventListener('DOMContentLoaded', function() {
+    const monthButtons = document.querySelectorAll('.rectangle-parent > div');
+
+    // Function to get the current date and time
+    const now = new Date();
+    const currentTime = formatTime(now);
+    const currentDate = formatDate(now);
+
+    // Retrieve last visit time and date from localStorage
+    const lastVisitTime = localStorage.getItem('lastVisitTime') || "N/A";
+    const lastVisitDate = localStorage.getItem('lastVisitDate') || "N/A";
+
+    // Update div2 and div3 with the last visit time and date
+    document.querySelector('.div2').textContent = lastVisitTime;
+    document.querySelector('.div3').textContent = lastVisitDate;
+
+    // Update div1 and empty-k-w with the current time and date
+    document.querySelector('.div1').textContent = currentTime;
+    document.querySelector('.empty-k-w').textContent = currentDate;
+
+    // Update the stored last visit time and date to the current time and date
+    localStorage.setItem('lastVisitTime', currentTime);
+    localStorage.setItem('lastVisitDate', currentDate);
+
+    function setActiveButton(button) {
+        monthButtons.forEach(btn => btn.classList.remove('active-btn'));
+        button.classList.add('active-btn');
+    }
+
+    monthButtons.forEach((btn, index) => {
+        btn.addEventListener('click', function() {
+            setActiveButton(this);
+            const month = `${Object.keys(data)[index]}`;
+            updateData(month);
+        });
+    });
+
+    // Initial load with January 2024 data
+    updateData('january-2024');
+});
+
+function updateData(month) {
+    const monthData = data[month];
+    document.querySelector('.kw1').textContent = monthData.lastReadingValue;
+    document.querySelector('.percentage-number').textContent = monthData.percentageConsumption;
+    document.querySelector('.ghs-120').textContent = monthData.cost;
+    document.querySelector('.kw').textContent = monthData.readingValue;
+    document.querySelector('.div').textContent = formatTime(new Date()); // Update div1 with current time
+    document.querySelector('.empty-k-w').textContent = formatDate(new Date()); // Update empty-k-w with current date
+    document.querySelector('.div1').textContent = formatDate(new Date(localStorage.getItem('lastVisitTime'))); // Update div3 with the last visit date
+    document.querySelector('.div3').textContent = formatDate(new Date(localStorage.getItem('lastVisitDate'))); // Update div3 with the last visit date
+}
+
+// Event listeners for month buttons
+document.querySelector('.janbtn').addEventListener('click', () => updateData('january-2024'));
+document.querySelector('.febbtn').addEventListener('click', () => updateData('february-2024'));
+document.querySelector('.marbtn').addEventListener('click', () => updateData('march-2024'));
+document.querySelector('.aprbtn').addEventListener('click', () => updateData('april-2024'));
+document.querySelector('.maybtn').addEventListener('click', () => updateData('may-2024'));
+document.querySelector('.junbtn').addEventListener('click', () => updateData('june-2024'));
+document.querySelector('.julbtn').addEventListener('click', () => updateData('july-2024'));
+document.querySelector('.augbtn').addEventListener('click', () => updateData('august-2024'));
+document.querySelector('.sepbtn').addEventListener('click', () => updateData('september-2024'));
+document.querySelector('.octbtn').addEventListener('click', () => updateData('october-2024'));
+document.querySelector('.novbtn').addEventListener('click', () => updateData('november-2024'));
+document.querySelector('.decbtn').addEventListener('click', () => updateData('december-2024'));
+
+
+
+
+
 
   document.addEventListener('DOMContentLoaded', function() {
     // Set current date for .empty-units
-    const dateElement = document.querySelector('.header-placeholders');
-    // Set current time for .div
-    const timeElements = document.querySelectorAll('.div');
+    const dateElement = document.querySelector('.empty-k-w');
+    // Set current time for .div1
+    const timeElements = document.querySelectorAll('.div1');
 
     const currentDate = new Date();
     const formattedDate = formatDate(currentDate);
@@ -302,7 +365,6 @@ openerBtnContainer.addEventListener("click", function (e) {
 });
 
 
-
 function formatDate(date) {
     const day = date.getDate().toString().padStart(2, '0');
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -315,3 +377,159 @@ function formatTime(date) {
     const minutes = date.getMinutes().toString().padStart(2, '0');
     return `${hours}:${minutes}`;
 }
+
+
+
+
+
+
+
+
+
+
+/// GET HISTORY FROM THE DATABSE                                                             !!!!!!!IMPORTANT
+// Client-side JavaScript
+
+/* // Event listeners for month buttons
+document.querySelector('.janbtn').addEventListener('click', () => updateData('january-2024'));
+document.querySelector('.febbtn').addEventListener('click', () => updateData('february-2024'));
+document.querySelector('.marbtn').addEventListener('click', () => updateData('march-2024'));
+document.querySelector('.aprbtn').addEventListener('click', () => updateData('april-2024'));
+document.querySelector('.maybtn').addEventListener('click', () => updateData('may-2024'));
+document.querySelector('.junbtn').addEventListener('click', () => updateData('june-2024'));
+document.querySelector('.julbtn').addEventListener('click', () => updateData('july-2024'));
+document.querySelector('.augbtn').addEventListener('click', () => updateData('august-2024'));
+document.querySelector('.sepbtn').addEventListener('click', () => updateData('september-2024'));
+document.querySelector('.octbtn').addEventListener('click', () => updateData('october-2024'));
+document.querySelector('.novbtn').addEventListener('click', () => updateData('november-2024'));
+document.querySelector('.decbtn').addEventListener('click', () => updateData('december-2024'));
+
+// Function to update data based on selected month
+async function updateData(monthYear) {
+    try {
+        const response = await fetch(`/api/rooms?monthYear=${monthYear}`);
+        const rooms = await response.json();
+        const updatedRooms = calculatePercentagesAndCosts(rooms);
+        updateDOM(updatedRooms);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+// Calculate percentages and costs based on consumption data
+function calculatePercentagesAndCosts(rooms) {
+    const totalConsumption = rooms.reduce((total, room) => total + room.readingValue, 0);
+    
+    rooms.forEach(room => {
+        room.percentageConsumption = ((room.readingValue / totalConsumption) * 100).toFixed(2) + '%';
+        room.cost = calculateCost(room.readingValue);
+    });
+
+    return rooms;
+}
+
+// Update the DOM with calculated percentages and costs
+function updateDOM(rooms) {
+    const container = document.getElementById('rooms-container');
+    container.innerHTML = ''; // Clear existing content
+
+    rooms.forEach(room => {
+        const roomDiv = document.createElement('div');
+        roomDiv.classList.add('percentage-wrapper');
+
+        roomDiv.innerHTML = `
+            <div class="percentage">
+                <b class="percentage-number">${room.percentageConsumption}</b>
+                <div class="price">
+                    <b class="ghs-120">${room.cost}</b>
+                </div>
+            </div>
+        `;
+
+        container.appendChild(roomDiv);
+    });
+}
+ */
+
+
+
+
+//// SERVER-SIDE
+            /* // app.js (or wherever your server setup code resides)
+            const express = require('express');
+            const mongoose = require('mongoose');
+            const Room = require('./models/Room');
+
+            const app = express();
+            const PORT = process.env.PORT || 3000;
+
+            mongoose.connect('mongodb://localhost:27017/your-database-name', {
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+                useCreateIndex: true,
+            });
+
+            // Middleware for parsing JSON bodies
+            app.use(express.json());
+
+            // Example endpoint to save monthly consumption data
+            app.post('/api/history', async (req, res) => {
+                try {
+                    const { month, year, roomsData } = req.body;
+
+                    // Assuming roomsData is an array of objects with roomName, consumption, and totalCost
+                    const historyEntry = {
+                        month,
+                        year,
+                        rooms: roomsData.map(room => ({
+                            roomName: room.roomName,
+                            consumption: room.consumption,
+                            totalCost: room.totalCost,
+                        })),
+                    };
+
+                    // Save historyEntry to MongoDB
+                    const savedHistory = await History.create(historyEntry);
+                    res.status(200).json(savedHistory);
+                } catch (error) {
+                    console.error('Error saving monthly history:', error);
+                    res.status(500).json({ error: 'Internal server error' });
+                }
+            });
+
+            // Example endpoint to retrieve historical data for a specific month and year
+            app.get('/api/history/:month/:year', async (req, res) => {
+                try {
+                    const { month, year } = req.params;
+
+                    // Retrieve historical data from MongoDB based on month and year
+                    const historyData = await History.find({ month, year });
+
+                    res.status(200).json(historyData);
+                } catch (error) {
+                    console.error('Error fetching historical data:', error);
+                    res.status(500).json({ error: 'Internal server error' });
+                }
+            });
+
+            app.listen(PORT, () => {
+                console.log(`Server is running on http://localhost:${PORT}`);
+            });
+ */
+
+
+
+
+
+
+ ///// cconnect to MODEL/ROOM.JS
+ /* // models/Room.js
+const mongoose = require('mongoose');
+
+const roomSchema = new mongoose.Schema({
+    roomName: String,
+    // Add more fields as needed
+});
+
+module.exports = mongoose.model('Room', roomSchema);
+            */

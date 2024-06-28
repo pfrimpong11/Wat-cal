@@ -1557,18 +1557,60 @@ body {
   opacity: 0.9;
   min-width: 781px;
 }
+
 .kwh {
-  height: 199px;
-  flex: 1;
+  align-self: stretch;
+  height: 94px;
   position: relative;
   line-height: 150%;
-  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-shadow: 1px 0 0#bfbfbf, 0 1px 0#bfbfbf, -1px 0 0#bfbfbf, 0-1px 0#bfbfbf;
+}
+.cost,
+.ghs-120 {
+  display: flex;
+  max-width: 100%;
+}
+.ghs-120 {
+  margin-top: -30px;
+  height: 94px;
+  flex :1;
+  position: relative;
+  line-height: 150%;
   align-items: center;
   justify-content: center;
   text-shadow: 1px 0 0#bfbfbf, 0 1px 0#bfbfbf, -1px 0 0#bfbfbf, 0-1px 0#bfbfbf;
-  z-index: 1;
 }
-.percentage,
+.cost {
+  align-self: stretch;
+  height: 64px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: flex;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+.consumption-percentage,
+.percentage {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.percentage {
+  align-self: stretch;
+  border-radius: 25px;
+  background-color: #1a1a1a;
+  border: 1px solid #bfbfbf;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  padding: 133px 133px 133px 133px;
+  max-width: 100%;
+}
 .percentage-wrapper {
   display: flex;
   flex-direction: row;
@@ -1576,16 +1618,7 @@ body {
   justify-content: flex-start;
   max-width: 100%;
 }
-.percentage {
-  flex: 1;
-  border-radius: 25px;
-  background-color: #1a1a1a;
-  border: 1px solid #bfbfbf;
-  box-sizing: border-box;
-  overflow: hidden;
-  padding: 104px 16px 104px 17px;
-  min-height: 428px;
-}
+
 .percentage-wrapper {
   align-self: stretch;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);

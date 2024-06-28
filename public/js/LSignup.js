@@ -2,31 +2,65 @@
 
 // Function to handle form submission
 document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.addroombtn').addEventListener('click', addRoom);
+
+    let roomIndex = 1;
+
+    function addRoom() {
+        const container = document.createElement('div');
+        container.className = 'room-container';
+
+        const label = document.createElement('label');
+        label.className = 'room-label';
+        label.innerText = `Room ${roomIndex}`;
+
+        const input = document.createElement('input');
+        input.className = 'room-input';
+        input.type = 'text';
+        input.name = `room${roomIndex}`; // Give each input a unique name
+        input.placeholder = `Enter room name`;
+
+        container.appendChild(label);
+        container.appendChild(input);
+
+        document.querySelector('.add-room-container').appendChild(container);
+
+        roomIndex++;
+    }
+
     document.getElementById('signUpForm').addEventListener('submit', async function(event) {
         event.preventDefault();
 
+        // Basic client-side validation
+        const username = document.getElementById("usernameInput").value;
+        const email = document.getElementById("emailInput").value;
+        const password = document.getElementById("passwordInput").value;
+        const confirmPassword = document.getElementById("confirmPasswordInput").value;
+        const dateOfBirth = document.getElementById("dateOfBirthInput").value;
+        const houseAddress = document.getElementById("houseAddressInput").value;
+        const meterSerialNumber = document.getElementById("meterSerialNumberInput").value;
+        const meterType = document.getElementById("meterTypeInput").value;
 
-            // Basic client-side validation
-            const username = document.getElementById("usernameInput").value;
-            const email = document.getElementById("emailInput").value;
-            const password = document.getElementById("passwordInput").value;
-            const confirmPassword = document.getElementById("confirmPasswordInput").value;
-            const dateOfBirth = document.getElementById("dateOfBirthInput").value;
-            const houseAddress = document.getElementById("houseAddressInput").value;
-            const meterSerialNumber = document.getElementById("meterSerialNumberInput").value;
-            const meterType = document.getElementById("meterTypeInput").value;
-            if (!username || !email || !password || !confirmPassword || !dateOfBirth) {
-                alert("Please fill in all required fields.");
-                return;
+        if (!username || !email || !password || !confirmPassword || !dateOfBirth) {
+            alert("Please fill in all required fields.");
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return;
+        }
+
+        // Collect room names
+        const rooms = [];
+        document.querySelectorAll('.room-input').forEach(input => {
+            if (input.value.trim()) { // Only add non-empty room names
+                rooms.push(input.value.trim());
             }
+        });
 
-            if (password !== confirmPassword) {
-                alert("Passwords do not match.");
-                return;
-            }
-
-            try {
-                const response = await fetch('/api/landlordSignup', {
+        try {
+            const response = await fetch('/api/landlordSignup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -38,27 +72,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     dateOfBirth,
                     houseAddress,
                     meterSerialNumber,
-                    meterType  
+                    meterType,
+                    rooms // Include rooms in the request body
                 })
-
             });
-        
-                const data = await response.json();
-        
-                if (!response.ok) {
-                throw new Error(data.msg || 'Registration failed');
-                }
-        
-                setTimeout(() => {
-                    window.location.href = 'LLogin.html';
-                    }, 1000);
-                } catch (error) {
-                    console.log("Signup failed");
-                }
 
-            
-        
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.msg || 'Registration failed');
+            }
+
+            setTimeout(() => {
+                window.location.href = 'LLogin.html';
+            }, 1000);
+        } catch (error) {
+            console.log("Signup failed: " + error.message);
+        }
     });
+
+
 
 
 
@@ -87,8 +120,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-
-    document.querySelector('.addroombtn').addEventListener('click', addRoom);
+   ////For the additionn of rooms implementation
+   /*  document.querySelector('.addroombtn').addEventListener('click', addRoom);
 
         let roomIndex = 1;
 
@@ -111,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.add-room-container').appendChild(container);
 
         roomIndex++;
-    }
+    } */
 
 
 
@@ -211,3 +244,138 @@ document.addEventListener('DOMContentLoaded', function() {
     //         });
     //     });
     // });
+
+
+
+
+
+
+
+
+
+
+    ///server and client side for the form                          
+//// DIRECTORY STRUCTURE
+/* /my-app
+│
+├── /controllers
+│   └── userController.js
+│
+├── /models
+│   └── userModel.js
+│
+├── /routes
+│   └── userRoutes.js
+│
+├── server.js
+├── package.json
+└── /node_modules
+ */
+
+
+
+
+//MODEL
+/* const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
+  username: { type: String, required: true },
+  email: { type: String, required: true },
+  password: { type: String, required: true },
+  dateOfBirth: { type: Date, required: true },
+  houseAddress: { type: String, required: false },
+  meterSerialNumber: { type: String, required: false },
+  meterType: { type: String, required: false },
+  rooms: [String] // Array of room names
+});
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
+ */
+
+
+
+
+//CONTROLLER
+/* const User = require('../models/userModel');
+
+exports.signup = async (req, res) => {
+  const { username, email, password, dateOfBirth, houseAddress, meterSerialNumber, meterType, rooms } = req.body;
+
+  try {
+    // Check if user already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ msg: 'User already exists' });
+    }
+
+    // Create new user
+    const newUser = new User({
+      username,
+      email,
+      password,
+      dateOfBirth,
+      houseAddress,
+      meterSerialNumber,
+      meterType,
+      rooms
+    });
+
+    await newUser.save();
+
+    res.status(201).json({ msg: 'User registered successfully' });
+  } catch (err) {
+    console.error('Error during registration:', err.message);
+    res.status(500).json({ msg: 'Server error' });
+  }
+};
+ */
+
+
+
+
+//ROUTES
+/* const express = require('express');
+const router = express.Router();
+const userController = require('../controllers/userController');
+
+// Signup route
+router.post('/landlordSignup', userController.signup);
+
+module.exports = router;
+ */
+
+
+
+
+//SERVER 
+/* const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const userRoutes = require('./routes/userRoutes');
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Middleware
+app.use(bodyParser.json());
+
+// Connect to MongoDB (replace 'your_mongodb_uri' with your actual MongoDB URI)
+mongoose.connect('your_mongodb_uri', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => {
+  console.log('Connected to MongoDB');
+}).catch(err => {
+  console.error('Error connecting to MongoDB:', err.message);
+});
+
+// Use routes
+app.use('/api', userRoutes);
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
+ */

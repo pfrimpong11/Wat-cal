@@ -351,17 +351,18 @@
   .hero-section {
     align-self: stretch;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     box-sizing: border-box;
     max-width: 100%;
+    top: -40px;
     
   }
   .hero-section {
     flex-direction: row;
     padding: 50px 82px 45.3px 0;
     position: relative;
-    gap: 120px;
+    gap:10px;
     min-height: 538px;
     font-size: 10px;
   }

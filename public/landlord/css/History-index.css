@@ -666,7 +666,7 @@
   box-sizing: border-box;
 }
 .date,
-.header-placeholders {
+.empty-k-w {
   position: relative;
   font-weight: 600;
 }
@@ -674,7 +674,7 @@
   display: inline-block;
   min-width: 38px;
 }
-.header-placeholders {
+.empty-k-w {
   align-self: stretch;
 }
 .reading-header-units {
@@ -710,14 +710,14 @@
   border-top: 1px solid #06cc02;
   box-sizing: border-box;
 }
-.div,
+.div1,
 .reading-time {
   position: relative;
   font-weight: 600;
   display: inline-block;
   min-width: 95px;
 }
-.div {
+.div1 {
   flex: 1;
   color: #fff;
   min-width: 28px;
@@ -779,7 +779,7 @@
   border-top: 1px solid #06cc02;
   box-sizing: border-box;
 }
-.div1,
+.div2,
 .last-reading-time {
   position: relative;
   font-weight: 600;
@@ -789,7 +789,7 @@
   display: inline-block;
   min-width: 125px;
 }
-.div1 {
+.div2 {
   align-self: stretch;
   height: 13px;
   display: flex;
@@ -863,7 +863,7 @@
   border-top: 1px solid #06cc02;
   box-sizing: border-box;
 }
-.div2,
+.div3,
 .last-reading-date {
   position: relative;
   font-weight: 600;
@@ -873,7 +873,7 @@
   display: inline-block;
   min-width: 128px;
 }
-.div2 {
+.div3 {
   align-self: stretch;
   height: 13px;
   display: flex;
@@ -2468,34 +2468,55 @@
   min-width: 781px;
   max-width: 100%;
 }
-.usage-percentage {
-  height: 199px;
-  flex: 1;
+.percentage-number ,
+.ghs-120 {
   position: relative;
+  text-shadow: 1px 0 0#bfbfbf, 0 1px 0#bfbfbf, -1px 0 0#bfbfbf, 0-1px 0#bfbfbf;
+}
+.percentage-number  {
+  align-self: stretch;
+  line-height: 150%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+.ghs-120 {
+  margin-top: -30px;
+  height: 94px;
+  flex: 1;
   line-height: 150%;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-shadow: 1px 0 0#bfbfbf, 0 1px 0#bfbfbf, -1px 0 0#bfbfbf, 0-1px 0#bfbfbf;
-  z-index: 1;
 }
 .percentage,
-.percentage-wrapper {
+.price {
   align-self: stretch;
-  flex: 1;
-  flex-direction: row;
+  display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
+}
+.price {
+  height: 64px;
+  flex-direction: row;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
 }
 .percentage {
   border-radius: 25px;
   background-color: #1a1a1a;
   border: 1px solid #bfbfbf;
-  box-sizing: border-box;
   overflow: hidden;
-  display: flex;
-  align-items: flex-start;
-  padding: 104px 15px 104px 16px;
-  max-width: 100%;
+  flex-direction: column;
+  padding: 133px 133px 133px 133px;
+}
+.percentage-wrapper {
+  align-self: stretch;
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 .percentage-wrapper {
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
@@ -3021,7 +3042,7 @@ text-decoration: none;
   .chart {
     gap: 53px;
   }
-  .usage-percentage {
+  .percentage-number {
     font-size: 40px;
     line-height: 72px;
   }
@@ -3118,7 +3139,7 @@ text-decoration: none;
   .dash {
     gap: 20px;
   }
-  .usage-percentage {
+  .percentage-number {
     font-size: 24px;
     line-height: 48px;
   }
