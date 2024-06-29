@@ -1,11 +1,14 @@
 // routes/tenantRoutes.js
 const express = require('express');
-const { registerTenant, loginTenant } = require('../controllers/tenantController');
+const { registerTenant, loginTenant, forgotPasswordTenant, resetPasswordTenant } = require('../controllers/tenantController');
 
 const router = express.Router();
 
 router.post('/tenantSignup', registerTenant);
 router.post('/tenantLogin', loginTenant);
+router.post('/forgotPasswordTenant', forgotPasswordTenant);
+router.post('/resetPasswordTenant', resetPasswordTenant);
+
 
 router.get('/tenantIsAuthenticated', (req, res) => {
     if (req.session.tenant) {

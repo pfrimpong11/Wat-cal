@@ -1,11 +1,14 @@
 // routes/landlordRoutes.js
 const express = require('express');
-const { registerLandlord, loginLandlord } = require('../controllers/landlordController');
+const { registerLandlord, loginLandlord, forgotPasswordLandlord, resetPasswordLandlord } = require('../controllers/landlordController');
 
 const router = express.Router();
 
 router.post('/landlordSignup', registerLandlord);
 router.post('/landlordLogin', loginLandlord);
+router.post('/forgotPasswordLandlord', forgotPasswordLandlord);
+router.post('/resetPasswordLandlord', resetPasswordLandlord);
+
 
 router.get('/landlordIsAuthenticated', (req, res) => {
     if (req.session.landlord) {

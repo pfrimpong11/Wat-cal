@@ -1,3 +1,35 @@
+document.addEventListener('DOMContentLoaded', function() {
+    async function checkAuth() {
+        const response = await fetch('/api/landlordIsAuthenticated');
+        const data = await response.json();
+
+        if (!data.isAuthenticated) {
+        window.location.href = '../Llogin.html';
+        } else {
+        document.getElementById('username').textContent = data.landlord.username;
+        document.getElementById('panelUsername').textContent = data.landlord.username;
+        document.getElementById('panelEmail').textContent = data.landlord.email;
+        }
+    }
+
+    document.getElementById('openerBtnContainer').addEventListener('click', async function() {
+        const response = await fetch('/api/landlordLogout', { method: 'POST' });
+
+        if (response.ok) {
+        window.location.href = '../Home.html';
+        } else {
+        alert('Logout failed');
+        }
+    });
+
+    checkAuth();
+});
+
+
+
+
+
+
 function showPopup(popupId) {
     const popup = document.getElementById(popupId);
     const overlay = document.getElementById('overlay' + popupId.replace('popup', ''));
@@ -43,28 +75,28 @@ function toggleInfo(button) {
 var textButton1 = document.getElementById("textButton1");
 if (textButton1) {
 textButton1.addEventListener("click", function (e) {
-    window.location.href = "../other/Helpdesk.html";
+    window.location.href = "../Helpdesk.html";
 });
 }
 
 var textButton = document.getElementById("textButton");
 if (textButton) {
 textButton.addEventListener("click", function (e) {
-    window.location.href = "../other/Home.html";
+    window.location.href = "../Home.html";
 });
 }
 
 var textButton2 = document.getElementById("textButton2");
 if (textButton2) {
 textButton2.addEventListener("click", function (e) {
-    window.location.href = "../other/About.html"; 
+    window.location.href = "../About.html"; 
 });
 }
 
 var textButton3 = document.getElementById("textButton3");
 if (textButton3) {
 textButton3.addEventListener("click", function (e) {
-    window.location.href = "../other/Security.html";
+    window.location.href = "../Security.html";
 });
 }
 
@@ -106,45 +138,45 @@ trendbtnContainer.addEventListener("click", function (e) {
 var openerBtnContainer = document.getElementById("openerBtnContainer");
 if (openerBtnContainer) {
 openerBtnContainer.addEventListener("click", function (e) {
-    window.location.href = "../other/Home.html";
+    window.location.href = "../Home.html";
 });
 }
 
  // Function to change the displayed month and update corresponding data
-  function changeMonth(button, month) {
-      // Update the displayed month in the UI
-      document.querySelector('.month').textContent = month;
+function changeMonth(button, month) {
+    // Update the displayed month in the UI
+    document.querySelector('.month').textContent = month;
 
-      // Remove 'active' class from all buttons
-      const buttons = document.querySelectorAll('.month-navigation div');
-      buttons.forEach(btn => {
-          btn.classList.remove('active');
-      });
+    // Remove 'active' class from all buttons
+    const buttons = document.querySelectorAll('.month-navigation div');
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+    });
 
-      // Add 'active' class to the clicked button
-      button.classList.add('active');
+    // Add 'active' class to the clicked button
+    button.classList.add('active');
 
-      // Display the data container corresponding to the selected month
-      const selectedContainer = document.getElementById(`${month.toLowerCase()}-2024`);
-      if (selectedContainer) {
-          selectedContainer.style.display = 'block';
-      } else {
-          console.error(`Data container for ${month} not found.`);
-      }
-  }
+    // Display the data container corresponding to the selected month
+    const selectedContainer = document.getElementById(`${month.toLowerCase()}-2024`);
+    if (selectedContainer) {
+        selectedContainer.style.display = 'block';
+    } else {
+        console.error(`Data container for ${month} not found.`);
+    }
+}
 
 
 /// Initialize the page with default month (June, 2024 in this case)
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
       changeMonth(document.querySelector('.janbtn'), 'January');
-  });
+});
 
 
 
 
 
 
-  
+
 ////Functions for Date, Time, and Cost Calculation
 const tierRates = [
     { upperLimit: 50, rate: 0.00 },     // Tier 1 (Lifeline)
@@ -533,3 +565,7 @@ const roomSchema = new mongoose.Schema({
 
 module.exports = mongoose.model('Room', roomSchema);
             */
+
+
+
+

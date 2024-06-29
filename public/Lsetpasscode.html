@@ -63,23 +63,26 @@
           </div>
         </div>
         <div class="side-bar-child"></div>
+        <form id="resetPasswordForm">
         <div class="password-field">
           <div class="password-input">
-            <b class="enter-email">Enter Email</b>
+            <b class="enter-email">New Password</b>
             <div class="rectangle-parent">
               <div class="frame-child"></div>
               <input
+                id="password"
                 class="melpetersgmailcom"
-                placeholder="melpeters@gmail.com"
-                type="text"
+                placeholder="*********"
+                type="password"
               />
             </div>
           </div>
           <div class="password-strength">
-            <b class="new-password">New Password </b>
+            <b class="new-password">Confirm Password</b>
             <div class="rectangle-group">
               <div class="frame-item"></div>
               <input
+                id="confirmPassword"
                 class="strength-value"
                 placeholder="*********"
                 type="password"
@@ -96,6 +99,7 @@
             </button>
           </div>
         </div>
+        </form>
       </div>
     </div>
   </body>
@@ -110,4 +114,38 @@
         buttonContainer.appendChild(button);
     }, 5000); // delay time in milliseconds (5000ms = 5 seconds)
 });
+
+  document.getElementById('resetPasswordForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get('token');
+
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+
+        if(password !== confirmPassword){
+          alert("Passwords do not match.");
+          return;
+        }
+
+        try {
+            const response = await fetch('/api/resetPasswordLandlord', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ token, newPassword: password })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+            throw new Error(data.msg || 'Failed to reset password');
+            }
+            window.location.href = 'LLogin.html';
+        } catch (error) {
+          console.log("Error resetting password");
+        }
+        });
 </script>

@@ -167,6 +167,6 @@ if (landlord2) {
 var forgotpassword = document.getElementById("forgotpassword");
 if (forgotpassword) {
     forgotpassword.addEventListener("click", function (e) {
-        window.location.href = "forgotpassword.html";
+        window.location.href = "Lforgotpassword.html";
     });
 }

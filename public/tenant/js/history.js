@@ -1,3 +1,36 @@
+document.addEventListener('DOMContentLoaded', function() {
+    async function checkAuth() {
+        const response = await fetch('/api/tenantIsAuthenticated');
+        const data = await response.json();
+
+        if (!data.isAuthenticated) {
+        window.location.href = '../Llogin.html';
+        } else {
+        document.getElementById('username').textContent = data.tenant.username;
+        document.getElementById('panelUsername').textContent = data.tenant.username;
+        document.getElementById('panelEmail').textContent = data.tenant.email;
+        }
+    }
+
+    document.getElementById('OutBtnContainer').addEventListener('click', async function() {
+        const response = await fetch('/api/tenantLogout', { method: 'POST' });
+
+        if (response.ok) {
+        window.location.href = '../Home.html';
+        } else {
+        alert('Logout failed');
+        }
+    });
+
+    checkAuth();
+});
+
+
+
+
+
+
+
 function showPopup(popupId) {
     const popup = document.getElementById(popupId);
     const overlay = document.getElementById('overlay' + popupId.replace('popup', ''));
