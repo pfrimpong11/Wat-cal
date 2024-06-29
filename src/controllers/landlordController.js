@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
 const Landlord = require('../models/Landlord');
+const Room = require('../models/Room');
 
 exports.registerLandlord = async (req, res) => {
     const {
@@ -12,8 +13,12 @@ exports.registerLandlord = async (req, res) => {
         dateOfBirth,
         houseAddress,
         meterSerialNumber,
-        meterType
+        meterType,
+        roomsData
     } = req.body;
+
+    // console.log(username);
+    // console.log(roomsData);
 
     try {
         // Check if username or email already exists
@@ -31,6 +36,15 @@ exports.registerLandlord = async (req, res) => {
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
 
+        // Insert rooms
+        const roomsToInsert = roomsData.map(room => ({
+            roomNumber: room.room,
+            roomEmail: room.email
+        }));
+
+        const insertedRooms = await Room.insertMany(roomsToInsert);
+        const roomIds = insertedRooms.map(room => room._id);
+
         // Save landlord to database
         landlord = new Landlord({
             username,
@@ -39,7 +53,8 @@ exports.registerLandlord = async (req, res) => {
             dateOfBirth,
             houseAddress,
             meterSerialNumber,
-            meterType
+            meterType,
+            roomIds,
         });
 
         await landlord.save();
@@ -51,7 +66,6 @@ exports.registerLandlord = async (req, res) => {
         res.status(500).send('Server error');
     }
 };
-
 
 
 exports.loginLandlord = async (req, res) => {

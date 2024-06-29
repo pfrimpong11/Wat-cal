@@ -80,12 +80,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Collect room names
-        const rooms = [];
-        document.querySelectorAll('.room-input').forEach(input => {
-            if (input.value.trim()) { // Only add non-empty room names
-                rooms.push(input.value.trim());
+        // const rooms = [];
+        // document.querySelectorAll('.room-input').forEach(input => {
+        //     if (input.value.trim()) { // Only add non-empty room names
+        //         rooms.push(input.value.trim());
+        //     }
+        // });
+
+        // Collect room names
+        const inputs = document.querySelectorAll('.room-container .input-container');
+        const roomsData = [];
+
+        inputs.forEach(inputContainer => {
+            const roomInput = inputContainer.querySelector('input[name^="room"]');
+            const emailInput = inputContainer.querySelector('input[name^="email"]');
+            
+            if (roomInput && emailInput) {
+                roomsData.push({
+                    room: roomInput.value,
+                    email: emailInput.value
+                });
             }
         });
+
+        if (roomsData.length < 2) {
+            document.getElementById('message').innerHTML = `<p style="color: red;"> You must add at least two rooms. </p>`;
+            // alert('You must add at least two rooms.');
+            return;
+        }
+
+
 
         try {
             const response = await fetch('/api/landlordSignup', {
@@ -101,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     houseAddress,
                     meterSerialNumber,
                     meterType,
-                    rooms // Include rooms in the request body
+                    roomsData // Include rooms in the request body
                 })
             });
 

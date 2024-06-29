@@ -28,9 +28,11 @@ const LandlordSchema = new mongoose.Schema({
     },
     meterType: {
         type: String,
-    }
+    },
+    roomIds: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Room'
+    }]
 });
-
-// const Landlord = mongoose.model('Landlord', LandlordSchema);
 
 module.exports = mongoose.model('Landlord', LandlordSchema);
