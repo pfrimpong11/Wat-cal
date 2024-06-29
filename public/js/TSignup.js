@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const meterSerialNumber = document.getElementById("meterSerialNumberInput").value;
             const meterType = document.getElementById("meterTypeInput").value;
             if (!username || !email || !password || !confirmPassword || !dateOfBirth) {
-                alert("Please fill in all required fields.");
+                document.getElementById('message').innerHTML = `<p style="color: red;"> Please fill in all required fields. </p>`;
                 return;
             }
 
             if (password !== confirmPassword) {
-                alert("Passwords do not match.");
+                document.getElementById('message').innerHTML = `<p style="color: red;"> Passwords do not match. </p>`;
                 return;
             }
 
@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.location.href = 'TLogin.html';
                 }, 1000);
             } catch (error) {
+                document.getElementById('message').innerHTML = `<p style="color: red;">${error.message}</p>`;
                 console.log("Signup failed");
             }
     });

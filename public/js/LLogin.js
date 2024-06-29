@@ -27,8 +27,8 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             window.location.href = '/landlord/Dashboard.html';
         }, 1000);
     } catch (error) {
+        document.getElementById('message').innerHTML = `<p style="color: red;">${error.message}</p>`;
         console.log("Login Failed");
-        // document.getElementById('message').innerHTML = `<p style="color: red;">${error.message}</p>`;
     }
 });
 

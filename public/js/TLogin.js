@@ -19,13 +19,12 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         throw new Error(data.msg || 'Login failed');
     }
 
-    // document.getElementById('message').innerHTML = `<p style="color: green;">${data.msg}. Redirecting to homepage...</p>`;
     setTimeout(() => {
         window.location.href = '/tenant/Dashboard.html';
     }, 1000);
     } catch (error) {
+        document.getElementById('message').innerHTML = `<p style="color: red;">${error.message}</p>`;
         console.log("Login Failed");
-    // document.getElementById('message').innerHTML = `<p style="color: red;">${error.message}</p>`;
     }
 });
 

@@ -66,6 +66,8 @@
         <form id="resetPasswordForm">
         <div class="password-field">
           <div class="password-input">
+            <!-- div container to display error message -->
+            <div id="message"></div>
             <b class="enter-email">New Password</b>
             <div class="rectangle-parent">
               <div class="frame-child"></div>
@@ -125,7 +127,7 @@
         const confirmPassword = document.getElementById('confirmPassword').value;
 
         if(password !== confirmPassword){
-          alert("Passwords do not match.");
+          document.getElementById('message').innerHTML = `<p style="color: red;"> Passwords do not match. </p>`;
           return;
         }
 
@@ -145,6 +147,7 @@
             }
             window.location.href = 'LLogin.html';
         } catch (error) {
+          document.getElementById('message').innerHTML = `<p style="color: red;">${error.message}</p>`;
           console.log("Error resetting password");
         }
         });

@@ -19,12 +19,12 @@ exports.registerLandlord = async (req, res) => {
         // Check if username or email already exists
         let landlord = await Landlord.findOne({ username });
         if (landlord) {
-            return res.status(400).json({ errors: [{ msg: 'Username already exists' }] });
+            return res.status(400).json({ msg: 'Username already exists' });
         }
 
         landlord = await Landlord.findOne({ email });
         if (landlord) {
-            return res.status(400).json({ errors: [{ msg: 'Email already exists' }] });
+            return res.status(400).json({ msg: 'Email already exists' });
         }
 
         // Hash the password
@@ -61,13 +61,13 @@ exports.loginLandlord = async (req, res) => {
         let landlord = await Landlord.findOne({ username });
 
         if (!landlord) {
-        return res.status(400).json({ msg: 'Invalid credentials' });
+        return res.status(400).json({ msg: 'Invalid username or password' });
         }
 
         const isMatch = await bcrypt.compare(password, landlord.password);
 
         if (!isMatch) {
-        return res.status(400).json({ msg: 'Invalid credentials' });
+        return res.status(400).json({ msg: 'Invalid username or password' });
         }
 
         req.session.landlord = landlord; // Save landlord in session

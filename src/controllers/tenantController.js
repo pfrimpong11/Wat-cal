@@ -19,12 +19,12 @@ exports.registerTenant = async (req, res) => {
         // Check if username or email already exists
         let tenant = await Tenant.findOne({ username });
         if (tenant) {
-            return res.status(400).json({ errors: [{ msg: 'Username already exists' }] });
+            return res.status(400).json({ msg: 'Username already exists' });
         }
 
         tenant = await Tenant.findOne({ email });
         if (tenant) {
-            return res.status(400).json({ errors: [{ msg: 'Email already exists' }] });
+            return res.status(400).json({ msg: 'Email already exists' });
         }
 
         // Hash the password
@@ -61,13 +61,13 @@ exports.loginTenant = async (req, res) => {
         let tenant = await Tenant.findOne({ username });
 
         if (!tenant) {
-        return res.status(400).json({ msg: 'Invalid credentials' });
+        return res.status(400).json({ msg: 'Invalid username or password' });
         }
 
         const isMatch = await bcrypt.compare(password, tenant.password);
 
         if (!isMatch) {
-        return res.status(400).json({ msg: 'Invalid credentials' });
+        return res.status(400).json({ msg: 'Invalid username or password' });
         }
 
         req.session.tenant = tenant; // Save tenant in session
