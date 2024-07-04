@@ -109,6 +109,13 @@ openerBtnContainer.addEventListener("click", function (e) {
     window.location.href = "../Home.html";
 });
 }
+var pay = document.getElementById("pay");
+if (pay) {
+    pay.addEventListener("click", function (e) {
+    window.location.href = "Payment.html";
+});
+}
+
 
 // JavaScript to set current date and time in the specified div
 document.addEventListener('DOMContentLoaded', function() {

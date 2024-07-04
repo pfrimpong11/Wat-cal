@@ -2,6 +2,27 @@
   border: 0;
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  overflow: hidden;
+  background: #000;
+  text-decoration: none;
+  border-radius: 10px;
+
+}
+::-webkit-scrollbar-thumb {
+  background-color: #06cc02; 
+  border-radius: 10px;
+  width: 10%;
+  border: 3px solid #000; 
+}
+
+
 .icon {
   height: 25px;
   width: 25px;
@@ -65,12 +86,12 @@
   position: relative;
 }
 .melissa-peters-parent {
-  width: 179px;
+  width: 183px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 5px;
   text-align: center;
   font-size: 16px;
 }
@@ -2977,6 +2998,7 @@ text-decoration: none;
   .dash,
   .frame-wrapper3 {
     flex: 1;
+    align-items: center;
   }
   .dash-parent {
     flex-wrap: wrap;
@@ -3000,6 +3022,10 @@ text-decoration: none;
   }
   .chart-grid,
   .dash {
+    min-width: 100%;
+  }
+  .percentage-wrapper{
+    justify-content: center;
     min-width: 100%;
   }
 }
@@ -3311,7 +3337,7 @@ text-decoration: none;
   overflow: auto;
 }
 .deletepopper {
-  width: 29.8%;
+  width: 500px;
   flex-direction: row;
   align-items: flex-start;
   line-height: normal;
@@ -3741,9 +3767,10 @@ text-decoration: none;
   height: 21px;
   flex-direction: row;
   gap: 11.5px;
+  margin-top: 10px;
 }
 .popper {
-  width: 16%;
+  width: 269px;
   position: absolute;
   border-radius: 20px;
   background-color: #1c1c1c;
@@ -3970,7 +3997,7 @@ text-decoration: none;
   font-family: 'Lexend', sans-serif; 
 }
 .downloadmenu {
-  width: 29.8%;
+  width: 500px;
   position: relative;
   align-items: flex-start;
   line-height: normal;

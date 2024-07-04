@@ -68,12 +68,12 @@
   position: relative;
 }
 .user-options {
-  width: 179px;
+  width: 183px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 5px;
   text-align: center;
   font-size: 16px;
 }
@@ -2169,9 +2169,7 @@
 
 .percentage-wrapper {
   align-self: stretch;
-  width: 349.5;
   flex-direction: row;
-  justify-content: flex-start;
 }
 
 .percentage-wrapper {
@@ -2183,6 +2181,7 @@
   display: flex;
   align-items: flex-start;
   max-width: 100%;
+  align-self: stretch;
 }
 .usage-percentage {
   height: 442px;
@@ -2248,7 +2247,26 @@
   padding: 0 10px 0 3px;
   max-width: 100%;
   font-size: 24px;
+    max-height: 100%;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    animation: none; /* Initially disable animation */
 }
+@keyframes dropdown {
+  from {
+      max-height: 0;
+      opacity: 0;
+  }
+  to {
+      max-height: 1000px;
+      opacity: 1;
+  }
+}
+
+.container-content.show {
+  animation: dropdown 2s forwards; /* Apply dropdown animation */
+}
+
 .containers {
   border-radius: 20px;
   background-color: #1c1c1c;
@@ -2619,6 +2637,29 @@
   line-height: normal;
   letter-spacing: normal;
 }
+
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  overflow: hidden;
+  background: #000;
+  text-decoration: none;
+  border-radius: 10px;
+
+}
+::-webkit-scrollbar-thumb {
+  background-color: #06cc02; 
+  border-radius: 10px;
+  width: 10%;
+  border: 3px solid #000; 
+}
+
+
+
 @media screen and (max-width: 1400px) {
   .chart-axis-y {
     flex: 1;
@@ -2629,10 +2670,19 @@
   }
   .dash,
   .usage-percentage {
-    flex: 1;
+    min-width: 100%;
+    align-items: center;
+    justify-content: center;
   }
   .chart-content {
     flex-wrap: wrap;
+    min-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .usage-percentage {
+    flex: 1;
+    align-self: stretch;
   }
   .containers {
     padding-top: 20px;
@@ -2651,8 +2701,20 @@
     flex-wrap: wrap;
   }
   .chart-axis-y,
+  .usage-percentage,
   .dash {
     min-width: 100%;
+    align-items: center
+  }
+  .usage-percentage {
+    flex: 1;
+    align-self: stretch;
+    min-width: 100%;
+  }
+  .percentage-wrapper{
+    justify-content: center;
+    min-width: 100%;
+    align-self: stretch;
   }
 }
 @media screen and (max-width: 825px) {
@@ -2962,7 +3024,7 @@
   overflow: auto;
 }
 .deletepopper {
-  width: 29.8%;
+  width:500px;
   flex-direction: row;
   align-items: flex-start;
   line-height: normal;
@@ -3392,9 +3454,10 @@
   height: 21px;
   flex-direction: row;
   gap: 11.5px;
+  margin-top: 10px;
 }
 .popper {
-  width: 16%;
+  width: 269px;
   position: absolute;
   border-radius: 20px;
   background-color: #1c1c1c;
@@ -3621,7 +3684,7 @@
   font-family: 'Lexend', sans-serif; 
 }
 .downloadmenu {
-  width: 29.8%;
+  width: 500px;
   position: relative;
   align-items: flex-start;
   line-height: normal;

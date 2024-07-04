@@ -78,9 +78,9 @@ body {
   align-items: center;
 }
 .melissa-peters-parent {
-  width: 179px;
+  width: 183px;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 5px;
   text-align: center;
   font-size: 16px;
 }
@@ -1558,25 +1558,59 @@ body {
   min-width: 781px;
 }
 
+
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  overflow: hidden;
+  background: #000;
+  text-decoration: none;
+  border-radius: 10px;
+
+}
+::-webkit-scrollbar-thumb {
+  background-color: #06cc02; 
+  border-radius: 10px;
+  width: 10%;
+  border: 3px solid #000; 
+}
+
+
+.percentage,
 .kwh {
-  align-self: stretch;
-  height: 94px;
+  display: flex;
+  max-width: 100%;
+}
+.kwh {
+  height: 72px;
+  flex: 1;
   position: relative;
   line-height: 150%;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   text-shadow: 1px 0 0#bfbfbf, 0 1px 0#bfbfbf, -1px 0 0#bfbfbf, 0-1px 0#bfbfbf;
 }
-.cost,
-.ghs-120 {
+.percentage {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 20px;
+  box-sizing: border-box;
+}
+.ghs-120,
+.cost {
   display: flex;
   max-width: 100%;
+  margin-top: -20px;
 }
 .ghs-120 {
-  margin-top: -30px;
   height: 94px;
-  flex :1;
+  flex: 1;
   position: relative;
   line-height: 150%;
   align-items: center;
@@ -1585,21 +1619,50 @@ body {
 }
 .cost {
   align-self: stretch;
-  height: 64px;
+  height: 74px;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  display: flex;
   padding: 0;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 30px;
 }
-.consumption-percentage,
-.percentage {
+.pay {
+  position: relative;
+  font-size: 16px;
+  line-height: 150%;
+  display: inline-block;
+  font-family: Nunito;
+  color: #000;
+  text-align: center;
+  min-width: 28px;
+}
+.payment-button,
+.payment-button1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.payment-button1 {
+  cursor: pointer;
+  border: 0;
+  padding: 7.5px 76px;
+  background-color: #06cc02;
+  border-radius: 20px;
+}
+.payment-button1:hover {
+  background-color: #1fe61c;
+}
+.payment-button {
+  padding: 0 78px 0 76px;
+  margin-top: -20px;
+}
+.percentage-wrapper {
   flex-direction: column;
   align-items: flex-start;
 }
-.percentage {
+.percentage-wrapper {
   align-self: stretch;
   border-radius: 25px;
   background-color: #1a1a1a;
@@ -1608,14 +1671,7 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: flex-start;
-  padding: 133px 133px 133px 133px;
-  max-width: 100%;
-}
-.percentage-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  padding: 130px 16px;
   max-width: 100%;
 }
 
@@ -2016,8 +2072,10 @@ body {
 }
 @media screen and (max-width: 1150px) {
   .chart-content,
+  .percentage-wrapper,
   .dash {
     min-width: 100%;
+    align-items: center;
   }
 }
 @media screen and (max-width: 800px) {
@@ -2533,9 +2591,10 @@ body {
   height: 21px;
   flex-direction: row;
   gap: 11.5px;
+  margin-top: 10px;
 }
 .popper {
-  width: 16%;
+  width: 269px;
   position: absolute;
   border-radius: 20px;
   background-color: #1c1c1c;

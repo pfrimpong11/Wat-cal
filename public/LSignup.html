@@ -134,7 +134,7 @@
                         required
                       />
                       </div>
-                      <img class="eye-icon" alt="" src="./images/eye.svg" />
+                      <img class="eye-icon" alt="" src="./images/eye.svg" style="cursor: pointer;">
                     </div>
                     <div class="date-of-birth-input-parent">
                       <div class="date-of-birth-input">
@@ -188,7 +188,7 @@
                         required
                       /> 
                       </div>
-                      <img class="eye-icon1" alt="" src="./images/eye.svg" />
+                      <img class="eye-icon1" alt="" src="./images/eye.svg" style="cursor: pointer;"/>
                     </div>
                     <div class="meter-fields">
                       <div class="serial-number-type">
@@ -212,13 +212,11 @@
                       </div>
                       <div class="rectangle-parent2">
                         <div class="frame-child2"></div>
-                        <input
-                          class="prepaidpostpaid"
-                          placeholder="Prepaid/Postpaid"
-                          type="text"
-                          id="meterTypeInput"
-                          required
-                        />
+                        <select class="prepaidpostpaid" id="meterTypeInput" name="meterType" required>
+                          <option value="" disabled selected>Select meter-type</option>
+                          <option value="prepaid">Prepaid</option>
+                          <option value="postpaid">Postpaid</option>
+                      </select>
                       </div>
                     </div>
                   </div>

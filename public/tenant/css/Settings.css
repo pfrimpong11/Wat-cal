@@ -3,6 +3,23 @@
   box-sizing: border-box;
   font-family: 'Lexend', sans-serif;
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  overflow: hidden;
+  background: #000;
+  text-decoration: none;
+  border-radius: 10px;
+
+}
+::-webkit-scrollbar-thumb {
+  background-color: #06cc02; 
+  border-radius: 10px;
+  width: 10%;
+  border: 3px solid #000; 
+}
 .icon {
   height: 25px;
   width: 25px;
@@ -150,20 +167,28 @@
   transition: .7s;
   color:#1fe61c;
 } 
+
+
+.iconamoonprofile-light {
+  height: 32.7px;
+  width: 30px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
 .edit-profile {
   align-self: stretch;
   position: relative;
   line-height: 87.52%;
   font-weight: 400;
-  white-space: nowrap;
 }
-.action-label,
-.iconamoonprofile-light-parent {
+.iconamoonprofile-light-parent,
+.profile-action-labels {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.action-label {
+.profile-action-labels {
   flex: 1;
   flex-direction: column;
   padding: 8.7px 0 0;
@@ -173,76 +198,6 @@
   flex-direction: row;
   gap: 10px;
   cursor: pointer;
-  font-size: 18px;
-}
-.material-symbolsprivacy-tip-o-icon {
-  height: 32.7px;
-  width: 30px;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.light-mode {
-  align-self: stretch;
-  position: relative;
-  line-height: 15px;
-  font-weight: 400;
-  white-space: nowrap;
-}
-.setting-label {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 9.2px 20px 0 0;
-  box-sizing: border-box;
-  min-width: 131px;
-}
-.switch-handle,
-.switch-toggle {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 20px;
-  background-color: #06cc02;
-  cursor: pointer;
-}
-.switch-handle {
-  height: 60%;
-  width: 33.33%;
-  top: 20%;
-  left: 11%;
-  bottom: 20%;
-  right: 55.67%;
-  border-radius: 50%;
-  background-color: #000;
-  z-index: 1;
-}
-.switch {
-  width: 30px;
-  height: 17px;
-  position: relative;
-}
-.material-symbolsprivacy-tip-o-parent,
-.theme-switch {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.theme-switch {
-  flex-direction: column;
-  padding: 7.9px 0 0;
-}
-.material-symbolsprivacy-tip-o-parent {
-  width: 323px;
-  flex-direction: row;
-  gap: 10px;
-  max-width: 100%;
 }
 .icoutline-lock-icon {
   height: 32.7px;
@@ -257,40 +212,44 @@
   line-height: 15px;
   font-weight: 400;
 }
-.account-label,
+.account-action-labels,
 .icoutline-lock-parent {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.account-label {
+.account-action-labels {
   flex: 1;
   flex-direction: column;
-  padding: 8.7px 0 0;
+  padding: 8.6px 0 0;
 }
 .icoutline-lock-parent {
   width: 283px;
   flex-direction: row;
   gap: 10px;
   cursor: pointer;
+  font-size: 20px;
 }
 .action-column {
   flex: 1;
   border-radius: 50px;
   background-color: #1c1c1c;
   flex-direction: column;
-  padding: 20px;
+  padding: 19.8px 20px;
   gap: 20px;
 }
 .action-column,
-.action-row,
-.container {
+.container,
+.action-row {
   box-sizing: border-box;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   max-width: 100%;
 }
+
+
+
 .action-row {
   align-self: stretch;
   flex-direction: row;
@@ -1457,9 +1416,10 @@
   height: 21px;
   flex-direction: row;
   gap: 11.5px;
+  margin-top: 10px;
 }
 .popup-wrapper {
-  width: 16%;
+  width: 269px;
   position: absolute ;
   border-radius: 20px;
   background-color: #1c1c1c;

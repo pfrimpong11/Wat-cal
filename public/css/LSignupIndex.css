@@ -5,6 +5,55 @@
   box-sizing: border-box;
   font-family: 'Lexend', sans-serif;
 }
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  overflow: hidden;
+  background: #000;
+  text-decoration: none;
+  border-radius: 10px;
+
+}
+::-webkit-scrollbar-thumb {
+  background-color: #06cc02; 
+  border-radius: 10px;
+  border: 3px solid #000; 
+}
+.form-group {
+  background-color: transparent;
+
+}
+.prepaidpostpaid {
+  background-color: transparent;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-weight: 500;
+  font-family: 'Inter';
+  font-size: 16px;
+  background-color: transparent;
+  height: 19.6px;
+  flex: 1;
+  line-height: 87.52%;
+  color: #BFBFBF;
+  text-align: left;
+  display: inline-block;
+  min-width: 250px;
+  padding: 0;
+  z-index: 1;
+  position: relative;
+  max-width: 100%;
+}
+option:hover{
+  color:#06cc02;
+}
+
+
+
+
 .logo-icon {
   height: 30px;
   width: 30px;
@@ -769,8 +818,7 @@
   box-sizing: border-box;
   max-width: 100%;
 }
-.frame-child2,
-.prepaidpostpaid {
+.frame-child2 {
   position: relative;
   max-width: 100%;
 }
@@ -781,24 +829,6 @@
   border: 1px solid #464444;
   box-sizing: border-box;
   display: none;
-}
-.prepaidpostpaid {
-  width: 100%;
-  border: 0;
-  outline: 0;
-  font-weight: 500;
-  font-family: 'Lexend', sans-serif;
-  font-size: 16px;
-  background-color: transparent;
-  height: 19.6px;
-  flex: 1;
-  line-height: 87.52%;
-  color: #BFBFBF;
-  text-align: left;
-  display: inline-block;
-  min-width: 250px;
-  padding: 0;
-  z-index: 1;
 }
 .rectangle-parent2 {
   align-self: stretch;
@@ -913,16 +943,15 @@
 .addroombtn {
   cursor: pointer;
   border: 0;
-  padding: 9.5px 20px;
+  padding: 9.5px 60px;
   background-color: #262626;
-  color: white;
-  width: 218px;
   border-radius: 20px;
   overflow: hidden;
-  flex-shrink: 0;
-  justify-content: center;
-  box-sizing: border-box;
-  gap: 5px;
+  justify-content: flex-start;
+  gap: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 
@@ -1126,13 +1155,15 @@
 .add-room-container-parent {
   align-self: stretch;
   align-items: flex-start;
-  justify-content: center;
   gap: 10px;
   text-align: center;
   color: #262626;
   font-family: 'Lexend', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
 }
-.add-room-container-parent,
 .sign-up,
 .signup-form {
   display: flex;
@@ -1534,6 +1565,8 @@
   .sign-up {
     gap: 40px;
   }
+ 
+
 }
 @media screen and (max-width: 750px) {
   .links-container {

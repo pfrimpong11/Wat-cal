@@ -121,6 +121,12 @@ OutBtnContainer.addEventListener("click", function (e) {
     window.location.href = "../Home.html";
 });
 }
+var pay = document.getElementById("pay");
+if (pay) {
+    pay.addEventListener("click", function (e) {
+    window.location.href = "Payment.html";
+});
+}
 
 
 
