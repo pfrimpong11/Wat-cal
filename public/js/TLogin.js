@@ -18,7 +18,10 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     if (!response.ok) {
         throw new Error(data.msg || 'Login failed');
     }
-
+    
+    // Save the username to local storage
+    localStorage.setItem('username', username);
+    
     setTimeout(() => {
         window.location.href = '/tenant/Dashboard.html';
     }, 1000);

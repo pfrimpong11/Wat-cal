@@ -237,132 +237,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-
-
-
-
-
-/// to add containers to the page                                        !!!!!IMPORTANT
-/* document.addEventListener('DOMContentLoaded', async function() {
-    try {
-        const response = await fetch('/api/rooms');
-        if (!response.ok) {
-            throw new Error('Failed to fetch rooms');
-        }
-        const roomsData = await response.json();
-
-        // Process roomsData as needed (e.g., creating room containers dynamically)
-        createRoomContainers(roomsData);
-    } catch (error) {
-        console.error('Error fetching rooms:', error);
-        // Handle error
-    }
-});
-
-function createRoomContainers(roomsData) {
-    const containersParent = document.querySelector('.containers');
-
-    roomsData.forEach(room => {
-        const roomContainer = document.createElement('div');
-        roomContainer.className = 'room-name-parent';
-
-        const roomNameHeader = document.createElement('h2');
-        roomNameHeader.className = 'room-name';
-        roomNameHeader.textContent = room.roomName;
-
-        // Add other room container elements here
-
-        roomContainer.appendChild(roomNameHeader);
-        containersParent.appendChild(roomContainer);
-    });
-} */
-
-
-
-
-
-
-        ////Database pull for data                                         !!!!!IMPORTANT
-/*         const tierRates = [
-            { upperLimit: 50, rate: 0.00 },     // Tier 1 (Lifeline)
-            { upperLimit: 150, rate: 0.2460 },  // Tier 2
-            { upperLimit: 300, rate: 0.3409 },  // Tier 3
-            { upperLimit: 600, rate: 0.4642 },  // Tier 4
-            { upperLimit: 1000, rate: 0.5693 }, // Tier 5
-            { upperLimit: Infinity, rate: 0.6758 } // Tier 6
-        ];
-
-        function calculateCost(consumption) {
-            let cost = 0;
-            let remainingConsumption = consumption;
-
-            for (const tier of tierRates) {
-                if (remainingConsumption > 0) {
-                    const tierConsumption = Math.min(remainingConsumption, tier.upperLimit);
-                    cost += tierConsumption * tier.rate;
-                    remainingConsumption -= tierConsumption;
-                } else {
-                    break;
-                }
-            }
-
-            return `GHS ${cost.toFixed(2)}`; // Format to two decimal places
-        }
-
-        async function fetchData() {
-            try {
-                const response = await fetch('/api/readings');
-                const rooms = await response.json();
-                return rooms;
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        }
-
-        function calculatePercentagesAndCosts(rooms) {
-            const totalConsumption = rooms.reduce((total, room) => total + room.readingValue, 0);
-            
-            rooms.forEach(room => {
-                room.percentageConsumption = ((room.readingValue / totalConsumption) * 100).toFixed(2) + '%';
-                room.cost = calculateCost(room.readingValue);
-            });
-
-            return rooms;
-        }
-
-        function updateDOM(rooms) {
-            const container = document.getElementById('rooms-container');
-            container.innerHTML = ''; // Clear existing content
-
-            rooms.forEach(room => {
-                const roomDiv = document.createElement('div');
-                roomDiv.classList.add('percentage-wrapper');
-
-                roomDiv.innerHTML = `
-                    <div class="percentage">
-                        <b class="percentage-number">${room.percentageConsumption}</b>
-                        <div class="price">
-                            <b class="ghs-120">${room.cost}</b>
-                        </div>
-                    </div>
-                `;
-
-                container.appendChild(roomDiv);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', async function() {
-            const rooms = await fetchData();
-            const updatedRooms = calculatePercentagesAndCosts(rooms);
-            updateDOM(updatedRooms);
-        }); */
-
-
        
         
 
         // Updated calculateCost function with tier rates
-const tierRates = [
+const Rates = [
     { upperLimit: 50, rate: 0.00 },     // Tier 1 (Lifeline)
     { upperLimit: 150, rate: 0.2460 },  // Tier 2
     { upperLimit: 300, rate: 0.3409 },  // Tier 3
@@ -375,7 +254,7 @@ function calculateCost(consumption) {
     let cost = 0;
     let remainingConsumption = consumption;
 
-    for (const tier of tierRates) {
+    for (const tier of Rates) {
         if (remainingConsumption > 0) {
             const tierConsumption = Math.min(remainingConsumption, tier.upperLimit);
             cost += tierConsumption * tier.rate;
@@ -410,54 +289,6 @@ function updateData() {
 
 // Call updateData initially and whenever needed
 updateData();
-
-
-
-
-
-
-
-
-
-
-
-
-
-/// SERVER SIDE 
-/* const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const Room = require('./models/Room'); // Adjust the path based on your project structure
-
-const app = express();
-const port = 3000;
-
-// MongoDB connection
-mongoose.connect('mongodb://localhost:27017/myapp', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB connected'))
-    .catch(err => console.error('MongoDB connection error:', err));
-
-// Middleware
-app.use(bodyParser.json());
-
-// Route to fetch room data
-app.get('/api/rooms', async (req, res) => {
-    try {
-        // Fetch all rooms from the database
-        const rooms = await Room.find({}, 'roomName'); // Adjust fields as needed
-
-        res.json(rooms);
-    } catch (error) {
-        console.error('Error fetching rooms:', error);
-        res.status(500).json({ message: 'Failed to fetch rooms' });
-    }
-});
-
-// Start the server
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
- */
 
 
 
@@ -502,4 +333,604 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     checkAuth();
+});
+
+
+
+
+
+// Define tier rates for cost calculation
+const tierRates = [
+    { upperLimit: 50, rate: 0.00 },     // Tier 1 (Lifeline)
+    { upperLimit: 150, rate: 0.2460 },  // Tier 2
+    { upperLimit: 300, rate: 0.3409 },  // Tier 3
+    { upperLimit: 600, rate: 0.4642 },  // Tier 4
+    { upperLimit: 1000, rate: 0.5693 }, // Tier 5
+    { upperLimit: Infinity, rate: 0.6758 } // Tier 6
+];
+
+// Function to calculate cost based on consumption
+function calculateCost(consumption) {
+    let cost = 0;
+    let remainingConsumption = consumption;
+
+    for (const tier of tierRates) {
+        if (remainingConsumption > 0) {
+            const tierConsumption = Math.min(remainingConsumption, tier.upperLimit);
+            cost += tierConsumption * tier.rate;
+            remainingConsumption -= tierConsumption;
+        } else {
+            break;
+        }
+    }
+
+    return cost.toFixed(2); // Return as string formatted to two decimal places
+}
+
+// Function to fetch readings from the server
+async function fetchData() {
+    try {
+        const response = await fetch('/api/readings'); // Adjust endpoint as per your API
+        if (!response.ok) {
+            throw new Error('Failed to fetch readings');
+        }
+        const rooms = await response.json();
+        return rooms;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        return [];
+    }
+}
+
+// Function to create room containers dynamically
+function createRoomContainer(roomNumber) {
+    const containersDiv = document.querySelector('.containers'); // Assuming this is where room containers are appended
+    const roomContainer = document.createElement('div');
+    roomContainer.classList.add('room-name-parent');
+    roomContainer.dataset.room = roomNumber; // Set room number as data attribute
+
+    // Construct the inner HTML structure
+    roomContainer.innerHTML = `
+    <div class="containers">
+    <div class="room-name-parent">
+      <h2 class="room-name">Room name</h2>
+      <div class="room-name1">
+        <div class="div">26/06/2023 - 17:01</div>
+      </div>
+      <div class="frame-parent">
+        <div class="rectangle-parent" onclick="toggleInfo(this)">
+          <div class="frame-child" ></div>
+          <img
+            class="eye-regular-1-icon"
+            loading="lazy"
+            alt=""
+            src="./images/look.svg"
+          />
+        </div>
+        <div class="rectangle-group"  onclick="showPopup('popup2')">
+          <div class="frame-item"></div>
+          <img
+            class="download-solid-1-icon"
+            loading="lazy"
+            alt=""
+            src="./images/download.svg"
+          />
+        </div>
+        <div class="rectangle-container" onclick="showPopup('popup3')">
+          <div class="frame-inner"></div>
+          <img
+            class="trash-can-regular-1-icon"
+            loading="lazy"
+            alt=""
+            src="./images/del.svg"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container-content">
+      <div class="container-header">
+        <div class="container-name-parent-parent">
+          <div class="container-name-parent">
+            <div class="container-card">
+              <h1 class="container">container</h1>
+              <button class="downloadbtn" onclick="showPopup('popup2')" style="border: 0;">
+                <img
+                  class="downloadbtn-child"
+                  alt=""
+                  src="./images/rectangle-31.svg"
+                />
+
+                <div class="export">Export</div>
+              </button>
+              <div class="container-data">
+                <div class="line"></div>
+                <div class="reading-values-wrapper">
+                  <div class="reading-values">
+                    <div class="date">Date :</div>
+                    <div class="container-date-value">
+                      <div class="empty-k-w">26/06/2023</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="line1"></div>
+                <div class="container-data-inner">
+                  <div class="reading-time-parent">
+                    <div class="reading-time">Reading_time :</div>
+                    <div class="div1">17:01</div>
+                  </div>
+                </div>
+                <div class="line2"></div>
+                <div class="container-data-child">
+                  <div class="reading-value-parent">
+                    <div class="reading-value">Reading_value :</div>
+                    <div class="kw">759KW</div>
+                  </div>
+                </div>
+                <div class="line3"></div>
+                <div class="frame-div">
+                  <div class="last-reading-time-parent">
+                    <div class="last-reading-time">
+                      Last_reading_time :
+                    </div>
+                    <div class="wrapper">
+                      <div class="div2">17:01</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="line4"></div>
+                <div class="container-data-inner1">
+                  <div class="last-reading-value-parent">
+                    <div class="last-reading-value">
+                      Last_reading_value :
+                    </div>
+                    <b class="kw1">857KW</b>
+                  </div>
+                </div>
+                <div class="line5"></div>
+                <div class="container-data-inner2">
+                  <div class="last-reading-date-parent">
+                    <div class="last-reading-date">
+                      Last_reading_date :
+                    </div>
+                    <div class="frame">
+                      <div class="div3">26/06/2023</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="line6"></div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-group">
+            <div class="execution-recommendation-patte-wrapper">
+              <h2 class="execution-recommendation-patte-container">
+                <p class="execution-recommendation">
+                  Execution Recommendation
+                </p>
+                <p class="pattern">Pattern</p>
+              </h2>
+            </div>
+            <div class="frame-container">
+              <div class="group-div">
+                <div class="rectangle-div"></div>
+                <div class="day-names-parent">
+                  <div class="day-names-row">
+                    <div class="sunday">Sunday</div>
+                    <div class="day-numbers-parent">
+                      <b class="june">10 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-12h">10h - 12h</div>
+              </div>
+              <div class="vector-parent">
+                <img
+                  class="rectangle-icon"
+                  alt=""
+                  src="./images/rectangle-32.svg"
+                />
+
+                <div class="frame-wrapper">
+                  <div class="monday-parent">
+                    <div class="monday">Monday</div>
+                    <div class="june-wrapper">
+                      <b class="june1">11 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-10h">8h - 10h</div>
+              </div>
+              <div class="rectangle-parent1">
+                <div class="frame-child1"></div>
+                <div class="frame-wrapper1">
+                  <div class="tuesday-parent">
+                    <div class="tuesday">Tuesday</div>
+                    <div class="june-container">
+                      <b class="june2">13 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-10h1">7h - 10h</div>
+              </div>
+              <div class="selected-date">
+                <div class="date-highlight"></div>
+                <b class="june3">14 June</b>
+                <div class="wednesday">Wednesday</div>
+                <div class="h-10h2">8h - 10h</div>
+              </div>
+              <div class="calendar-grid">
+                <div class="calendar-grid-child"></div>
+                <div class="calendar-grid-inner">
+                  <div class="thursday-parent">
+                    <div class="thursday">Thursday</div>
+                    <div class="june-frame">
+                      <b class="june4">15 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-10h3">8h - 10h</div>
+              </div>
+              <div class="calendar-grid1">
+                <div class="calendar-grid-item"></div>
+                <div class="calendar-grid-inner1">
+                  <div class="friday-parent">
+                    <div class="friday">Friday</div>
+                    <div class="june-wrapper1">
+                      <b class="june5">16 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-15h">13h - 15h</div>
+              </div>
+              <div class="calendar-grid2">
+                <div class="calendar-grid-child1"></div>
+                <div class="calendar-grid-inner2">
+                  <div class="saturday-parent">
+                    <div class="saturday">Saturday</div>
+                    <div class="june-wrapper2">
+                      <b class="june6">17 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-18h">16h - 18h</div>
+              </div>
+              <div class="calendar-grid3">
+                <div class="calendar-grid-child2"></div>
+                <div class="calendar-grid-inner3">
+                  <div class="sunday-parent">
+                    <div class="sunday1">Sunday</div>
+                    <div class="june-wrapper3">
+                      <b class="june7">18 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-12h1">10h - 12h</div>
+              </div>
+              <div class="calendar-grid4">
+                <img
+                  class="calendar-grid-child3"
+                  alt=""
+                  src="./images/rectangle-32.svg"
+                />
+
+                <div class="calendar-grid-inner4">
+                  <div class="monday-group">
+                    <div class="monday1">Monday</div>
+                    <div class="june-wrapper4">
+                      <b class="june8">19 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-10h4">8h - 10h</div>
+              </div>
+              <div class="calendar-grid5">
+                <div class="calendar-grid-child4"></div>
+                <div class="calendar-grid-inner5">
+                  <div class="tuesday-group">
+                    <div class="tuesday1">Tuesday</div>
+                    <div class="june-wrapper5">
+                      <b class="june9">20 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-10h5">7h - 10h</div>
+              </div>
+              <div class="calendar-grid6">
+                <div class="calendar-grid-child5"></div>
+                <div class="calendar-grid-inner6">
+                  <div class="wednesday-parent">
+                    <div class="wednesday1">Wednesday</div>
+                    <div class="june-wrapper6">
+                      <b class="june10">21 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-10h6">8h - 10h</div>
+              </div>
+              <div class="calendar-grid7">
+                <div class="calendar-grid-child6"></div>
+                <div class="calendar-grid-inner7">
+                  <div class="thursday-group">
+                    <div class="thursday1">Thursday</div>
+                    <div class="june-wrapper7">
+                      <b class="june11">22 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-10h7">8h - 10h</div>
+              </div>
+              <div class="calendar-grid8">
+                <div class="calendar-grid-child7"></div>
+                <div class="calendar-grid-inner8">
+                  <div class="friday-group">
+                    <div class="friday1">Friday</div>
+                    <div class="june-wrapper8">
+                      <b class="june12">23 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-15h1">13h - 15h</div>
+              </div>
+              <div class="calendar-grid9">
+                <div class="calendar-grid-child8"></div>
+                <div class="calendar-grid-inner9">
+                  <div class="saturday-group">
+                    <div class="saturday1">Saturday</div>
+                    <div class="june-wrapper9">
+                      <b class="june13">24 June</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-18h1">16h - 18h</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="usage-chart-parent">
+          <div class="usage-chart-title-parent">
+            <div class="usage-chart-title">
+              <h1 class="percentage-usage">Percentage Usage</h1>
+            </div>
+            <div class="chart-content">
+              <div class="dash">
+                <h2 class="total-electricity-consumption">
+                  Total electricity consumption
+                </h2>
+                <div class="chart-container">
+                  <div class="chart">
+                    <div class="chart-axis-y">
+                      <div class="y-axis-values">
+                        <div class="grid-label">1000</div>
+                        <div class="y-axis-value">
+                          <div class="y-axis-label">750</div>
+                        </div>
+                        <div class="div4">500</div>
+                        <div class="div5">250</div>
+                        <div class="target-value">0</div>
+                      </div>
+                      <div class="chart-bars">
+                        <div class="chart-bar-parent">
+                          <img
+                            class="energy-bar-icon"
+                            loading="lazy"
+                            alt=""
+                            src="./images/d.png.svg"
+                          />
+
+                          <div class="chart-axis-x">
+                            <div class="weekday-label-parent">
+                              <img
+                                class="weekday-label-icon"
+                                alt=""
+                                src="./images/d.png"
+                              />
+
+                              <div class="chart-x-labels">
+                                <img
+                                  class="percentage-label-icon"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./images/.png"
+                                />
+
+                                <img
+                                  class="vector-icon"
+                                  alt=""
+                                  src="./images/.png"
+                                />
+
+                               
+                              </div>
+                              <img
+                                class="previous-bar-icon"
+                                loading="lazy"
+                                alt=""
+                                src="./images/d.png"
+                              />
+
+                              <img
+                                class="group-icon"
+                                alt=""
+                                src="./images/grid.png"
+                              />
+
+                              <div class="chart-grid">
+                                <img
+                                  class="weekdays-icon"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="weekdays-icon1"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="weekdays-icon2"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="weekdays-icon3"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="weekdays-icon4"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="weekdays-icon5"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="weekdays-icon6"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="weekdays-icon7"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="weekdays-icon8"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="weekdays-icon9"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="weekdays-icon10"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="weekdays-icon11"
+                                  alt=""
+                                  src="./images/d.png"
+                                />
+
+                                <img
+                                  class="group-icon1"
+                                  alt=""
+                                  src="./images/bluedots.png"
+                                />
+                              </div>
+                              <img
+                                class="group-icon2"
+                                alt=""
+                                src="./images/reddots.png"
+                              />
+                            </div>
+                            <div class="chart-scale">
+                              <div class="scale-values">
+                                <div class="blank-placeholder">0</div>
+                                <div class="blank-placeholder1">1</div>
+                                <div class="blank-placeholder2">2</div>
+                                <div class="blank-placeholder3">3</div>
+                                <div class="blank-placeholder4">4</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="usage-percentage">
+                <div class="percentage-wrapper">
+                  <div class="percentage">
+                    <b class="percentage-number">28%</b>
+                    <div class="price">
+                      <b class="ghs-120">Gh₵ 121.60</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+    `;
+
+    // Append the container to the parent
+    containersDiv.appendChild(roomContainer);
+}
+
+// Function to update room containers with fetched data
+function updateRoomContainers(rooms) {
+    rooms.forEach(room => {
+        const roomContainer = document.querySelector(`.room-name-parent[data-room="${room.roomNumber}"]`);
+        if (roomContainer) {
+            // Update percentage consumption
+            const percentageElement = roomContainer.querySelector('.percentage-number');
+            if (percentageElement) {
+                percentageElement.textContent = `${room.percentageConsumption}%`;
+            }
+
+            // Update cost per kWh
+            const costElement = roomContainer.querySelector('.ghs-120');
+            if (costElement) {
+                const costPerKwh = calculateCost(room.readingValue);
+                costElement.textContent = `Gh₵ ${costPerKwh}`;
+            }
+
+            // Update reading value
+            const readingElement = roomContainer.querySelector('.kw');
+            if (readingElement) {
+                readingElement.textContent = `${room.readingValue} KW`; // Assuming room.readingValue is in kWh
+            }
+        }
+    });
+}
+
+// Initialize page on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', async function() {
+    try {
+        const rooms = await fetchData();
+        if (rooms.length > 0) {
+            // Perform calculations for each room
+            rooms.forEach(room => {
+                room.percentageConsumption = ((room.readingValue / totalConsumption) * 100).toFixed(2);
+            });
+
+            // Update DOM with room data
+            updateRoomContainers(rooms);
+        } else {
+            console.log('No rooms data available. Creating placeholders...');
+            createRoomContainer('Room 1'); // Example room number to create
+            // Add more calls to createRoomContainer for other rooms as needed
+        }
+    } catch (error) {
+        console.error('Error initializing page:', error);
+    }
 });

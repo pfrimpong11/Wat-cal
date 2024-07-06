@@ -646,6 +646,47 @@
   justify-content: center;
   padding: 0 1px 0 0;
 }
+
+.add-room-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the add-room-container */
+  justify-content: center;
+  padding: 0 0 9px;
+  gap: 10px;
+}
+
+.room-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the inputs and labels */
+  gap: 10px; /* Adjust gap between the room and email containers */
+}
+
+.add-room-label {
+  display: block;
+  padding: 2px 0 0;
+  color: white;
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align labels and inputs to the start */
+  gap: 5px; /* Adjust gap between label and input */
+}
+
+.room-input, .email-input {
+  margin-left: 5px; /* Adjust spacing as needed */
+}
+
+
 .container,
 .content-wrapper {
   align-self: stretch;

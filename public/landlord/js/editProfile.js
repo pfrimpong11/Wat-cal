@@ -30,7 +30,7 @@ function goBack() {
     });
   }
   
-  document.addEventListener('DOMContentLoaded', () => {
+  /* document.addEventListener('DOMContentLoaded', () => {
     const username = localStorage.getItem('username'); // Retrieve the logged-in user's username
 
     if (username) {
@@ -57,63 +57,95 @@ function goBack() {
     } else {
         console.error('No username found in local storage');
     }
+}); */
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.addroombtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        addRoom();
+    });
+
+    let roomIndex = 1;
+
+    function addRoom() {
+        const container = document.createElement('div');
+        container.className = 'room-container';
+
+        // Room label and input
+        const roomLabel = document.createElement('label');
+        roomLabel.className = 'add-room-label';
+        roomLabel.innerText = `Room ${roomIndex}`;
+
+        const roomInput = document.createElement('input');
+        roomInput.className = 'room-input';
+        roomInput.type = 'text';
+        roomInput.name = `room${roomIndex}`; // Give each input a unique name
+        roomInput.placeholder = `Enter room name`;
+
+        // Email label and input
+        const emailLabel = document.createElement('label');
+        emailLabel.className = 'add-room-label';
+        emailLabel.innerText = `Email`;
+
+        const emailInput = document.createElement('input');
+        emailInput.className = 'room-input';
+        emailInput.type = 'email';
+        emailInput.name = `email${roomIndex}`; // Give each input a unique name
+        emailInput.placeholder = `Enter tenant email`;
+
+        // Container for room and email inputs
+        const inputContainer = document.createElement('div');
+        inputContainer.className = 'input-container';
+
+        inputContainer.appendChild(roomLabel);
+        inputContainer.appendChild(roomInput);
+        inputContainer.appendChild(emailLabel);
+        inputContainer.appendChild(emailInput);
+
+        container.appendChild(inputContainer);
+        document.querySelector('.add-room-container').appendChild(container);
+
+        roomIndex++;
+    }
 });
-
-document.querySelector('.addroombtn').addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent form submission and page reload
-    addRoom(); // Call the addRoom function to add a new room input
-});
-
-let roomIndex = 1;
-
-function addRoom(roomName = '', index = roomIndex) {
-    const container = document.createElement('div');
-    container.className = 'room-container';
-
-    const label = document.createElement('label');
-    label.className = 'room-label';
-    label.innerText = `Room ${index}`;
-
-    const input = document.createElement('input');
-    input.className = 'room-input';
-    input.type = 'text';
-    input.placeholder = `Enter room name`;
-    input.value = roomName;
-
-    container.appendChild(label);
-    container.appendChild(input);
-
-    document.querySelector('.add-room-container').appendChild(container);
-
-    roomIndex++;
-}
 
 document.getElementById('saveButton').addEventListener('click', async (e) => {
     e.preventDefault();
 
     const profileForm = document.getElementById('profileForm');
-    const formData = new FormData(profileForm); // Use FormData to collect form data
+    const formData = new FormData(profileForm);
 
-    const username = localStorage.getItem('username'); // Retrieve the logged-in user's username
+    const username = localStorage.getItem('username');
 
     if (username) {
-        const rooms = Array.from(document.querySelectorAll('.room-input')).map(input => input.value);
+        const inputs = document.querySelectorAll('.room-container .input-container');
+        const roomsData = [];
+
+        inputs.forEach(inputContainer => {
+            const roomInput = inputContainer.querySelector('input[name^="room"]');
+            const emailInput = inputContainer.querySelector('input[name^="email"]');
+
+            if (roomInput && emailInput) {
+                roomsData.push({
+                    room: roomInput.value,
+                    email: emailInput.value
+                });
+            }
+        });
 
         const userData = {
             username,
-            email: formData.get('email'),
-            dateOfBirth: formData.get('dateOfBirth'),
-            meterSerialNumber: formData.get('meterSerialNumber'),
-            houseAddress: formData.get('houseAddress'),
-            phoneNumber: formData.get('phoneNumber'),
-            meterType: formData.get('meterType'),
-            optional: formData.get('optional'),
-            prepaidPostpaid: formData.get('prepaidPostpaid'),
-            rooms, // Include rooms array in the user data
+            email: document.getElementById('email').value,
+            dateOfBirth: document.getElementById('dateOfBirth').value,
+            meterSerialNumber: document.getElementById('meterSerialNumber').value,
+            houseAddress: document.getElementById('houseAddress').value,
+            meterType: document.getElementById('meterType').value,
+            rooms: roomsData // Include rooms array in the user data
         };
+        console.log(userData);
 
         try {
-            const response = await fetch('http://localhost:3000/update-profile', {
+            const response = await fetch('/updateLandlord', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -122,13 +154,18 @@ document.getElementById('saveButton').addEventListener('click', async (e) => {
             });
 
             if (!response.ok) {
-                throw new Error('Failed to update profile');
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Failed to update profile');
             }
 
             const data = await response.json();
             alert('Profile updated successfully');
         } catch (error) {
-            console.error('Error updating profile:', error);
+            if (error.message.includes('username')) {
+                alert('Request aborted. Username is unique and cannot be changed.');
+            } else {
+                alert('Server error');
+            }
         }
     } else {
         console.error('No username found in local storage');

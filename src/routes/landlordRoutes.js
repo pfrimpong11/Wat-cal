@@ -1,6 +1,10 @@
 // routes/landlordRoutes.js
 const express = require('express');
 const { registerLandlord, loginLandlord, forgotPasswordLandlord, resetPasswordLandlord } = require('../controllers/landlordController');
+const {updateUserProfile, getUserProfile} = require('../controllers/landlordUpdate');
+const {getAllReadings, getAllRooms} = require('../controllers/LandlordAnalysisController');
+
+
 
 const router = express.Router();
 
@@ -8,6 +12,11 @@ router.post('/landlordSignup', registerLandlord);
 router.post('/landlordLogin', loginLandlord);
 router.post('/forgotPasswordLandlord', forgotPasswordLandlord);
 router.post('/resetPasswordLandlord', resetPasswordLandlord);
+router.post('/updateLandlord', updateUserProfile);
+router.get('/profile/:username', getUserProfile);
+
+router.get('/getAllReadings',getAllReadings);
+router.get('/getAllRooms', getAllRooms);
 
 
 router.get('/landlordIsAuthenticated', (req, res) => {

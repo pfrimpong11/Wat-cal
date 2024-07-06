@@ -1,6 +1,7 @@
 // routes/tenantRoutes.js
 const express = require('express');
 const { registerTenant, loginTenant, forgotPasswordTenant, resetPasswordTenant } = require('../controllers/tenantController');
+const {updateUserProfile, getUserProfile} = require('../controllers/tenantUpdate');
 
 const router = express.Router();
 
@@ -8,6 +9,8 @@ router.post('/tenantSignup', registerTenant);
 router.post('/tenantLogin', loginTenant);
 router.post('/forgotPasswordTenant', forgotPasswordTenant);
 router.post('/resetPasswordTenant', resetPasswordTenant);
+router.post('/updateLandlord', updateUserProfile);
+router.get('/profile/:username', getUserProfile);
 
 
 router.get('/tenantIsAuthenticated', (req, res) => {

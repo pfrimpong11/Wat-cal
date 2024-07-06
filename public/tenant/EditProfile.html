@@ -17,7 +17,7 @@
   <body>
     <div class="tenant-edit-profile-page-des">
       <section class="top-navigation-container-wrapper">
-        <form class="top-navigation-container">
+        <form class="top-navigation-container" id="profileForm">
           <div class="top-navigation">
             <div class="navbar">
               <div class="material-symbolsarrow-back-io" onclick="goBack()">
@@ -68,6 +68,7 @@
                   <div class="rectangle-group">
                     <div class="frame-inner"></div>
                     <input
+                    id="email"
                       class="melpetersgmailcom"
                       name="email"
                       placeholder="melpeters@gmail.com"
@@ -84,6 +85,7 @@
                   <div class="rectangle-container">
                     <div class="rectangle-div"></div>
                     <input
+                    id="dateOfBirth"
                       class="ddmmyyyy"
                       name="dateOfBirth"
                       placeholder="DD/MM/YYYY"
@@ -98,6 +100,7 @@
                   <div class="group-div">
                     <div class="frame-child1"></div>
                     <input
+                    id="meterSerialNumber"
                       class="xxxxxxx"
                       name="phoneNumber"
                       placeholder="131xxxxxxx"
@@ -114,6 +117,7 @@
                   <div class="frame-child2"></div>
                   <div class="optional-label">
                     <input
+                    id="houseAddress"
                     class="optional"
                     name="optional"
                     placeholder="(Optional)"
@@ -131,6 +135,7 @@
                   <div class="rectangle-parent2">
                     <div class="frame-child3"></div>
                     <input
+                    id="meterType"
                       class="prepaidpostpaid"
                       name="prepaidPostpaid"
                       placeholder="Prepaid/Postpaid"
@@ -142,7 +147,7 @@
             </div>
           </div>
           <div class="save-button-container">
-            <button class="button">
+            <button class="button" id="saveButton">
               <div class="save-changes" loading="lazy">Save changes</div>
             </button>
           </div>

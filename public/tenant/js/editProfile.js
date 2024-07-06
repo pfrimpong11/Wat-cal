@@ -1,3 +1,50 @@
+document.getElementById('saveButton').addEventListener('click', async (e) => {
+  e.preventDefault();
+
+  const profileForm = document.getElementById('profileForm');
+  const formData = new FormData(profileForm); // Use FormData to collect form data
+
+  const username = localStorage.getItem('username'); // Retrieve the logged-in user's username
+
+  if (username) {
+      const userData = {
+          username,
+          email: document.getElementById('email').value,
+          dateOfBirth: document.getElementById('dateOfBirth').value,
+          meterSerialNumber: document.getElementById('meterSerialNumber').value,
+          houseAddress: document.getElementById('houseAddress').value,
+          meterType: document.getElementById('meterType').value,
+      };
+      console.log(userData);
+
+      try {
+          const response = await fetch('/updateLandlord', {
+              method: 'PUT',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(userData),
+          });
+
+          if (!response.ok) {
+              throw new Error('Failed to update profile');
+          }
+
+          const data = await response.json();
+          alert('Profile updated successfully');
+      } catch (error) {
+        if (error.message.includes('username')) {
+          res.status(400).send('Request aborted... Username is unique and cannot be changed.');
+      } else {
+          res.status(500).send('Server error');
+      }
+      }
+  } else {
+      console.error('No username found in local storage');
+  }
+});
+
+
 
 function goBack() {
     window.history.back();
