@@ -2480,7 +2480,7 @@
     gap: 40px;
   }
 }
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .dashboard {
     font-size: 16px;
     line-height: 21px;
@@ -2559,7 +2559,7 @@
     flex-direction: column;
   }
 }
-
+ */
 .avatar {
   height: 107.3px;
   flex: 1;

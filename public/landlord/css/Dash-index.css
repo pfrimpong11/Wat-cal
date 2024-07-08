@@ -2128,7 +2128,7 @@ body {
     gap: 40px;
   }
 }
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .dashboard {
     line-height: 21px;
   }
@@ -2189,7 +2189,7 @@ body {
   .dashboard-page-desktop {
     gap: 20px;
   }
-}
+} */
 
 .kid {
   height: 107.3px;

@@ -617,7 +617,7 @@
     gap: 50px;
   }
 }
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .privacy {
     font-size: 16px;
     line-height: 21px;
@@ -632,4 +632,4 @@
   .privacy-page-desktop {
     gap: 25px;
   }
-}
+} */

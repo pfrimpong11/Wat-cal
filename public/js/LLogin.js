@@ -170,3 +170,19 @@ if (forgotpassword) {
         window.location.href = "Lforgotpassword.html";
     });
 }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const passwordInput = document.getElementById("password");
+    const togglePassword = document.getElementById("togglePassword");
+
+    togglePassword.addEventListener("click", () => {
+        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordInput.setAttribute("type", type);
+        
+        // Toggle the eye icon image source
+        const iconSrc = type === "password" ? "./images/e.png" : "./images/closed-eye-white.png";
+        togglePassword.setAttribute("src", iconSrc);
+    });
+});

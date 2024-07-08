@@ -799,7 +799,7 @@
       box-sizing: border-box;
     }
   }
-  @media screen and (max-width: 450px) {
+  /* @media screen and (max-width: 450px) {
     .help-support {
       font-size: 16px;
       line-height: 21px;
@@ -830,4 +830,4 @@
     .help-page-desktop {
       gap: 27px;
     }
-  }
+  } */

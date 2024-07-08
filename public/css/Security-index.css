@@ -856,7 +856,6 @@
   flex-wrap: wrap;
   gap: 30px;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
 }
 .heading9 {
   margin: 0;
@@ -937,7 +936,6 @@
   flex-wrap: wrap;
   gap: 30px;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
 }
 .heading11 {
   font-weight: 500;
@@ -1019,7 +1017,6 @@
   flex-wrap: wrap;
   align-items: flex-start;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
   max-width: 100%;
 }
 .items-container {
@@ -1490,7 +1487,7 @@
     gap: 50px;
   }
 }
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .heading {
     font-size: 29px;
     line-height: 37px;
@@ -1556,7 +1553,7 @@
   .security-page-desktop {
     gap: 25px;
   }
-}
+} */
 
 
 .wrap {

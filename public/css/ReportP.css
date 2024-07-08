@@ -548,7 +548,7 @@
       box-sizing: border-box;
     }
   }
-  @media screen and (max-width: 450px) {
+/*   @media screen and (max-width: 450px) {
     .report-a-problem {
       font-size: 16px;
       line-height: 14px;
@@ -566,4 +566,4 @@
     .report-problem-page-desktop {
       gap: 25px;
     }
-  }
+  } */

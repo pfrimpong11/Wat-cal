@@ -1153,7 +1153,7 @@
     gap: 67px;
   }
 }
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .edit-profile {
     font-size: 16px;
     line-height: 14px;
@@ -1168,7 +1168,7 @@
   .edit-profile-page-desktop {
     gap: 34px;
   }
-}
+} */
 
 
 .room-container {

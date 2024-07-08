@@ -2834,7 +2834,7 @@
     gap: 32px;
   }
 }
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .history {
     font-size: 16px;
     line-height: 21px;
@@ -2907,7 +2907,7 @@
   }
 }
 
-
+ */
 
 .avatar {
   height: 107.3px;

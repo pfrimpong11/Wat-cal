@@ -1193,7 +1193,6 @@
     flex-wrap: wrap;
     gap: 30px;
     flex-shrink: 0;
-    debug_commit: bf4bc93;
   }
   .heading15 {
     font-weight: 500;
@@ -1272,7 +1271,6 @@
     flex-wrap: wrap;
     gap: 30px;
     flex-shrink: 0;
-    debug_commit: bf4bc93;
   }
   .heading17 {
     font-weight: 500;
@@ -1354,7 +1352,6 @@
     flex-wrap: wrap;
     align-items: flex-start;
     flex-shrink: 0;
-    debug_commit: bf4bc93;
     max-width: 100%;
   }
   .items-container {
@@ -1967,7 +1964,7 @@
       gap: 40px;
     }
   }
-  @media screen and (max-width: 450px) {
+  /* @media screen and (max-width: 450px) {
     .logo-icon {
       height: 15px;
       width: 15px;
@@ -2235,7 +2232,7 @@
     .home-page-desktop {
       gap: 20px;
     }
-  }
+  } */
 
   .wrap {
       text-align: center;

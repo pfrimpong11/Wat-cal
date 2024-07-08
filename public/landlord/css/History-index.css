@@ -3098,7 +3098,7 @@ text-decoration: none;
     gap: 32px;
   }
 }
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .history {
     line-height: 21px;
   }
@@ -3185,7 +3185,7 @@ text-decoration: none;
     gap: 16px;
   }
 }
-
+ */
 
 
 

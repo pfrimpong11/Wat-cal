@@ -74,7 +74,7 @@
                 type="password"
               />
               <div class="icon-wrapper">
-                <img class="icon" alt="" src="./images/e.png" style="cursor: pointer;">
+                <img id="togglePassword" class="icon" alt="" src="./images/e.png" style="cursor: pointer;">
               </div>
             </div>
           </div>
@@ -90,7 +90,7 @@
               />
 
               <div class="icon-container">
-                <img class="icon1" alt="" src="./images/e.png" style="cursor: pointer;">
+                <img id="toggleConfirmPassword" class="icon1" alt="" src="./images/e.png"  style="cursor: pointer;">
               </div>
             </div>
           </div>
@@ -149,6 +149,26 @@
           document.getElementById('message').innerHTML = `<p style="color: red;">${error.message}</p>`;
           console.log("Error resetting password");
         }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const togglePasswordVisibility = (passwordInputId, toggleIconId) => {
+                const passwordInput = document.getElementById(passwordInputId);
+                const toggleIcon = document.getElementById(toggleIconId);
+
+                toggleIcon.addEventListener("click", () => {
+                    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+                    passwordInput.setAttribute("type", type);
+                    
+                    // Toggle the eye icon image source
+                    const iconSrc = type === "password" ? "./images/e.png" : "./images/closed-eye-white.png";
+                    toggleIcon.setAttribute("src", iconSrc);
+                });
+            };
+
+            togglePasswordVisibility("password", "togglePassword");
+            togglePasswordVisibility("confirmPassword", "toggleConfirmPassword");
         });
 </script>
 

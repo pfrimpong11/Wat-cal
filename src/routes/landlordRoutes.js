@@ -3,6 +3,7 @@ const express = require('express');
 const { registerLandlord, loginLandlord, forgotPasswordLandlord, resetPasswordLandlord } = require('../controllers/landlordController');
 const {updateUserProfile, getUserProfile} = require('../controllers/landlordUpdate');
 const {getAllReadings, getAllRooms} = require('../controllers/LandlordAnalysisController');
+const { updateElectricityStatus } = require('../controllers/LandlordRelayToggle');
 
 
 
@@ -17,6 +18,7 @@ router.get('/profile/:username', getUserProfile);
 
 router.get('/getAllReadings',getAllReadings);
 router.get('/getAllRooms', getAllRooms);
+router.post('/updateElectricityStatus',updateElectricityStatus);
 
 
 router.get('/landlordIsAuthenticated', (req, res) => {

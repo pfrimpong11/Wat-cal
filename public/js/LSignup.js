@@ -249,3 +249,23 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const togglePasswordVisibility = (passwordInputId, toggleIconId) => {
+        const passwordInput = document.getElementById(passwordInputId);
+        const toggleIcon = document.getElementById(toggleIconId);
+
+        toggleIcon.addEventListener("click", () => {
+            const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+            passwordInput.setAttribute("type", type);
+            
+            // Toggle the eye icon image source
+            const iconSrc = type === "password" ? "./images/eye.svg" : "./images/closed-eyel.png";
+            toggleIcon.setAttribute("src", iconSrc);
+        });
+    };
+
+    togglePasswordVisibility("passwordInput", "togglePassword");
+    togglePasswordVisibility("confirmPasswordInput", "toggleConfirmPassword");
+});
+

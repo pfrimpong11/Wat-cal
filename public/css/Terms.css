@@ -768,7 +768,7 @@
     box-sizing: border-box;
   }
 }
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .terms-and-policies {
     font-size: 16px;
     line-height: 14px;
@@ -791,4 +791,4 @@
   .terms-page-desktop {
     gap: 23px;
   }
-}
+} */

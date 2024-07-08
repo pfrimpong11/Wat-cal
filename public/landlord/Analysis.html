@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="./css/Analysis-index.css" />
+    <link rel="stylesheet" href="./css/AnalysisIndex.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap"
@@ -15,7 +15,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
     />
   </head>
   <body>
@@ -213,364 +213,373 @@
             </div>
           </div>
     </div>
-   <div class="content blur-background"> 
+   <div class="tent blur-background"> 
     <div class="analysis-page-desktop">
-      <section class="navigation-parent-wrapper">
-        <div class="navigation-parent">
-          <div class="navigation">
-            <div class="navbar">
-              <div class="button-parent">
-                <button class="button" onclick="showPopup('popup1')" style="border: 0;">
-                  <img
-                    class="icon"
-                    loading="lazy"
-                    alt=""
-                    src="./images/dash.svg"
-                  />
-                </button>
-                <div class="analysis-wrapper">
-                  <h2 class="analysis">Analysis</h2>
-                </div>
-              </div>
-              <div class="user-options">
-                <!-- added username in the header after login -->
-                <a class="melissa-peters"> <span id="username"></span></a>
+      <section class="body">
+        <div class="navbar-parent">
+          <div class="navbar">
+            <div class="button-parent">
+              <div class="button" onclick="showPopup('popup1')" style="border: 0;">
                 <img
-                  class="user-options-child"
+                  class="icon"
                   loading="lazy"
                   alt=""
-                  src="./images/ava.png"
+                  src="./images/dash.svg"
                 />
               </div>
+              <div class="analysis-wrapper">
+                <h2 class="analysis">Analysis</h2>
+              </div>
+            </div>
+            <div class="user-options">
+              <a class="melissa-peters"><span id="username"></span></a>
+              <img
+                class="user-options-child"
+                loading="lazy"
+                alt=""
+                src="./images/ava.png"
+              />
             </div>
           </div>
-          <div class="containers">
-            <div class="room-name-parent">
-              <h2 class="room-name">Room name</h2>
-              <div class="room-name1">
-                <div class="div">26/06/2023 - 17:01</div>
-              </div>
-              <div class="frame-parent">
-                <div class="rectangle-parent" onclick="toggleInfo(this)">
-                  <div class="frame-child" ></div>
-                  <img
-                    class="eye-regular-1-icon"
-                    loading="lazy"
-                    alt=""
-                    src="./images/look.svg"
-                  />
-                </div>
-                <div class="rectangle-group"  onclick="showPopup('popup2')">
-                  <div class="frame-item"></div>
-                  <img
-                    class="download-solid-1-icon"
-                    loading="lazy"
-                    alt=""
-                    src="./images/download.svg"
-                  />
-                </div>
-                <div class="rectangle-container" onclick="showPopup('popup3')">
-                  <div class="frame-inner"></div>
-                  <img
-                    class="trash-can-regular-1-icon"
-                    loading="lazy"
-                    alt=""
-                    src="./images/del.svg"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="container-content">
+          <div class="containers-wrapper">
+            <div class="containers">
               <div class="container-header">
-                <div class="container-name-parent-parent">
-                  <div class="container-name-parent">
-                    <div class="container-card">
-                      <h1 class="container">container</h1>
-                      <button class="downloadbtn" onclick="showPopup('popup2')" style="border: 0;">
+                <div class="container-header-inner">
+                  <div class="room-name-parent">
+                    <h2 class="room-name">Room name</h2>
+                    <div class="room-name-value">
+                      <div class="div">26/06/2023 - 17:01</div>
+                    </div>
+                    <div class="frame-parent">
+                      <div class="rectangle-parent">
+                        <div class="frame-child"></div>
                         <img
-                          class="downloadbtn-child"
+                          class="eye-regular-1-icon"
+                          loading="lazy"
                           alt=""
-                          src="./images/rectangle-31.svg"
+                          src="./images/look.svg"
                         />
-
-                        <div class="export">Export</div>
-                      </button>
-                      <div class="container-data">
-                        <div class="line"></div>
-                        <div class="reading-values-wrapper">
-                          <div class="reading-values">
-                            <div class="date">Date :</div>
-                            <div class="container-date-value">
-                              <div class="empty-k-w">26/06/2023</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="line1"></div>
-                        <div class="container-data-inner">
-                          <div class="reading-time-parent">
-                            <div class="reading-time">Reading_time :</div>
-                            <div class="div1">17:01</div>
-                          </div>
-                        </div>
-                        <div class="line2"></div>
-                        <div class="container-data-child">
-                          <div class="reading-value-parent">
-                            <div class="reading-value">Reading_value :</div>
-                            <div class="kw">759KW</div>
-                          </div>
-                        </div>
-                        <div class="line3"></div>
-                        <div class="frame-div">
-                          <div class="last-reading-time-parent">
-                            <div class="last-reading-time">
-                              Last_reading_time :
-                            </div>
-                            <div class="wrapper">
-                              <div class="div2">17:01</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="line4"></div>
-                        <div class="container-data-inner1">
-                          <div class="last-reading-value-parent">
-                            <div class="last-reading-value">
-                              Last_reading_value :
-                            </div>
-                            <b class="kw1">857KW</b>
-                          </div>
-                        </div>
-                        <div class="line5"></div>
-                        <div class="container-data-inner2">
-                          <div class="last-reading-date-parent">
-                            <div class="last-reading-date">
-                              Last_reading_date :
-                            </div>
-                            <div class="frame">
-                              <div class="div3">26/06/2023</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="line6"></div>
+                      </div>
+                      <div class="rectangle-group" onclick="showPopup('popup2')">
+                        <div class="frame-item"></div>
+                        <img
+                          class="download-solid-1-icon"
+                          loading="lazy"
+                          alt=""
+                          src="./images/download.svg"
+                        />
+                      </div>
+                      <div class="rectangle-container" onclick="showPopup('popup3')">
+                        <div class="frame-inner"></div>
+                        <img
+                          class="trash-can-regular-1-icon"
+                          loading="lazy"
+                          alt=""
+                          src="./images/del.svg"
+                        />
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="data-list">
                   <div class="frame-group">
-                    <div class="execution-recommendation-patte-wrapper">
-                      <h2 class="execution-recommendation-patte-container">
-                        <p class="execution-recommendation">
-                          Execution Recommendation
-                        </p>
-                        <p class="pattern">Pattern</p>
-                      </h2>
+                    <div class="container-card-wrapper">
+                      <div class="container-card">
+                        <div class="toggle-value">
+                          <h1 class="container">container</h1>
+                          <div class="togglebtn1-wrapper" data-roomIds="ROOM_IDS">
+                            <div class="togglebtn1">
+                              <div class="on">ON</div>
+                            </div>
+                          </div>
+                          <div class="downloadbtn" onclick="showPopup('popup2')" style="border: 0;" >
+                            <img
+                              class="downloadbtn-child"
+                              loading="lazy"
+                              alt=""
+                              src="./images/DownloadBtn.png"
+                            />
+
+                            <div class="export">Export</div>
+                          </div>
+                        </div>
+                        <div class="container-data-wrapper">
+                          <div class="container-data">
+                            <div class="line"></div>
+                            <div class="reading-values-wrapper">
+                              <div class="reading-values">
+                                <div class="date">Date :</div>
+                                <div class="reading-labels">
+                                  <div class="empty-k-w">26/06/2023</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="line1"></div>
+                            <div class="container-data-inner">
+                              <div class="reading-time-parent">
+                                <div class="reading-time">Reading_time :</div>
+                                <div class="div1">17:01</div>
+                              </div>
+                            </div>
+                            <div class="line2"></div>
+                            <div class="container-data-child">
+                              <div class="reading-value-parent">
+                                <div class="reading-value">Reading_value :</div>
+                                <div class="kw">942kWh</div>
+                              </div>
+                            </div>
+                            <div class="line3"></div>
+                            <div class="frame-div">
+                              <div class="last-reading-time-parent">
+                                <div class="last-reading-time">
+                                  Last_reading_time :
+                                </div>
+                                <div class="wrapper">
+                                  <div class="div2">17:01</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="line4"></div>
+                            <div class="container-data-inner1">
+                              <div class="last-reading-value-parent">
+                                <div class="last-reading-value">
+                                  Last_reading_value :
+                                </div>
+                                <b class="kw1">1000kWh</b>
+                              </div>
+                            </div>
+                            <div class="line5"></div>
+                            <div class="container-data-inner2">
+                              <div class="last-reading-date-parent">
+                                <div class="last-reading-date">
+                                  Last_reading_date :
+                                </div>
+                                <div class="frame">
+                                  <div class="div3">26/06/2023</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="line6"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="frame-container">
-                      <div class="group-div">
-                        <div class="rectangle-div"></div>
-                        <div class="day-names-parent">
-                          <div class="day-names-row">
-                            <div class="sunday">Sunday</div>
-                            <div class="day-numbers-parent">
-                              <b class="june">10 June</b>
+                      <div class="execution-recommendation-patte-wrapper">
+                        <h2 class="execution-recommendation-patte-container">
+                          <p class="execution-recommendation">
+                            Execution Recommendation
+                          </p>
+                          <p class="pattern">Pattern</p>
+                        </h2>
+                      </div>
+                      <div class="frame-parent1">
+                        <div class="group-div">
+                          <div class="rectangle-div"></div>
+                          <div class="graph-columns">
+                            <div class="day-names-row">
+                              <div class="sunday">Sunday</div>
+                              <div class="graph-days">
+                                <b class="june">10 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-12h">10h - 12h</div>
                         </div>
-                        <div class="h-12h">10h - 12h</div>
-                      </div>
-                      <div class="vector-parent">
-                        <img
-                          class="rectangle-icon"
-                          alt=""
-                          src="./images/rectangle-32.svg"
-                        />
+                        <div class="vector-parent">
+                          <img
+                            class="rectangle-icon"
+                            alt=""
+                            src="./public/rectangle-32.svg"
+                          />
 
-                        <div class="frame-wrapper">
-                          <div class="monday-parent">
-                            <div class="monday">Monday</div>
-                            <div class="june-wrapper">
-                              <b class="june1">11 June</b>
+                          <div class="frame-wrapper">
+                            <div class="monday-parent">
+                              <div class="monday">Monday</div>
+                              <div class="june-wrapper">
+                                <b class="june1">11 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-10h">8h - 10h</div>
                         </div>
-                        <div class="h-10h">8h - 10h</div>
-                      </div>
-                      <div class="rectangle-parent1">
-                        <div class="frame-child1"></div>
-                        <div class="frame-wrapper1">
-                          <div class="tuesday-parent">
-                            <div class="tuesday">Tuesday</div>
-                            <div class="june-container">
-                              <b class="june2">13 June</b>
+                        <div class="rectangle-parent1">
+                          <div class="frame-child1"></div>
+                          <div class="frame-wrapper1">
+                            <div class="tuesday-parent">
+                              <div class="tuesday">Tuesday</div>
+                              <div class="june-container">
+                                <b class="june2">13 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-10h1">7h - 10h</div>
                         </div>
-                        <div class="h-10h1">7h - 10h</div>
-                      </div>
-                      <div class="selected-date">
-                        <div class="date-highlight"></div>
-                        <b class="june3">14 June</b>
-                        <div class="wednesday">Wednesday</div>
-                        <div class="h-10h2">8h - 10h</div>
-                      </div>
-                      <div class="calendar-grid">
-                        <div class="calendar-grid-child"></div>
-                        <div class="calendar-grid-inner">
-                          <div class="thursday-parent">
-                            <div class="thursday">Thursday</div>
-                            <div class="june-frame">
-                              <b class="june4">15 June</b>
+                        <div class="selected-date">
+                          <div class="date-highlight"></div>
+                          <b class="june3">14 June</b>
+                          <div class="wednesday">Wednesday</div>
+                          <div class="h-10h2">8h - 10h</div>
+                        </div>
+                        <div class="calendar-grid">
+                          <div class="calendar-grid-child"></div>
+                          <div class="calendar-grid-inner">
+                            <div class="thursday-parent">
+                              <div class="thursday">Thursday</div>
+                              <div class="june-frame">
+                                <b class="june4">15 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-10h3">8h - 10h</div>
                         </div>
-                        <div class="h-10h3">8h - 10h</div>
-                      </div>
-                      <div class="calendar-grid1">
-                        <div class="calendar-grid-item"></div>
-                        <div class="calendar-grid-inner1">
-                          <div class="friday-parent">
-                            <div class="friday">Friday</div>
-                            <div class="june-wrapper1">
-                              <b class="june5">16 June</b>
+                        <div class="calendar-grid1">
+                          <div class="calendar-grid-item"></div>
+                          <div class="calendar-grid-inner1">
+                            <div class="friday-parent">
+                              <div class="friday">Friday</div>
+                              <div class="june-wrapper1">
+                                <b class="june5">16 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-15h">13h - 15h</div>
                         </div>
-                        <div class="h-15h">13h - 15h</div>
-                      </div>
-                      <div class="calendar-grid2">
-                        <div class="calendar-grid-child1"></div>
-                        <div class="calendar-grid-inner2">
-                          <div class="saturday-parent">
-                            <div class="saturday">Saturday</div>
-                            <div class="june-wrapper2">
-                              <b class="june6">17 June</b>
+                        <div class="calendar-grid2">
+                          <div class="calendar-grid-child1"></div>
+                          <div class="calendar-grid-inner2">
+                            <div class="saturday-parent">
+                              <div class="saturday">Saturday</div>
+                              <div class="june-wrapper2">
+                                <b class="june6">17 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-18h">16h - 18h</div>
                         </div>
-                        <div class="h-18h">16h - 18h</div>
-                      </div>
-                      <div class="calendar-grid3">
-                        <div class="calendar-grid-child2"></div>
-                        <div class="calendar-grid-inner3">
-                          <div class="sunday-parent">
-                            <div class="sunday1">Sunday</div>
-                            <div class="june-wrapper3">
-                              <b class="june7">18 June</b>
+                        <div class="calendar-grid3">
+                          <div class="calendar-grid-child2"></div>
+                          <div class="calendar-grid-inner3">
+                            <div class="sunday-parent">
+                              <div class="sunday1">Sunday</div>
+                              <div class="june-wrapper3">
+                                <b class="june7">18 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-12h1">10h - 12h</div>
                         </div>
-                        <div class="h-12h1">10h - 12h</div>
-                      </div>
-                      <div class="calendar-grid4">
-                        <img
-                          class="calendar-grid-child3"
-                          alt=""
-                          src="./images/rectangle-32.svg"
-                        />
+                        <div class="calendar-grid4">
+                          <img
+                            class="calendar-grid-child3"
+                            alt=""
+                            src="./public/rectangle-32.svg"
+                          />
 
-                        <div class="calendar-grid-inner4">
-                          <div class="monday-group">
-                            <div class="monday1">Monday</div>
-                            <div class="june-wrapper4">
-                              <b class="june8">19 June</b>
+                          <div class="calendar-grid-inner4">
+                            <div class="monday-group">
+                              <div class="monday1">Monday</div>
+                              <div class="june-wrapper4">
+                                <b class="june8">19 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-10h4">8h - 10h</div>
                         </div>
-                        <div class="h-10h4">8h - 10h</div>
-                      </div>
-                      <div class="calendar-grid5">
-                        <div class="calendar-grid-child4"></div>
-                        <div class="calendar-grid-inner5">
-                          <div class="tuesday-group">
-                            <div class="tuesday1">Tuesday</div>
-                            <div class="june-wrapper5">
-                              <b class="june9">20 June</b>
+                        <div class="calendar-grid5">
+                          <div class="calendar-grid-child4"></div>
+                          <div class="calendar-grid-inner5">
+                            <div class="tuesday-group">
+                              <div class="tuesday1">Tuesday</div>
+                              <div class="june-wrapper5">
+                                <b class="june9">20 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-10h5">7h - 10h</div>
                         </div>
-                        <div class="h-10h5">7h - 10h</div>
-                      </div>
-                      <div class="calendar-grid6">
-                        <div class="calendar-grid-child5"></div>
-                        <div class="calendar-grid-inner6">
-                          <div class="wednesday-parent">
-                            <div class="wednesday1">Wednesday</div>
-                            <div class="june-wrapper6">
-                              <b class="june10">21 June</b>
+                        <div class="calendar-grid6">
+                          <div class="calendar-grid-child5"></div>
+                          <div class="calendar-grid-inner6">
+                            <div class="wednesday-parent">
+                              <div class="wednesday1">Wednesday</div>
+                              <div class="june-wrapper6">
+                                <b class="june10">21 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-10h6">8h - 10h</div>
                         </div>
-                        <div class="h-10h6">8h - 10h</div>
-                      </div>
-                      <div class="calendar-grid7">
-                        <div class="calendar-grid-child6"></div>
-                        <div class="calendar-grid-inner7">
-                          <div class="thursday-group">
-                            <div class="thursday1">Thursday</div>
-                            <div class="june-wrapper7">
-                              <b class="june11">22 June</b>
+                        <div class="calendar-grid7">
+                          <div class="calendar-grid-child6"></div>
+                          <div class="calendar-grid-inner7">
+                            <div class="thursday-group">
+                              <div class="thursday1">Thursday</div>
+                              <div class="june-wrapper7">
+                                <b class="june11">22 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-10h7">8h - 10h</div>
                         </div>
-                        <div class="h-10h7">8h - 10h</div>
-                      </div>
-                      <div class="calendar-grid8">
-                        <div class="calendar-grid-child7"></div>
-                        <div class="calendar-grid-inner8">
-                          <div class="friday-group">
-                            <div class="friday1">Friday</div>
-                            <div class="june-wrapper8">
-                              <b class="june12">23 June</b>
+                        <div class="calendar-grid8">
+                          <div class="calendar-grid-child7"></div>
+                          <div class="calendar-grid-inner8">
+                            <div class="friday-group">
+                              <div class="friday1">Friday</div>
+                              <div class="june-wrapper8">
+                                <b class="june12">23 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-15h1">13h - 15h</div>
                         </div>
-                        <div class="h-15h1">13h - 15h</div>
-                      </div>
-                      <div class="calendar-grid9">
-                        <div class="calendar-grid-child8"></div>
-                        <div class="calendar-grid-inner9">
-                          <div class="saturday-group">
-                            <div class="saturday1">Saturday</div>
-                            <div class="june-wrapper9">
-                              <b class="june13">24 June</b>
+                        <div class="calendar-grid9">
+                          <div class="calendar-grid-child8"></div>
+                          <div class="calendar-grid-inner9">
+                            <div class="saturday-group">
+                              <div class="saturday1">Saturday</div>
+                              <div class="june-wrapper9">
+                                <b class="june13">24 June</b>
+                              </div>
                             </div>
                           </div>
+                          <div class="h-18h1">16h - 18h</div>
                         </div>
-                        <div class="h-18h1">16h - 18h</div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="usage-chart-parent">
-                  <div class="usage-chart-title-parent">
-                    <div class="usage-chart-title">
-                      <h1 class="percentage-usage">Percentage Usage</h1>
-                    </div>
-                    <div class="chart-content">
-                      <div class="dash">
-                        <h2 class="total-electricity-consumption">
-                          Total electricity consumption
-                        </h2>
-                        <div class="chart-container">
-                          <div class="chart">
-                            <div class="chart-axis-y">
-                              <div class="y-axis-values">
-                                <div class="grid-label">1000</div>
-                                <div class="y-axis-value">
-                                  <div class="y-axis-label">750</div>
+                  <div class="chart-summary">
+                    <div class="usage-summary-parent">
+                      <div class="usage-summary">
+                        <h1 class="percentage-usage">Percentage Usage</h1>
+                      </div>
+                      <div class="chart-content">
+                        <div class="dash">
+                          <h2 class="total-electricity-consumption">
+                            Total electricity consumption
+                          </h2>
+                          <div class="chart-container">
+                            <div class="chart">
+                              <div class="chart-area">
+                                <div class="chart-axis">
+                                  <div class="grid-label">1000</div>
+                                  <div class="horizontal-axis">
+                                    <div class="y-axis-label">750</div>
+                                  </div>
+                                  <div class="div4">500</div>
+                                  <div class="div5">250</div>
+                                  <div class="target-value">0</div>
                                 </div>
-                                <div class="div4">500</div>
-                                <div class="div5">250</div>
-                                <div class="target-value">0</div>
-                              </div>
-                              <div class="chart-bars">
-                                <div class="chart-bar-parent">
-                                  <img
-                                    class="energy-bar-icon"
-                                    loading="lazy"
-                                    alt=""
-                                    src="./images/d.png.svg"
-                                  />
+                                <div class="data-visualization">
+                                  <div class="graph-axis">
+                                    <img
+                                      class="energy-bar-icon"
+                                      loading="lazy"
+                                      alt=""
+                                      src="./images/d.png"
+                                    />
 
-                                  <div class="chart-axis-x">
                                     <div class="weekday-label-parent">
                                       <img
                                         class="weekday-label-icon"
@@ -578,21 +587,21 @@
                                         src="./images/d.png"
                                       />
 
-                                      <div class="chart-x-labels">
+                                      <div class="fourth-point">
                                         <img
                                           class="percentage-label-icon"
                                           loading="lazy"
                                           alt=""
-                                          src="./images/.png"
+                                          src="./public/dc"
                                         />
 
                                         <img
                                           class="vector-icon"
                                           alt=""
-                                          src="./images/.png"
+                                          src="./public/dc"
                                         />
 
-                                       
+                                        
                                       </div>
                                       <img
                                         class="previous-bar-icon"
@@ -603,11 +612,12 @@
 
                                       <img
                                         class="group-icon"
+                                        loading="lazy"
                                         alt=""
                                         src="./images/grid.png"
                                       />
 
-                                      <div class="chart-grid">
+                                      <div class="remaining-data-points">
                                         <img
                                           class="weekdays-icon"
                                           loading="lazy"
@@ -701,28 +711,28 @@
                                         src="./images/reddots.png"
                                       />
                                     </div>
-                                    <div class="chart-scale">
-                                      <div class="scale-values">
-                                        <div class="blank-placeholder">0</div>
-                                        <div class="blank-placeholder1">1</div>
-                                        <div class="blank-placeholder2">2</div>
-                                        <div class="blank-placeholder3">3</div>
-                                        <div class="blank-placeholder4">4</div>
-                                      </div>
-                                    </div>
                                   </div>
+                                </div>
+                              </div>
+                              <div class="chart-legend">
+                                <div class="legend-items">
+                                  <div class="legend-values">
+                                    <div class="blank-placeholder">0</div>
+                                  </div>
+                                  <div class="blank-placeholder1">1</div>
+                                  <div class="blank-placeholder2">2</div>
+                                  <div class="blank-placeholder3">3</div>
+                                  <div class="blank-placeholder4">4</div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="usage-percentage">
-                        <div class="percentage-wrapper">
+                        <div class="percentage-summary">
                           <div class="percentage">
-                            <b class="percentage-number">28%</b>
+                            <b class="percentage-number">50%</b>
                             <div class="price">
-                              <b class="ghs-120">Gh₵ 121.60</b>
+                              <b class="ghs-120">Gh₵ 121.80</b>
                             </div>
                           </div>
                         </div>
@@ -748,7 +758,7 @@
             <h1 class="watcal">WatCal</h1>
           </div>
         </div>
-        <div class="footer-navigation">
+        <div class="navigation-links">
           <div class="links-container">
             <div class="text-button" id="textButton">Home</div>
             <div class="text-button1" id="textButton1">Help Desk</div>
@@ -757,10 +767,10 @@
           </div>
         </div>
         <div class="line7"></div>
-        <div class="social-buttons">
+        <div class="social-icons">
           <div class="social-buttons-container">
             <div class="button1">
-              <div class="language-option">
+              <div class="icon-button-container">
                 <img
                   class="icon1"
                   loading="lazy"
@@ -784,8 +794,8 @@
           </div>
         </div>
         <div class="line8"></div>
-        <div class="container1">
-          <div class="text-wrapper">
+        <footer class="container1">
+          <div class="copyright">
             <div class="text">WatCal All Rights Reserved</div>
           </div>
           <div class="social-media-icons">
@@ -802,7 +812,7 @@
                 class="icon4"
                 loading="lazy"
                 alt=""
-                src="./images/twitter.svg" 
+                src="./images/twitter.svg"
               />
             </div>
             <div class="button5">
@@ -814,16 +824,14 @@
               />
             </div>
           </div>
-          <div class="legal-links">
+          <div class="contact-us">
             <div class="legal-buttons-container">
-             <!-- <div class="text-button6" id="textButton6">Privacy Policy</div> -->
-             <a href="../Privacy.html" class="text-button6" >Privacy Policy</a>
-             <div class="theme-separator"></div>
-             <!-- <div class="text-button7" id="textButton7">Terms of Service</div> -->
-             <a href="../Terms.html" class="text-button7">Terms of Service</a>
+                <a href="../Privacy.html" class="text-button6" >Privacy Policy</a>
+              <div class="theme-separator"></div>
+              <a href="../Terms.html" class="text-button7">Terms of Service</a>
             </div>
           </div>
-        </div>
+        </footer>
       </section>
     </div>
    </div>
@@ -831,4 +839,4 @@
    <script src="js/download.js"></script>
     <script src="js/analysis.js"></script>
   </body>
-</html>
+</htm

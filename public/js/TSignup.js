@@ -154,21 +154,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 
-    // document.addEventListener("DOMContentLoaded", function () {
-    //     // Previous code...
+document.addEventListener("DOMContentLoaded", () => {
+    const togglePasswordVisibility = (passwordInputId, toggleIconId) => {
+        const passwordInput = document.getElementById(passwordInputId);
+        const toggleIcon = document.getElementById(toggleIconId);
 
-    //     // Show/Hide password functionality
-    //     const eyeIcons = document.querySelectorAll(".eye-icon");
-    //     eyeIcons.forEach(icon => {
-    //         icon.addEventListener("click", function () {
-    //             const input = this.previousElementSibling.querySelector("input");
-    //             if (input.type === "password") {
-    //                 input.type = "text";
-    //                 this.src = "./images/eye-off.svg"; // Change icon to eye-off
-    //             } else {
-    //                 input.type = "password";
-    //                 this.src = "./images/eye.svg"; // Change icon to eye
-    //             }
-    //         });
-    //     });
-    // });
+        toggleIcon.addEventListener("click", () => {
+            const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+            passwordInput.setAttribute("type", type);
+            
+            // Toggle the eye icon image source
+            const iconSrc = type === "password" ? "./images/eye.svg" : "./images/closed-eyel.png";
+            toggleIcon.setAttribute("src", iconSrc);
+        });
+    };
+
+    togglePasswordVisibility("passwordInput", "togglePassword");
+    togglePasswordVisibility("confirmPasswordInput", "toggleConfirmPassword");
+});

@@ -176,7 +176,7 @@
 }
 .icon {
   width: 20px;
-  height: 21px;
+  height: 20px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -255,7 +255,7 @@
 }
 .icon1 {
   width: 20px;
-  height: 21px;
+  height: 20px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -390,9 +390,9 @@
     min-height: 1024;
   }
 }
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .watcal {
     font-size: 22px;
     line-height: 32px;
   }
-}
+} */

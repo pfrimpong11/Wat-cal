@@ -9,6 +9,10 @@ const RoomSchema = new mongoose.Schema({
     roomEmail: {
         type: String,
         required: true,
+    },
+    electricityStatus: {
+      type: Boolean,
+      default: true
     }
 });
 

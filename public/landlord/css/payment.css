@@ -684,7 +684,7 @@
       box-sizing: border-box;
     }
   }
-  @media screen and (max-width: 450px) {
+  /* @media screen and (max-width: 450px) {
     .gh-2400000,
     .total-consumption-amount {
       font-size: 21px;
@@ -724,4 +724,4 @@
       padding-right: 20px;
       box-sizing: border-box;
     }
-  }
+  } */
