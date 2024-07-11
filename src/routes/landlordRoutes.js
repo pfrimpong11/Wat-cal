@@ -4,6 +4,8 @@ const { registerLandlord, loginLandlord, forgotPasswordLandlord, resetPasswordLa
 const {updateUserProfile, getUserProfile} = require('../controllers/landlordUpdate');
 const {getAllReadings, getAllRooms} = require('../controllers/LandlordAnalysisController');
 const { updateElectricityStatus } = require('../controllers/LandlordRelayToggle');
+const authMiddleware = require('../middleware/authMiddleware');
+
 
 
 
@@ -13,8 +15,8 @@ router.post('/landlordSignup', registerLandlord);
 router.post('/landlordLogin', loginLandlord);
 router.post('/forgotPasswordLandlord', forgotPasswordLandlord);
 router.post('/resetPasswordLandlord', resetPasswordLandlord);
-router.post('/updateLandlord', updateUserProfile);
-router.get('/profile/:username', getUserProfile);
+router.post('/updateLandlord', authMiddleware, updateUserProfile);
+router.get('/getProfile', authMiddleware, getUserProfile);  //get user profile
 
 router.get('/getAllReadings',getAllReadings);
 router.get('/getAllRooms', getAllRooms);

@@ -9,7 +9,7 @@ router.post('/tenantSignup', registerTenant);
 router.post('/tenantLogin', loginTenant);
 router.post('/forgotPasswordTenant', forgotPasswordTenant);
 router.post('/resetPasswordTenant', resetPasswordTenant);
-router.post('/updateLandlord', updateUserProfile);
+router.post('/updateTenant', updateUserProfile);
 router.get('/profile/:username', getUserProfile);
 
 
