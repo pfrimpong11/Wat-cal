@@ -57,7 +57,7 @@
                       <div class="frame-child"></div>
                       <input
                       autocomplete="off"
-                        id="user"
+                        id="username"
                         class="melissa-peters"
                         placeholder="Melissa Peters"
                         type="text"
@@ -135,11 +135,13 @@
                   <div class="optional-field-inner">
                     <div class="rectangle-parent2">
                       <div class="frame-child2"></div>
-                      <select class="prepaidpostpaid" id="meterType" name="meterType" required>
-                        <option value="" disabled selected>Select meter-type</option>
-                        <option value="prepaid">Prepaid</option>
-                        <option value="postpaid">Postpaid</option>
-                    </select>
+                      <input
+                      autocomplete="off"
+                      id="meterType"
+                        class="prepaidpostpaid"
+                        placeholder="Prepaid/Postpaid"
+                        type="text"
+                      />
                     </div>
                   </div>
                 </div>
@@ -155,8 +157,9 @@
               <div class="add-room-container"></div> <!-- Container for dynamically added rooms -->
             </div>
           </div>
+          <div id="message"></div>
           <div class="save-button">
-            <button class="button" id="saveButton" loading="lazy">
+            <button type="submit" class="button" id="saveButton" loading="lazy">
               <div class="save-changes" >Save changes</div>
             </button>
           </div>
