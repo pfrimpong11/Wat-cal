@@ -5,10 +5,12 @@ const RoomSchema = new mongoose.Schema({
     roomNumber: {
         type: String,
         required: true,
+        unique: true,
     },
     roomEmail: {
         type: String,
         required: true,
+        unique: true,
     },
     electricityStatus: {
       type: Boolean,
