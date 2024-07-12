@@ -485,7 +485,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         if (rooms.length > 0) {
             // Perform calculations for each room
             rooms.forEach(room => {
-                room.percentageConsumption = ((room.readingValue / totalConsumption) * 100).toFixed(2);
+                room.percentageConsumption = ((room.readingValue / totalConsumption) * 100).toFixed(1);
             });
 
             // Update DOM with room data
