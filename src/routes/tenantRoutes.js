@@ -11,7 +11,7 @@ router.post('/tenantLogin', loginTenant);
 router.post('/forgotPasswordTenant', forgotPasswordTenant);
 router.post('/resetPasswordTenant', resetPasswordTenant);
 
-router.post('/updateLandlord', TauthMiddleware, updateUserProfile);
+router.post('/updateTenant', TauthMiddleware, updateUserProfile);
 router.get('/getProfile', TauthMiddleware, getUserProfile);  //get user profile
 
 
