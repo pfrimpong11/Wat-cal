@@ -57,7 +57,7 @@ groupContainer3.addEventListener("click", function (e) {
 var groupContainer4 = document.getElementById("groupContainer4");
 if (groupContainer4) {
 groupContainer4.addEventListener("click", function (e) {
-  window.location.href = "../ReportProblem.html";
+  window.location.href = "../ReportP.html";
 });
 }
 

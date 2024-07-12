@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="payment-page-desktop">
-      <div class="material-symbolsarrow-back-io">
+      <div class="material-symbolsarrow-back-io" onclick="goBack()">
         <img
           class="back-icon"
           loading="lazy"
@@ -36,7 +36,7 @@
             <div class="meter-selection">
               <b class="click-on-the">click on the card to select the meter-type</b>
               <div class="payment-options">
-                <div class="options-heading">
+                <div class="options-heading" id="prepaidOption">
                   <h2 class="prepaid">PREPAID</h2>
                   <img
                     class="options-background-icon"
@@ -45,7 +45,7 @@
                     src="./images/chip.png"
                   />
                 </div>
-                <div class="options-heading1">
+                <div class="options-heading1" id="postpaidOption">
                   <h2 class="postpaid">POSTPAID</h2>
                   <img
                     class="options-heading-child"
@@ -57,8 +57,8 @@
               </div>
             </div>
           </div>
-          <div class="prepaid-parent">
-            <h2 class="prepaid1">PREPAID</h2>
+          <div class="prepaid-parent" id="paymentForm">
+            <h2 class="prepaid1" id="paymentTypeHeader">PREPAID</h2>
             <div class="choose-your-payment">choose your payment method</div>
             <div class="prepaid-input">
               <div class="input-fields">
@@ -154,5 +154,32 @@
       </main>
     </div>
     <script src="./js/payment.js"></script>
+    <script>
+          async function fetchDataFromDashboard() {
+  try {
+    const response = await fetch('Dashboard.html'); // Check URL path relative to payment.html
+    const text = await response.text();
+    console.log('Fetched content:', text); // Log fetched content for debugging
+    
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+    
+    const costElement = doc.querySelector('.ghs-120');
+    if (costElement) {
+      const costValue = costElement.textContent.trim();
+      console.log('Extracted cost value:', costValue); // Log extracted cost value for debugging
+      document.querySelector('.cost-value').textContent = costValue;
+    } else {
+      console.error('.ghs-120 element not found.');
+    }
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+window.onload = fetchDataFromDashboard;
+
+  
+    </script>
   </body>
 </html>

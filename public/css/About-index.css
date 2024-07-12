@@ -352,6 +352,7 @@
 .image-icon1 {
   width: 544px;
   border-radius: 50px 50px 0 0;
+  margin: 30px 30px;
   max-height: 100%;
   object-fit: cover;
   z-index: 1;
@@ -369,7 +370,7 @@
   padding: 0 31px;
   box-sizing: border-box;
   gap: 10px;
-  background-image: url(./public/image-container@3x.png);
+  background-image: url(../images/Card2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -459,6 +460,7 @@
   width: 544px;
   position: relative;
   border-radius: 50px 50px 0 0;
+  margin: 30px 30px;
   max-height: 100%;
   object-fit: cover;
   max-width: 100%;
@@ -476,7 +478,7 @@
   box-sizing: border-box;
   position: relative;
   gap: 10px;
-  background-image: url(./public/image-container@3x.png);
+  background-image: url(../images/Card2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;

@@ -26,10 +26,4 @@ router.get('/tenantIsAuthenticated', (req, res) => {
 router.post('/tenantLogout', (req, res) => {
     req.session.destroy(err => {
         if (err) {
-        return res.status(500).json({ msg: 'Logout failed' });
-        }
-        res.status(200).json({ msg: 'Logout successful' });
-    });
-});
-
-module.exports = router;
+        return res.status(500).json({ msg: 'Logout failed

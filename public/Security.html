@@ -291,7 +291,7 @@
         </div>
         <div class="footer-navigation">
           <div class="footer-link-buttons">
-            <div class="text-buttonC" id="textButtonC">Home</div>
+            <div class="text-buttonC" id="textButton">Home</div>
             <div class="text-button5" id="textButton1">Help Desk</div>
             <div class="text-button6" id="textButton2">About</div>
             <div class="text-button7" id="textButton3">Security</div>
@@ -414,6 +414,13 @@
         });
       }
       
+      var textButton = document.getElementById("textButton");
+      if (textButton) {
+        textButton.addEventListener("click", function (e) {
+          window.location.href = "Home.html";
+        });
+      }
+      
       var textButton1 = document.getElementById("textButton1");
       if (textButton1) {
         textButton1.addEventListener("click", function (e) {
@@ -424,21 +431,14 @@
       var textButton2 = document.getElementById("textButton2");
       if (textButton2) {
         textButton2.addEventListener("click", function (e) {
-          window.location.href = "About.html"; 
+          window.location.href = "About.html";
         });
       }
       
       var textButton3 = document.getElementById("textButton3");
       if (textButton3) {
         textButton3.addEventListener("click", function (e) {
-          window.location.href = "security-page-desktop.html";
-        });
-      }
-      
-      var textButtonC = document.getElementById("textButtonC");
-      if (textButtonC) {
-        textButtonC.addEventListener("click", function (e) {
-          window.location.href = "Home.html";
+          window.location.href = "Security.html";
         });
       }
       

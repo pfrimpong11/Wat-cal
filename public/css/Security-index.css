@@ -711,7 +711,7 @@
   align-items: center;
   padding: 48px 49px;
   gap: 24px;
-  background-image: url(./public/Card2.png);
+  background-image: url(../images/Card2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
