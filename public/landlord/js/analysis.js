@@ -298,6 +298,16 @@ document.addEventListener('DOMContentLoaded', function() {
        
         
 
+
+
+
+        
+
+
+
+
+        ////Mock data presenntation
+
         // Updated calculateCost function with tier rates
         const Rates = [
             { upperLimit: 50, rate: 0.00 },     // Tier 1 (Lifeline)
@@ -361,6 +371,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     async function checkAuth() {
         const response = await fetch('/api/landlordIsAuthenticated');
@@ -391,6 +407,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+//database fetch 
 
 // Define tier rates for cost calculation
 const tierRates = [
