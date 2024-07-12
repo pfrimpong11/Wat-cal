@@ -135,13 +135,11 @@
                   <div class="optional-field-inner">
                     <div class="rectangle-parent2">
                       <div class="frame-child2"></div>
-                      <input
-                      autocomplete="off"
-                      id="meterType"
-                        class="prepaidpostpaid"
-                        placeholder="Prepaid/Postpaid"
-                        type="text"
-                      />
+                      <select class="prepaidpostpaid" id="meterType" name="meterType" required>
+                        <option value="" disabled selected>Select meter-type</option>
+                        <option value="prepaid">Prepaid</option>
+                        <option value="postpaid">Postpaid</option>
+                    </select>
                     </div>
                   </div>
                 </div>

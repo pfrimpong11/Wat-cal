@@ -1,51 +1,3 @@
-document.getElementById('saveButton').addEventListener('click', async (e) => {
-  e.preventDefault();
-
-  const profileForm = document.getElementById('profileForm');
-  const formData = new FormData(profileForm); // Use FormData to collect form data
-
-  const username = localStorage.getItem('username'); // Retrieve the logged-in user's username
-
-  if (username) {
-      const userData = {
-          username,
-          email: document.getElementById('email').value,
-          dateOfBirth: document.getElementById('dateOfBirth').value,
-          meterSerialNumber: document.getElementById('meterSerialNumber').value,
-          houseAddress: document.getElementById('houseAddress').value,
-          meterType: document.getElementById('meterType').value,
-      };
-      console.log(userData);
-
-      try {
-          const response = await fetch('/updateLandlord', {
-              method: 'PUT',
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(userData),
-          });
-
-          if (!response.ok) {
-              throw new Error('Failed to update profile');
-          }
-
-          const data = await response.json();
-          alert('Profile updated successfully');
-      } catch (error) {
-        if (error.message.includes('username')) {
-          res.status(400).send('Request aborted... Username is unique and cannot be changed.');
-      } else {
-          res.status(500).send('Server error');
-      }
-      }
-  } else {
-      console.error('No username found in local storage');
-  }
-});
-
-
-
 function goBack() {
     window.history.back();
   }
@@ -76,4 +28,75 @@ function goBack() {
           window.location.href = "../other/Security.html";
       });
     }
+
+
+
+    // get user profile
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+      const response = await fetch('/api/getProfile');
+      const tenant = await response.json();
+
+
+      document.getElementById('username').value = tenant.username;
+      document.getElementById('email').value = tenant.email;
+      document.getElementById('dateOfBirth').value = tenant.dateOfBirth;
+      document.getElementById('meterSerialNumber').value = tenant.meterSerialNumber;
+      document.getElementById('houseAddress').value = tenant.houseAddress;
+      document.getElementById('meterType').value = tenant.meterType;
+  } catch (error) {
+      console.error('Error fetching profile:', error);
+  }
+});
+
+
+// update user profile
+// Function to handle form submission
+
+  document.getElementById('profileForm').addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+
+      // Basic client-side validation
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const dateOfBirth = document.getElementById('dateOfBirth').value;
+      const meterSerialNumber = document.getElementById('meterSerialNumber').value;
+      const houseAddress = document.getElementById('houseAddress').value;
+      const meterType = document.getElementById('meterType').value;
+
+
+
+
+      try {
+          const response = await fetch('/api/updateTenant', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ 
+                  username,
+                  email,
+                  dateOfBirth,
+                  houseAddress,
+                  meterSerialNumber,
+                  meterType
+              })
+          });
+
+          const data = await response.json();
+
+          if (!response.ok) {
+              throw new Error(data.msg || 'Registration failed');
+          }
+          console.log("update successful");
+          document.getElementById('message').innerHTML = `<p style="color: green;">${data.msg}</p>`;
+
+      } catch (error) {
+          document.getElementById('message').innerHTML = `<p style="color: red;">${error.message}</p>`;
+          console.log("Signup failed");
+      }
+  });
+
+
    

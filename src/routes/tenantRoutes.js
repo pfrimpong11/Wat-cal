@@ -2,6 +2,7 @@
 const express = require('express');
 const { registerTenant, loginTenant, forgotPasswordTenant, resetPasswordTenant } = require('../controllers/tenantController');
 const {updateUserProfile, getUserProfile} = require('../controllers/tenantUpdate');
+const TauthMiddleware = require('../middleware/TauthMiddleware');
 
 const router = express.Router();
 
@@ -9,8 +10,9 @@ router.post('/tenantSignup', registerTenant);
 router.post('/tenantLogin', loginTenant);
 router.post('/forgotPasswordTenant', forgotPasswordTenant);
 router.post('/resetPasswordTenant', resetPasswordTenant);
-router.post('/updateTenant', updateUserProfile);
-router.get('/profile/:username', getUserProfile);
+
+router.post('/updateLandlord', TauthMiddleware, updateUserProfile);
+router.get('/getProfile', TauthMiddleware, getUserProfile);  //get user profile
 
 
 router.get('/tenantIsAuthenticated', (req, res) => {
