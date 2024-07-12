@@ -1,10 +1,41 @@
 const mongoose = require('mongoose');
 
 const readingSchema = new mongoose.Schema({
-    room: { type: mongoose.Schema.Types.ObjectId, ref: 'Room', required: true },
-    readingValue: { type: Number, required: true },
-    timestamp: { type: Date, default: Date.now }
-    // Other reading fields as needed
+  frameType: {
+    type: String,
+    required: true,
+    enum: ['short', 'control', 'long', 'variable'],
+  },
+  address: {
+    type: String,
+    required: true,
+  },
+  controlField: {
+    type: String,
+    required: true,
+  },
+  data: {
+    type: String,
+    required: true,
+  },
+  timestamp: {
+    type: Date,
+    default: Date.now,
+  },
+  checksum: {
+    type: String,
+    required: true,
+  },
+  length: {
+    type: Number,
+    required: true,
+  },
+  crc: {
+    type: String,
+    required: false,
+  }
 });
 
-module.exports = mongoose.model('Reading', readingSchema);
+const Reading = mongoose.model('Reading', readingSchema);
+
+module.exports = Reading;
