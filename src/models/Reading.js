@@ -1,41 +1,25 @@
 const mongoose = require('mongoose');
 
-const readingSchema = new mongoose.Schema({
-  frameType: {
-    type: String,
-    required: true,
-    enum: ['short', 'control', 'long', 'variable'],
-  },
-  address: {
-    type: String,
-    required: true,
-  },
-  controlField: {
-    type: String,
-    required: true,
-  },
-  data: {
-    type: String,
-    required: true,
-  },
-  timestamp: {
-    type: Date,
-    default: Date.now,
-  },
-  checksum: {
-    type: String,
-    required: true,
-  },
-  length: {
-    type: Number,
-    required: true,
-  },
-  crc: {
-    type: String,
-    required: false,
-  }
+const MBusDataSchema = new mongoose.Schema({
+  id: String,
+  manufacturer: String,
+  version: String,
+  productName: String,
+  medium: String,
+  accessNumber: Number,
+  status: String,
+  signature: String,
+  dataRecords: [{
+    function: String,
+    storageNumber: Number,
+    tariff: Number,
+    device: Number,
+    unit: String,
+    quantity: String,
+    value: Number,
+  }],
 });
 
-const Reading = mongoose.model('Reading', readingSchema);
+const Reading = mongoose.model('Reading', MBusDataSchema);
 
 module.exports = Reading;
