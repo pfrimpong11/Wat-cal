@@ -1,17 +1,17 @@
-const fs = require('fs');
+const axios = require('axios');
 const parseString = require('xml2js').parseString;
 const Reading = require('../models/Reading');
 
-const parseAndSaveXML = (filePath) => {
-    fs.readFile(filePath, 'utf-8', (err, data) => {
-        if (err) {
-            console.error(`Failed to read file ${filePath}:`, err);
-            return;
-        }
+const parseAndSaveXML = async (url) => {
+    try {
+        // Fetch XML data from the remote server
+        const response = await axios.get(url);
+        const data = response.data;
 
+        // Parse the XML data
         parseString(data, (err, result) => {
             if (err) {
-                console.error(`Failed to parse XML data from file ${filePath}:`, err);
+                console.error(`Failed to parse XML data from URL ${url}:`, err);
                 return;
             }
 
@@ -41,28 +41,35 @@ const parseAndSaveXML = (filePath) => {
             });
 
             reading.save()
-                .then(() => console.log(`Data from ${filePath} saved successfully`))
-                .catch(err => console.error(`Failed to save data from ${filePath}`, err));
+                .then(() => console.log(`Data from ${url} saved successfully`))
+                .catch(err => console.error(`Failed to save data from ${url}`, err));
         });
-    });
+    } catch (err) {
+        console.error(`Failed to fetch data from ${url}:`, err);
+    }
 };
 
-const readMetersSequentially = (filePaths, interval, delayBetweenReadings) => {
-    const processFilePaths = (index) => {
-        if (index >= filePaths.length) {
-            setTimeout(() => processFilePaths(0), interval - (filePaths.length * delayBetweenReadings));
+const readMetersSequentially = async (urls, interval, delayBetweenReadings) => {
+    const processUrls = async (index) => {
+        if (index >= urls.length) {
+            // After all URLs are processed, wait for the interval period
+            setTimeout(() => processUrls(0), interval - (urls.length * delayBetweenReadings));
             return;
         }
 
-        parseAndSaveXML(filePaths[index]);
-        setTimeout(() => processFilePaths(index + 1), delayBetweenReadings);
+        // Wait for the XML parsing and saving to complete
+        await parseAndSaveXML(urls[index]);
+
+        // Delay before processing the next URL
+        setTimeout(() => processUrls(index + 1), delayBetweenReadings);
     };
 
-    processFilePaths(0); // Start processing files
+    // Start processing URLs
+    processUrls(0);
 };
+
 
 module.exports = {
     parseAndSaveXML,
     readMetersSequentially
 };
-
