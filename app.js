@@ -50,3 +50,5 @@ app.use('/api', require('./src/routes/landlordRoutes'));
 
 // Export app
 module.exports = app;
+
+
